@@ -46,6 +46,8 @@
         } else if (/-windows\.zip$/.test(a.name)) {
           var zip = document.getElementById('dl-win-zip');
           if (zip) zip.href = a.browser_download_url;
+        } else if (/-macos-[^-]+\.dmg$/.test(a.name)) {
+          updateCard('dl-mac', 'Apple Silicon · macOS', a, null, null, null);
         } else if (/\.flatpak$/.test(a.name)) {
           // Solo la tarjeta (enlace y peso). El bloque de comandos NO se
           // toca: instala desde el repositorio, que es lo que hace que

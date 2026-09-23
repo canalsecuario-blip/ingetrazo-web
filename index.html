@@ -138,7 +138,7 @@
         "name": "¿Cómo lo instalo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "En Windows: descarga el instalador de ingetrazo.com o de los releases de GitHub, doble clic y listo. En Linux: descarga el Flatpak (doble clic y tu tienda de aplicaciones lo instala, con los .igz y .skp asociados), el AppImage (permiso de ejecución y abrir) o, si tu distro no trae FUSE, el tar.gz — lo descomprimes donde quieras y ejecutas ingetrazo. En macOS todavía no hay paquete (no tenemos un Mac donde probarlo): se corre desde el código fuente con los comandos de la sección Descargar, y agradecemos que nos cuentes cómo va. También puedes correrlo desde el código fuente con 3 comandos."
+          "text": "En Windows: descarga el instalador de ingetrazo.com o de los releases de GitHub, doble clic y listo. En Linux: descarga el Flatpak (doble clic y tu tienda de aplicaciones lo instala, con los .igz y .skp asociados), el AppImage (permiso de ejecución y abrir) o, si tu distro no trae FUSE, el tar.gz — lo descomprimes donde quieras y ejecutas ingetrazo. En macOS (Apple Silicon): descarga el .dmg, arrastra IngeTrazo a Aplicaciones y la primera vez ábrelo con clic derecho ▸ Abrir (aún no está firmado con una cuenta de Apple). También puedes correrlo desde el código fuente con 3 comandos."
         }
       },
       {
@@ -478,17 +478,16 @@ IngeTrazo-0.3.7.1/ingetrazo</code>
         <div class="dl-divider"></div>
 
         <div class="dl-group" id="mac">
-          <span class="dl-group-label">macOS</span>
-          <p class="dl-group-alt"><strong>Todavía no hay paquete para Mac</strong>, y la razón es simple: <strong>no tengo un Mac donde probarlo</strong>. Nada en IngeTrazo es específico de un sistema (Python, Qt y OpenGL funcionan en Intel y en Apple Silicon, y todas las librerías existen para Mac), así que debería correr desde el código fuente. Si tienes un Mac, esta es la prueba de cinco minutos que nos permitiría publicar un <code>.app</code>. Hace falta Python 3.12 o superior (de python.org o con Homebrew):</p>
-          <div class="dl-code" id="dl-code-mac">
-            <code>git clone https://github.com/ingelibre/ingetrazo.git
-cd ingetrazo/app
-python3 -m venv venv &amp;&amp; source venv/bin/activate
-pip install -r requirements.txt
-python main.py</code>
-            <button class="dl-code-copy" type="button" data-copy="git clone https://github.com/ingelibre/ingetrazo.git && cd ingetrazo/app && python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && python main.py">Copiar</button>
+          <span class="dl-group-label">macOS · Apple Silicon</span>
+          <div class="dl-group-cards">
+            <a class="dl-card dl-card-compact" id="dl-mac" href="https://github.com/ingelibre/ingetrazo/releases/latest" target="_blank" rel="noopener">
+              <svg width="26" height="26" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M11.18.01c.05.52-.13 1.04-.45 1.44-.33.41-.86.72-1.39.68-.07-.5.16-1.03.47-1.4.35-.4.9-.7 1.37-.72zM13.9 11.6c-.26.6-.39.87-.73 1.4-.47.73-1.14 1.64-1.97 1.65-.74.01-.93-.48-1.93-.48-1 .01-1.21.49-1.95.48-.83-.01-1.46-.83-1.94-1.56C4.04 11.1 3.9 8.67 4.72 7.4c.58-.9 1.5-1.43 2.37-1.43.88 0 1.43.48 2.16.48.71 0 1.14-.48 2.16-.48.77 0 1.59.42 2.17 1.15-1.9 1.04-1.6 3.76.32 4.48z"/></svg>
+              <strong>IngeTrazo para Mac (.dmg)</strong>
+              <span>Apple Silicon · macOS</span>
+            </a>
           </div>
-          <p class="dl-group-alt">Después, cuéntanos en un <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">issue de GitHub</a> si abre, si el visor 3D va fluido y qué escribe la Terminal (pégalo tal cual). Con eso podemos preparar la versión descargable. Lo que no funcionará en Mac por ahora: la importación de DWG y el conversor auxiliar <code>skp2dae</code>; abrir y guardar <code>.skp</code> sí, porque el lector es propio. El primer <code>.app</code> saldrá sin firma de Apple: la primera vez se abre con clic derecho ▸ Abrir.</p>
+          <p class="dl-group-alt">Abre el <code>.dmg</code> y arrastra IngeTrazo a <strong>Aplicaciones</strong>. Todavía no está firmado con una cuenta de Apple, así que <strong>la primera vez</strong> macOS no lo abrirá con doble clic: <strong>clic derecho ▸ Abrir</strong> y confirma. Desde entonces abre normal, y los <code>.igz</code> y <code>.skp</code> se abren con doble clic. Empaquetado por <a href="https://github.com/felixriestra" target="_blank" rel="noopener">Félix Riestra</a>.</p>
+          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">Para Mac con Apple Silicon (M1 en adelante). Lo que aún no funciona en Mac: la importación de DWG y el conversor auxiliar <code>skp2dae</code>; abrir y guardar <code>.skp</code> sí. Si algo falla, cuéntanos en un <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">issue de GitHub</a>.</p>
         </div>
       </div>
     </div>
@@ -573,7 +572,7 @@ python main.py</code>
         </details>
         <details class="faq-item">
           <summary>¿Cómo lo instalo?</summary>
-          <p>En <strong>Windows</strong>: descarga el instalador de la sección Descargar, doble clic y listo (asocia los archivos .igz). En <strong>Linux</strong>: descarga el <strong>Flatpak</strong> (doble clic y GNOME Software / KDE Discover lo instala, con los .igz y .skp asociados), el <strong>AppImage</strong> (dale permiso de ejecución y ábrelo) o, si tu distro no trae FUSE, el <strong>tar.gz</strong>: lo descomprimes donde quieras y ejecutas <code>ingetrazo</code>. Si algo no funciona, <code>--check</code> te dice qué le falta. En <strong>macOS</strong> todavía no hay paquete —no tenemos un Mac donde probarlo—: se corre desde el código fuente con los comandos de la sección <a href="#mac">Descargar ▸ macOS</a>, y agradecemos que nos cuentes cómo va. También puedes correrlo desde el código fuente con 3 comandos.</p>
+          <p>En <strong>Windows</strong>: descarga el instalador de la sección Descargar, doble clic y listo (asocia los archivos .igz). En <strong>Linux</strong>: descarga el <strong>Flatpak</strong> (doble clic y GNOME Software / KDE Discover lo instala, con los .igz y .skp asociados), el <strong>AppImage</strong> (dale permiso de ejecución y ábrelo) o, si tu distro no trae FUSE, el <strong>tar.gz</strong>: lo descomprimes donde quieras y ejecutas <code>ingetrazo</code>. Si algo no funciona, <code>--check</code> te dice qué le falta. En <strong>macOS</strong> (Apple Silicon): descarga el <strong>.dmg</strong> de <a href="#mac">Descargar ▸ macOS</a>, arrastra IngeTrazo a Aplicaciones y la primera vez ábrelo con clic derecho ▸ Abrir (aún no está firmado con una cuenta de Apple). También puedes correrlo desde el código fuente con 3 comandos.</p>
         </details>
         <details class="faq-item">
           <summary>¿Sirve para impresión 3D?</summary>
