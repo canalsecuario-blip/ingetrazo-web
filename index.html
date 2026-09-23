@@ -451,27 +451,47 @@
               <span>sin FUSE</span>
             </a>
           </div>
-          <p class="dl-group-alt"><strong>Flatpak</strong> — <em>la forma recomendada en Linux</em>: instálalo desde nuestro repositorio y a partir de ahí <code>flatpak update</code> te trae cada versión nueva. Queda en tu menú de aplicaciones con los .igz y .skp asociados (el entorno Freedesktop baja solo de Flathub).</p>
-          <div class="dl-code" id="dl-code-flatpak">
-            <code>flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo
+          <div class="dl-howto">
+            <div class="dl-tabs" role="tablist" aria-label="Cómo instalar en Linux">
+              <span class="dl-tabs-label">Cómo instalar ▾</span>
+              <button type="button" role="tab" class="dl-tab" aria-selected="false" data-tab="flatpak">Flatpak <em>recomendado</em></button>
+              <button type="button" role="tab" class="dl-tab" aria-selected="false" data-tab="appimage">AppImage</button>
+              <button type="button" role="tab" class="dl-tab" aria-selected="false" data-tab="tarball">tar.gz</button>
+            </div>
+
+            <div class="dl-panel" role="tabpanel" data-panel="flatpak" hidden>
+              <p>Instálalo desde nuestro repositorio y <code>flatpak update</code> te traerá cada versión nueva. Queda en tu menú de aplicaciones, con los <code>.igz</code> y <code>.skp</code> asociados.</p>
+              <div class="dl-code" id="dl-code-flatpak">
+                <code>flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo
 flatpak install --user ingetrazo com.ingetrazo.IngeTrazo
 flatpak run com.ingetrazo.IngeTrazo</code>
-            <button class="dl-code-copy" type="button" data-copy="flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo && flatpak install --user ingetrazo com.ingetrazo.IngeTrazo && flatpak run com.ingetrazo.IngeTrazo">Copiar</button>
-          </div>
-          <p class="dl-group-alt">¿Prefieres el archivo suelto? La tarjeta de arriba lo descarga y se instala con doble clic — pero así <strong>no se actualiza solo</strong>: un <code>.flatpak</code> no tiene de dónde buscar versiones nuevas.</p>
-          <p class="dl-group-alt"><strong>AppImage</strong>: dale permiso de ejecución y ábrelo (o doble clic desde tu gestor de archivos):</p>
-          <div class="dl-code" id="dl-code-appimage">
-            <code>chmod +x IngeTrazo-0.3.7.1-x86_64.AppImage
+                <button class="dl-code-copy" type="button" data-copy="flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo && flatpak install --user ingetrazo com.ingetrazo.IngeTrazo && flatpak run com.ingetrazo.IngeTrazo">Copiar</button>
+              </div>
+              <p class="dl-panel-small">¿Prefieres el archivo suelto? La tarjeta de arriba lo descarga y se instala con doble clic, pero así <strong>no se actualiza solo</strong>.</p>
+            </div>
+
+            <div class="dl-panel" role="tabpanel" data-panel="appimage" hidden>
+              <p>No instala nada: dale permiso de ejecución y ábrelo (o doble clic desde tu gestor de archivos).</p>
+              <div class="dl-code" id="dl-code-appimage">
+                <code>chmod +x IngeTrazo-0.3.7.1-x86_64.AppImage
 ./IngeTrazo-0.3.7.1-x86_64.AppImage</code>
-            <button class="dl-code-copy" type="button" data-copy="chmod +x IngeTrazo-0.3.7.1-x86_64.AppImage && ./IngeTrazo-0.3.7.1-x86_64.AppImage">Copiar</button>
-          </div>
-          <p class="dl-group-alt"><strong>tar.gz</strong>: si tu distro no trae FUSE (lo único que un AppImage necesita), descomprime y ejecuta — sirve igual para instalarlo en <code>/opt</code>:</p>
-          <div class="dl-code" id="dl-code-tarball">
-            <code>tar -xzf IngeTrazo-0.3.7.1-linux-x86_64.tar.gz
+                <button class="dl-code-copy" type="button" data-copy="chmod +x IngeTrazo-0.3.7.1-x86_64.AppImage && ./IngeTrazo-0.3.7.1-x86_64.AppImage">Copiar</button>
+              </div>
+              <p class="dl-panel-small">Necesita FUSE, que casi todas las distros traen. Si la tuya no, usa el tar.gz.</p>
+            </div>
+
+            <div class="dl-panel" role="tabpanel" data-panel="tarball" hidden>
+              <p>Para distros sin FUSE, o para instalarlo en <code>/opt</code>: descomprime y ejecuta.</p>
+              <div class="dl-code" id="dl-code-tarball">
+                <code>tar -xzf IngeTrazo-0.3.7.1-linux-x86_64.tar.gz
 IngeTrazo-0.3.7.1/ingetrazo</code>
-            <button class="dl-code-copy" type="button" data-copy="tar -xzf IngeTrazo-0.3.7.1-linux-x86_64.tar.gz && IngeTrazo-0.3.7.1/ingetrazo">Copiar</button>
+                <button class="dl-code-copy" type="button" data-copy="tar -xzf IngeTrazo-0.3.7.1-linux-x86_64.tar.gz && IngeTrazo-0.3.7.1/ingetrazo">Copiar</button>
+              </div>
+              <p class="dl-panel-small">Trae lo mismo que el AppImage: Python, Qt y el lector de .skp viajan dentro.</p>
+            </div>
+
+            <p class="dl-howto-foot" hidden>Los tres corren en Ubuntu 22.04 o posterior. Si algo falla, <code>--check</code> te dice qué falta.</p>
           </div>
-          <p class="dl-group-alt">Los dos traen lo mismo: Python, Qt y el lector de .skp viajan dentro. Corren en Ubuntu 22.04 y posteriores. Si algo falla, <code>--check</code> te dice qué falta.</p>
           <p class="dl-note">También puedes correrlo <a href="https://github.com/ingelibre/ingetrazo" target="_blank" rel="noopener">desde el código fuente</a> (3 comandos, README). Todos los archivos en los <a href="https://github.com/ingelibre/ingetrazo/releases" target="_blank" rel="noopener">releases de GitHub</a>.</p>
         </div>
 

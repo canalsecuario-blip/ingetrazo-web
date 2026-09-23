@@ -134,3 +134,25 @@
     });
   });
 })();
+
+/* «Cómo instalar» de Linux: cerrado de entrada; cada pestaña despliega
+   su panel y un segundo clic en la misma lo vuelve a plegar. */
+document.querySelectorAll('.dl-howto').forEach(function (box) {
+  var tabs = box.querySelectorAll('.dl-tab');
+  var foot = box.querySelector('.dl-howto-foot');
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var name = tab.classList.contains('is-active') ? null : tab.getAttribute('data-tab');
+      tabs.forEach(function (t) {
+        var on = t.getAttribute('data-tab') === name;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      box.querySelectorAll('.dl-panel').forEach(function (p) {
+        p.hidden = p.getAttribute('data-panel') !== name;
+      });
+      if (foot) foot.hidden = !name;
+      box.classList.toggle('is-open', !!name);
+    });
+  });
+});
