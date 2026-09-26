@@ -3,6 +3,27 @@
 (function () {
   'use strict';
 
+  /* ── Idioma de la página (es/en/pt) ────────────────────────────────── */
+  var LANG = (document.documentElement.lang || 'es').slice(0, 2);
+  var STRINGS = {
+    es: { locale: 'es-PE', copied: '¡Copiado!', copy: 'Copiar',
+          flatpak: 'doble clic instala', appimage: 'no instala nada', tarball: 'sin FUSE' },
+    en: { locale: 'en-US', copied: 'Copied!', copy: 'Copy',
+          flatpak: 'double-click installs', appimage: 'installs nothing', tarball: 'no FUSE needed' },
+    pt: { locale: 'pt-BR', copied: 'Copiado!', copy: 'Copiar',
+          flatpak: 'clique duplo instala', appimage: 'não instala nada', tarball: 'sem FUSE' }
+  };
+  var T = STRINGS[LANG] || STRINGS.es;
+
+  /* Elegir idioma a mano gana a la detección automática del Worker
+     (worker.js): la cookie dura un año. */
+  document.querySelectorAll('.lang-switch a[data-lang]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      document.cookie = 'lang=' + a.getAttribute('data-lang') +
+        '; path=/; max-age=31536000; SameSite=Lax; Secure';
+    });
+  });
+
   /* ── Versión + fecha desde GitHub Releases ─────────────────────────── */
   fetch('https://api.github.com/repos/ingelibre/ingetrazo/releases/latest')
     .then(function (r) { return r.ok ? r.json() : null; })
@@ -16,7 +37,7 @@
       if (rel.published_at) {
         var d = new Date(rel.published_at);
         var dd = document.getElementById('dl-date');
-        if (dd) dd.textContent = d.toLocaleDateString('es-PE',
+        if (dd) dd.textContent = d.toLocaleDateString(T.locale,
           { year: 'numeric', month: 'long' });
       }
       /* URL exacta de cada artefacto del release, su tamaño real, y el
@@ -52,14 +73,14 @@
           // Solo la tarjeta (enlace y peso). El bloque de comandos NO se
           // toca: instala desde el repositorio, que es lo que hace que
           // `flatpak update` funcione, y no depende de cada release.
-          updateCard('dl-flatpak', 'doble clic instala', a, null, null, null);
+          updateCard('dl-flatpak', T.flatpak, a, null, null, null);
         } else if (/\.AppImage$/.test(a.name)) {
-          updateCard('dl-appimage', 'no instala nada', a, 'dl-code-appimage',
+          updateCard('dl-appimage', T.appimage, a, 'dl-code-appimage',
             'chmod +x ' + a.name + '\n./' + a.name,
             'chmod +x ' + a.name + ' && ./' + a.name);
         } else if (/\.tar\.gz$/.test(a.name)) {
           var dir = a.name.replace(/-linux-[^-]+\.tar\.gz$/, '');
-          updateCard('dl-tarball', 'sin FUSE', a, 'dl-code-tarball',
+          updateCard('dl-tarball', T.tarball, a, 'dl-code-tarball',
             'tar -xzf ' + a.name + '\n' + dir + '/ingetrazo',
             'tar -xzf ' + a.name + ' && ' + dir + '/ingetrazo');
         }
@@ -124,10 +145,10 @@
     btn.addEventListener('click', function () {
       var text = btn.getAttribute('data-copy') || '';
       navigator.clipboard.writeText(text).then(function () {
-        btn.textContent = '¡Copiado!';
+        btn.textContent = T.copied;
         btn.classList.add('copied');
         setTimeout(function () {
-          btn.textContent = 'Copiar';
+          btn.textContent = T.copy;
           btn.classList.remove('copied');
         }, 2200);
       });

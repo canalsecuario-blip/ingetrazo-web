@@ -6,8 +6,13 @@
   "name": "ingetrazo-web",
   "compatibility_date": "2026-07-16",
   "compatibility_flags": ["nodejs_compat"],
+  // worker.js solo corre para «/» y «/apoyar»: elige el idioma (es/en/pt)
+  // por cookie, navegador y país; todo lo demás sale directo de los assets.
+  "main": "worker.js",
   "assets": {
-    "directory": "./"
+    "directory": "./",
+    "binding": "ASSETS",
+    "run_worker_first": ["/", "/apoyar"]
   },
   "routes": [
     { "pattern": "ingetrazo.com", "custom_domain": true },

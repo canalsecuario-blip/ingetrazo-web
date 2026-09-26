@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ingetrazo.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ingetrazo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ingetrazo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ingetrazo.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ingetrazo.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ingetrazo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ingetrazo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ingetrazo.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ingetrazo.com/pt/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ingetrazo.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ingetrazo.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ingetrazo.com/pt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ingetrazo.com/apoyar</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ingetrazo.com/apoyar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ingetrazo.com/en/apoyar"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ingetrazo.com/pt/apoyar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/apoyar"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ingetrazo.com/en/apoyar</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ingetrazo.com/apoyar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ingetrazo.com/en/apoyar"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ingetrazo.com/pt/apoyar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/apoyar"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ingetrazo.com/pt/apoyar</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ingetrazo.com/apoyar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ingetrazo.com/en/apoyar"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ingetrazo.com/pt/apoyar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/apoyar"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -114,6 +114,15 @@ code {
 .nav-links { display: flex; align-items: center; gap: 32px; }
 .nav-links a { color: rgba(255,255,255,0.7); font-size: 14px; font-weight: 500; }
 .nav-links a:not(.btn):hover { color: var(--white); }
+.lang-switch {
+  display: inline-flex; gap: 2px; padding: 2px;
+  border: 1px solid rgba(255,255,255,0.18); border-radius: 6px;
+}
+.nav-links .lang-switch a {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+  padding: 3px 7px; border-radius: 4px;
+}
+.nav-links .lang-switch a[aria-current] { background: rgba(255,255,255,0.14); color: var(--white); }
 
 .nav-toggle {
   display: none; flex-direction: column; gap: 5px;
@@ -130,6 +139,8 @@ code {
     background: var(--slate-700); padding: 20px 32px; gap: 14px;
   }
   .nav-links.open a { font-size: 16px; }
+  .nav-links.open .lang-switch { align-self: flex-start; }
+  .nav-links.open .lang-switch a { font-size: 14px; padding: 4px 10px; }
 }
 
 /* ============ Scroll reveal ============ */
