@@ -75,18 +75,11 @@ code {
 .container-narrow { max-width: 780px; }
 @media (max-width: 560px) { .container { padding: 0 20px; } }
 
-/* ============ Tarjetas sobre el lienzo ============ */
+/* ============ Secciones de color a sangre (de borde a borde) ============ */
 .feat-bim, .feat-terra, .bridge, .impact, .support, .download-section, .section {
-  width: calc(100% - 32px);
-  max-width: 1440px;
-  margin: 16px auto;
-  border-radius: var(--radius-card);
+  width: 100%;
+  margin: 0;
   overflow: hidden;
-}
-@media (max-width: 760px) {
-  .feat-bim, .feat-terra, .bridge, .impact, .support, .download-section, .section {
-    width: calc(100% - 16px); margin: 8px auto; border-radius: 16px;
-  }
 }
 
 /* ============ Buttons ============ */
@@ -270,7 +263,7 @@ code {
 /* ============================================================
    FEATURES — una gran tarjeta clara con las secciones dentro
    ============================================================ */
-#features { padding: 72px 0 16px; }   /* sin tarjeta: BIM y Terreno son las tarjetas */
+#features { padding: 72px 0 16px; }   /* fondo blanco; BIM y Terreno llevan su color */
 .features-head h2 {
   font-size: clamp(30px, 4.4vw, 52px);
   line-height: 1.05;
@@ -522,13 +515,13 @@ code {
 /* ============ Impact: «Libre para siempre» en turquesa ============ */
 .impact {
   position: relative;
-  /* el texto alinea con .container: la tarjeta ya va 16px hacia dentro */
-  padding: 88px max(32px, calc((100% - 1180px) / 2 + 16px));
+  /* el texto alinea con .container */
+  padding: 88px max(32px, calc((100% - 1180px) / 2 + 32px));
   background: var(--night);
 }
 .impact::after {                      /* hexágonos decorativos, como en blender.org */
   content: '';
-  position: absolute; right: max(32px, calc((100% - 1180px) / 2 + 16px)); top: 50%;
+  position: absolute; right: max(32px, calc((100% - 1180px) / 2 + 32px)); top: 50%;
   width: 150px; height: 170px; transform: translateY(-50%);
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 170'%3E%3Cpath d='M70 6l38 22v44l-38 22-38-22V28z' fill='%2346EBC2'/%3E%3Cpath d='M36 104l24 14v28l-24 14-24-14v-28z' fill='%2346EBC2' opacity='.75'/%3E%3Cpath d='M112 112l18 10.5v21L112 154l-18-10.5v-21z' fill='%2346EBC2' opacity='.5'/%3E%3C/svg%3E") center / contain no-repeat;
   opacity: 0.9;
@@ -682,7 +675,6 @@ code {
 
 /* ============ Footer ============ */
 .footer {
-  margin-top: 16px;
   background: var(--night); color: rgba(255,255,255,0.7);
   padding: 56px 0 36px; font-size: 14px;
 }
