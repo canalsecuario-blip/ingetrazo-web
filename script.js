@@ -171,7 +171,7 @@
     var p = document.createElement('span'); p.textContent = T.thanksSub;
     txt.appendChild(h); txt.appendChild(p);
     var a = document.createElement('a');
-    a.className = 'btn btn-primary btn-sm'; a.href = T.support; a.textContent = '\u2661 ' + T.thanksBtn;
+    a.className = 'btn btn-heart btn-sm'; a.href = T.support; a.textContent = T.thanksBtn;
     var x = document.createElement('button');
     x.type = 'button'; x.className = 'dl-thanks-close'; x.setAttribute('aria-label', T.close);
     x.textContent = '\u00d7';

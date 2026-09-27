@@ -122,14 +122,33 @@ code {
 .nav-links { display: flex; align-items: center; gap: 22px; }
 .nav-links > a { color: var(--text); font-size: 14px; font-weight: 400; }
 .nav-links > a:hover { color: var(--head); }
-.nav-links > a[href*="apoyar"] {          /* Apoyar = botón azul con corazón */
-  display: inline-flex; align-items: center; gap: 6px;
-  background: var(--accent); color: var(--white); font-weight: 500;
-  padding: 7px 14px; border-radius: var(--radius-sm);
-  box-shadow: 0 2px 10px rgba(54,137,230,0.35);
+.nav-links > a[href*="apoyar"] {          /* Apoyar: píldora suave con corazón que late */
+  display: inline-flex; align-items: center; gap: 7px;
+  background: var(--accent-soft); color: var(--accent-dk); font-weight: 600;
+  padding: 7px 15px 7px 12px; border-radius: 999px;
 }
-.nav-links > a[href*="apoyar"]::before { content: '♡'; font-size: 15px; line-height: 1; }
-.nav-links > a[href*="apoyar"]:hover { background: var(--accent-dk); color: var(--white); }
+.nav-links > a[href*="apoyar"]::before,
+.btn-heart::before {
+  content: ''; width: 15px; height: 15px; flex: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23E5484D' d='M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.nav-links > a[href*="apoyar"]:hover { background: #D6E7FB; color: var(--accent-dk); }
+.nav-links > a[href*="apoyar"]:hover::before,
+.btn-heart:hover::before { animation: latido 0.9s ease; }
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  25% { transform: scale(1.28); }
+  45% { transform: scale(0.92); }
+  65% { transform: scale(1.12); }
+}
+
+/* Botón de apoyo fuera del menú: la misma píldora */
+.btn-heart {
+  background: var(--white); color: var(--head); font-weight: 600;
+  border-radius: 999px; box-shadow: 0 0 0 1px var(--line);
+}
+.btn-heart:hover { background: #F4F8FE; color: var(--accent-dk); }
+.dl-thanks .btn-heart { background: var(--accent-soft); color: var(--accent-dk); box-shadow: none; }
 .lang-switch {
   display: inline-flex; gap: 2px; padding: 2px;
   border: 1px solid var(--line); border-radius: var(--radius-sm);
