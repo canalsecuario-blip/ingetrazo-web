@@ -573,21 +573,16 @@ code {
 .impact-card {
   grid-area: card; align-self: center;
   position: relative; overflow: hidden;
-  padding: 28px 28px 24px;
+  padding: 30px 28px 24px; text-align: center;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(70,235,194,0.28);
   border-radius: 18px;
 }
-.impact-card::after {                  /* los hexágonos, discretos en la esquina */
-  content: ''; position: absolute; right: -18px; top: -22px;
-  width: 96px; height: 110px; opacity: 0.18;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 170'%3E%3Cpath d='M70 6l38 22v44l-38 22-38-22V28z' fill='%2346EBC2'/%3E%3Cpath d='M36 104l24 14v28l-24 14-24-14v-28z' fill='%2346EBC2' opacity='.75'/%3E%3Cpath d='M112 112l18 10.5v21L112 154l-18-10.5v-21z' fill='%2346EBC2' opacity='.5'/%3E%3C/svg%3E") center / contain no-repeat;
-  pointer-events: none;
-}
 .impact-card-q {
-  font-size: 19px; line-height: 1.35; font-weight: 700; color: var(--white);
-  margin-bottom: 18px; padding-right: 48px;
+  font-size: 22px; line-height: 1.25; font-weight: 800; color: var(--white);
+  letter-spacing: -0.01em; margin-bottom: 6px;
 }
+.impact .impact-card-sub { font-size: 14.5px; line-height: 1.5; color: rgba(255,255,255,0.7); margin: 0 auto 20px; max-width: 290px; }
 .impact-card-btn {
   display: flex; justify-content: center; width: 100%;
   background: var(--teal); color: #0B1220; font-weight: 700; border-radius: 999px;
@@ -1017,8 +1012,9 @@ code {
 .steps { padding: 72px 0 76px; background: #F4F7FB; }
 .steps h2 {
   font-size: clamp(26px, 3vw, 38px); line-height: 1.1; font-weight: 800;
-  color: var(--head); letter-spacing: -0.02em; margin-bottom: 40px;
+  color: var(--head); letter-spacing: -0.02em; margin-bottom: 44px; text-align: center;
 }
+@media (max-width: 860px) { .steps h2 { text-align: left; } }
 .steps-row {
   --gap: 48px; --dot: 56px;
   list-style: none; position: relative;
@@ -1027,11 +1023,11 @@ code {
 .steps-row::before {                   /* la línea que une los tres pasos */
   content: ''; position: absolute; z-index: 0;
   top: calc(var(--dot) / 2 - 1px); height: 3px; border-radius: 3px;
-  left: calc(var(--dot) / 2);
-  right: calc((100% - 2 * var(--gap)) / 3 - var(--dot) / 2);
+  left: calc((100% - 2 * var(--gap)) / 6);           /* centro de la 1.ª columna */
+  right: calc((100% - 2 * var(--gap)) / 6);          /* centro de la 3.ª */
   background: linear-gradient(90deg, var(--accent), #7CB8FF);
 }
-.step { position: relative; z-index: 1; }
+.step { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .step-n {
   display: flex; align-items: center; justify-content: center;
   width: var(--dot); height: var(--dot); border-radius: 50%; margin-bottom: 22px;
@@ -1039,7 +1035,7 @@ code {
   box-shadow: 0 0 0 7px #F4F7FB, 0 8px 22px rgba(54,137,230,0.35);
 }
 .step h3 { font-size: 22px; font-weight: 800; color: var(--head); letter-spacing: -0.01em; margin-bottom: 8px; }
-.step p { font-size: 15.5px; line-height: 1.6; color: var(--text); max-width: 330px; }
+.step p { font-size: 15.5px; line-height: 1.6; color: var(--text); max-width: 300px; }
 @media (max-width: 860px) {
   .steps-row { --dot: 48px; grid-template-columns: 1fr; gap: 28px; }
   .steps-row::before {                 /* en vertical, a la izquierda */
@@ -1047,7 +1043,7 @@ code {
     right: auto; width: 3px; height: auto;
     background: linear-gradient(180deg, var(--accent), #7CB8FF);
   }
-  .step { padding-left: calc(var(--dot) + 20px); min-height: var(--dot); }
+  .step { display: block; text-align: left; padding-left: calc(var(--dot) + 20px); min-height: var(--dot); }
   .step-n { position: absolute; left: 0; top: 0; margin: 0; font-size: 19px; }
   .step h3 { padding-top: 10px; }
 }
