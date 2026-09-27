@@ -540,36 +540,81 @@ code {
   .bridge { padding: 64px 0; }
 }
 
-/* ============ Impact: «Libre para siempre» en turquesa ============ */
+/* ============ Impact: «Libre para siempre» + tarjeta de apoyo ============ */
 .impact {
   position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
+  grid-template-areas: "h card" "p card";
+  grid-template-rows: min-content 1fr;     /* la tarjeta no separa título y párrafo */
+  column-gap: 64px; align-items: start;
   /* el texto alinea con .container */
   padding: 88px max(32px, calc((100% - 1180px) / 2 + 32px));
   background: var(--night);
 }
-.impact::after {                      /* hexágonos decorativos, como en blender.org */
-  content: '';
-  position: absolute; right: max(32px, calc((100% - 1180px) / 2 + 32px)); top: 88px;
-  width: 150px; height: 170px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 170'%3E%3Cpath d='M70 6l38 22v44l-38 22-38-22V28z' fill='%2346EBC2'/%3E%3Cpath d='M36 104l24 14v28l-24 14-24-14v-28z' fill='%2346EBC2' opacity='.75'/%3E%3Cpath d='M112 112l18 10.5v21L112 154l-18-10.5v-21z' fill='%2346EBC2' opacity='.5'/%3E%3C/svg%3E") center / contain no-repeat;
-  opacity: 0.9;
-}
 .impact h2 {
+  grid-area: h;
   font-size: clamp(32px, 5vw, 56px);
   font-weight: 800;
   color: var(--teal);
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 20px;
-  max-width: 720px;
 }
-.impact p {
+.impact > p {
+  grid-area: p;
   font-size: clamp(15px, 1.6vw, 17px);
   color: rgba(255,255,255,0.82);
   line-height: 1.65;
   max-width: 620px;
 }
-@media (max-width: 760px) { .impact::after { display: none; } .impact { padding: 64px 24px; } }
+
+/* Tarjeta de apoyo: todo lo de aportar, junto y en el color de la sección */
+.impact-card {
+  grid-area: card; align-self: center;
+  position: relative; overflow: hidden;
+  padding: 28px 28px 24px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(70,235,194,0.28);
+  border-radius: 18px;
+}
+.impact-card::after {                  /* los hexágonos, discretos en la esquina */
+  content: ''; position: absolute; right: -18px; top: -22px;
+  width: 96px; height: 110px; opacity: 0.18;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 170'%3E%3Cpath d='M70 6l38 22v44l-38 22-38-22V28z' fill='%2346EBC2'/%3E%3Cpath d='M36 104l24 14v28l-24 14-24-14v-28z' fill='%2346EBC2' opacity='.75'/%3E%3Cpath d='M112 112l18 10.5v21L112 154l-18-10.5v-21z' fill='%2346EBC2' opacity='.5'/%3E%3C/svg%3E") center / contain no-repeat;
+  pointer-events: none;
+}
+.impact-card-q {
+  font-size: 19px; line-height: 1.35; font-weight: 700; color: var(--white);
+  margin-bottom: 18px; padding-right: 48px;
+}
+.impact-card-btn {
+  display: flex; justify-content: center; width: 100%;
+  background: var(--teal); color: #0B1220; font-weight: 700; border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(70,235,194,0.25);
+}
+.impact-card-btn::before {
+  content: ''; width: 16px; height: 16px; flex: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230B1220' d='M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+.impact-card-btn:hover { background: #6FF2D2; color: #0B1220; }
+.impact-card-btn:hover::before { animation: latido 0.9s ease; }
+.pay-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 16px 0 18px; }
+.pay-chips li {
+  font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.85);
+  padding: 4px 10px; border-radius: 999px;
+  background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+}
+.impact .impact-card-alt {
+  font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.6);
+  padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.1);
+}
+.impact-card-alt a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 900px) {
+  .impact { grid-template-columns: 1fr; grid-template-areas: "h" "p" "card"; }
+  .impact-card { margin-top: 36px; max-width: 460px; }
+}
+@media (max-width: 760px) { .impact { padding: 64px 24px; } }
 
 /* ============ Download: tarjeta azul clara ============ */
 .download-section {
@@ -884,11 +929,6 @@ code {
 .hero-version a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
 .hero-version a:hover { color: var(--white); }
 .hero-sub code { background: rgba(255,255,255,0.14); color: var(--white); }
-
-/* ============ Botón de apoyo bajo «Libre para siempre» ============ */
-.impact-support { margin-top: 32px; }
-.support-ctas { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
-.support-ctas span { font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.65); }
 
 /* ============ Descarga: botón para tu sistema ============ */
 .dl-primary { margin: -16px auto 40px; }
