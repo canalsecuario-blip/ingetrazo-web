@@ -76,7 +76,7 @@ code {
 @media (max-width: 560px) { .container { padding: 0 20px; } }
 
 /* ============ Tarjetas sobre el lienzo ============ */
-#features, .bridge, .impact, .download-section, .section {
+.feat-bim, .feat-terra, .bridge, .impact, .download-section, .section {
   width: calc(100% - 32px);
   max-width: 1440px;
   margin: 16px auto;
@@ -84,7 +84,7 @@ code {
   overflow: hidden;
 }
 @media (max-width: 760px) {
-  #features, .bridge, .impact, .download-section, .section {
+  .feat-bim, .feat-terra, .bridge, .impact, .download-section, .section {
     width: calc(100% - 16px); margin: 8px auto; border-radius: 16px;
   }
 }
@@ -270,7 +270,7 @@ code {
 /* ============================================================
    FEATURES — una gran tarjeta clara con las secciones dentro
    ============================================================ */
-#features { background: var(--card); padding: 72px 0 16px; }
+#features { padding: 72px 0 16px; }   /* sin tarjeta: BIM y Terreno son las tarjetas */
 .features-head h2 {
   font-size: clamp(30px, 4.4vw, 52px);
   line-height: 1.05;
@@ -420,8 +420,6 @@ code {
 
 /* BIM y Terreno: tarjetas de color dentro de la tarjeta, título en su tono */
 .feat-bim, .feat-terra {
-  margin: 24px;
-  border-radius: 20px;
   padding: 72px 0;
 }
 .feat-bim { background: var(--night); }
@@ -510,7 +508,7 @@ code {
 @media (max-width: 860px) {
   #features { padding-top: 56px; }
   .feat { padding: 56px 0; }
-  .feat-bim, .feat-terra { margin: 12px; padding: 48px 0; border-radius: 14px; }
+  .feat-bim, .feat-terra { padding: 48px 0; }
   .feat-row {
     flex-direction: column !important;
     gap: 32px;
