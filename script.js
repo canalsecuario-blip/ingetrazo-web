@@ -7,11 +7,32 @@
   var LANG = (document.documentElement.lang || 'es').slice(0, 2);
   var STRINGS = {
     es: { locale: 'es-PE', copied: '¡Copiado!', copy: 'Copiar',
-          flatpak: 'doble clic instala', appimage: 'no instala nada', tarball: 'sin FUSE' },
+          flatpak: 'doble clic instala', appimage: 'no instala nada', tarball: 'sin FUSE',
+          dlWin: 'Descargar para Windows', dlMac: 'Descargar para Mac', dlLinux: 'Descargar para Linux (Flatpak)',
+          dlWinSub: 'Instalador para Windows 10/11 · 64 bits. Otras versiones y sistemas, abajo.',
+          dlMacSub: 'Para Mac con Apple Silicon (M1 o posterior). Otras opciones, abajo.',
+          dlLinuxSub: 'Se instala con doble clic. AppImage, tar.gz y los demás sistemas, abajo.',
+          thanks: '¡Gracias por descargar IngeTrazo!',
+          thanksSub: 'Es libre y lo hace una persona. Si te ahorra horas, puedes apoyarlo.',
+          thanksBtn: 'Apoyar', support: '/apoyar', close: 'Cerrar' },
     en: { locale: 'en-US', copied: 'Copied!', copy: 'Copy',
-          flatpak: 'double-click installs', appimage: 'installs nothing', tarball: 'no FUSE needed' },
+          flatpak: 'double-click installs', appimage: 'installs nothing', tarball: 'no FUSE needed',
+          dlWin: 'Download for Windows', dlMac: 'Download for Mac', dlLinux: 'Download for Linux (Flatpak)',
+          dlWinSub: 'Installer for Windows 10/11 · 64-bit. Other versions and systems below.',
+          dlMacSub: 'For Macs with Apple Silicon (M1 or later). Other options below.',
+          dlLinuxSub: 'Installs with a double-click. AppImage, tar.gz and other systems below.',
+          thanks: 'Thanks for downloading IngeTrazo!',
+          thanksSub: 'It is free and made by one person. If it saves you hours, you can support it.',
+          thanksBtn: 'Support', support: '/en/apoyar', close: 'Close' },
     pt: { locale: 'pt-BR', copied: 'Copiado!', copy: 'Copiar',
-          flatpak: 'clique duplo instala', appimage: 'não instala nada', tarball: 'sem FUSE' }
+          flatpak: 'clique duplo instala', appimage: 'não instala nada', tarball: 'sem FUSE',
+          dlWin: 'Baixar para Windows', dlMac: 'Baixar para Mac', dlLinux: 'Baixar para Linux (Flatpak)',
+          dlWinSub: 'Instalador para Windows 10/11 · 64 bits. Outras versões e sistemas, abaixo.',
+          dlMacSub: 'Para Mac com Apple Silicon (M1 ou posterior). Outras opções, abaixo.',
+          dlLinuxSub: 'Instala com clique duplo. AppImage, tar.gz e outros sistemas, abaixo.',
+          thanks: 'Obrigado por baixar o IngeTrazo!',
+          thanksSub: 'É livre e feito por uma pessoa. Se ele te poupa horas, você pode apoiá-lo.',
+          thanksBtn: 'Apoiar', support: '/pt/apoyar', close: 'Fechar' }
   };
   var T = STRINGS[LANG] || STRINGS.es;
 
@@ -24,10 +45,32 @@
     });
   });
 
-  /* ── Versión + fecha desde GitHub Releases ─────────────────────────── */
-  fetch('https://api.github.com/repos/ingelibre/ingetrazo/releases/latest')
+  /* ── Cifras en vivo (franja bajo la portada) ────────────────────────── */
+  function setStat(name, n, round) {
+    var el = document.querySelector('[data-stat="' + name + '"]');
+    if (!el || !n) return;
+    if (round) n = Math.floor(n / round) * round;
+    /* miles como en el resto de la página: 7.000 (es/pt), 7,000 (en) */
+    var sep = LANG === 'en' ? ',' : '.';
+    el.textContent = String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep) + (round ? '+' : '');
+  }
+  fetch('https://api.github.com/repos/ingelibre/ingetrazo')
     .then(function (r) { return r.ok ? r.json() : null; })
-    .then(function (rel) {
+    .then(function (repo) { if (repo) setStat('stars', repo.stargazers_count); })
+    .catch(function () {});
+
+  /* ── Versión + fecha desde GitHub Releases ─────────────────────────── */
+  /* Una sola consulta trae la última versión y las descargas de todas. */
+  fetch('https://api.github.com/repos/ingelibre/ingetrazo/releases?per_page=100')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (list) {
+      if (!list || !list.length) return;
+      var total = 0;
+      list.forEach(function (x) {
+        (x.assets || []).forEach(function (a) { total += a.download_count || 0; });
+      });
+      setStat('downloads', total, total >= 1000 ? 100 : 0);
+      var rel = list.filter(function (x) { return !x.draft && !x.prerelease; })[0];
       if (!rel || !rel.tag_name) return;
       var v = rel.tag_name.replace(/^v/, '');
       var el = document.getElementById('latest-version');
@@ -88,6 +131,55 @@
     })
     .catch(function () { /* fallback: valores estáticos del HTML */ });
 
+  /* ── Descarga: botón principal para el sistema del visitante ───────── */
+  var primary = document.getElementById('dl-primary');
+  if (primary) {
+    var ua = navigator.userAgent;
+    var pick = /Windows/.test(ua) ? ['dl-win-btn', T.dlWin, T.dlWinSub]
+      : /Macintosh|Mac OS X/.test(ua) && !/iPhone|iPad/.test(ua) ? ['dl-mac', T.dlMac, T.dlMacSub]
+      : /Linux|X11/.test(ua) && !/Android/.test(ua) ? ['dl-flatpak', T.dlLinux, T.dlLinuxSub]
+      : null;                              // celulares: se ven todas las opciones
+    var card = pick && document.getElementById(pick[0]);
+    if (card) {
+      var pbtn = document.getElementById('dl-primary-btn');
+      pbtn.textContent = pick[1];
+      document.getElementById('dl-primary-sub').textContent = pick[2];
+      /* El enlace se lee al hacer clic: la API de GitHub lo actualiza después. */
+      pbtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        window.location.href = card.href;
+        thanks();
+      });
+      primary.hidden = false;
+    }
+  }
+
+  /* ── Tras descargar: gracias y una invitación a apoyar ─────────────── */
+  var thanksShown = false;
+  function thanks() {
+    if (thanksShown) return;
+    thanksShown = true;
+    var box = document.createElement('div');
+    box.className = 'dl-thanks';
+    box.setAttribute('role', 'status');
+    var txt = document.createElement('div');
+    var h = document.createElement('strong'); h.textContent = T.thanks;
+    var p = document.createElement('span'); p.textContent = T.thanksSub;
+    txt.appendChild(h); txt.appendChild(p);
+    var a = document.createElement('a');
+    a.className = 'btn btn-primary btn-sm'; a.href = T.support; a.textContent = '\u2661 ' + T.thanksBtn;
+    var x = document.createElement('button');
+    x.type = 'button'; x.className = 'dl-thanks-close'; x.setAttribute('aria-label', T.close);
+    x.textContent = '\u00d7';
+    x.addEventListener('click', function () { box.classList.remove('show'); });
+    box.appendChild(txt); box.appendChild(a); box.appendChild(x);
+    document.body.appendChild(box);
+    setTimeout(function () { box.classList.add('show'); }, 600);
+  }
+  document.querySelectorAll('a.dl-card').forEach(function (c) {
+    c.addEventListener('click', thanks);
+  });
+
   /* ── Menú móvil ─────────────────────────────────────────────────────── */
   var toggle = document.querySelector('.nav-toggle');
   var links = document.querySelector('.nav-links');
@@ -120,6 +212,10 @@
   var lightbox = document.getElementById('lightbox');
   if (lightbox) {
     var lbImg = lightbox.querySelector('img');
+    /* Leyenda de la captura: el texto largo vive aquí, no junto a la imagen */
+    var lbCap = document.createElement('p');
+    lbCap.className = 'lightbox-caption';
+    lightbox.appendChild(lbCap);
     var close = function () {
       lightbox.classList.remove('open');
       lightbox.setAttribute('aria-hidden', 'true');
@@ -128,6 +224,8 @@
       img.addEventListener('click', function () {
         lbImg.src = img.src;
         lbImg.alt = img.alt || '';
+        lbCap.textContent = img.getAttribute('data-caption') || '';
+        lbCap.hidden = !lbCap.textContent;
         lightbox.classList.add('open');
         lightbox.setAttribute('aria-hidden', 'false');
       });
