@@ -887,8 +887,8 @@ code {
 
 /* ============ Botón de apoyo bajo «Libre para siempre» ============ */
 .impact-support { margin-top: 32px; }
-.support-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-.support-ctas span { font-size: 13px; color: rgba(255,255,255,0.6); }
+.support-ctas { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.support-ctas span { font-size: 13.5px; line-height: 1.55; color: rgba(255,255,255,0.65); }
 
 /* ============ Descarga: botón para tu sistema ============ */
 .dl-primary { margin: -16px auto 40px; }
