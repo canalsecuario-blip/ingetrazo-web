@@ -1000,3 +1000,6 @@ code {
 .final-cta-dl:hover { background: #F0F6FE; color: var(--accent-dk); }
 .final-cta-man { background: rgba(255,255,255,0.14); color: var(--white); }
 .final-cta-man:hover { background: rgba(255,255,255,0.24); color: var(--white); }
+
+/* ============ Pie: botón Apoyar ============ */
+.footer-support { margin: 8px 0 6px; box-shadow: none; }
