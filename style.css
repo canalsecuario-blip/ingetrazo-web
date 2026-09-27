@@ -124,15 +124,16 @@ code {
 .nav-links > a:hover { color: var(--head); }
 .nav-links > a[href*="apoyar"] {          /* Apoyar: píldora suave con corazón que late */
   display: inline-flex; align-items: center; gap: 7px;
-  background: var(--accent-soft); color: var(--accent-dk); font-weight: 600;
+  background: var(--accent); color: var(--white); font-weight: 600;
   padding: 7px 15px 7px 12px; border-radius: 999px;
 }
+.nav-links > a[href*="apoyar"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") !important; }
 .nav-links > a[href*="apoyar"]::before,
 .btn-heart::before {
   content: ''; width: 15px; height: 15px; flex: none;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23E5484D' d='M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
-.nav-links > a[href*="apoyar"]:hover { background: #D6E7FB; color: var(--accent-dk); }
+.nav-links > a[href*="apoyar"]:hover { background: var(--accent-dk); color: var(--white); }
 .nav-links > a[href*="apoyar"]:hover::before,
 .btn-heart:hover::before { animation: latido 0.9s ease; }
 @keyframes latido {
@@ -259,8 +260,8 @@ code {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   animation: hero-fade-up 0.8s 0.3s ease both;
 }
-.hero .btn-primary { background: rgba(255,255,255,0.92); color: #000; }
-.hero .btn-primary:hover { background: var(--white); color: #000; }
+.hero .btn-primary { background: var(--accent); color: var(--white); box-shadow: 0 6px 20px rgba(54,137,230,0.4); }
+.hero .btn-primary:hover { background: var(--accent-dk); color: var(--white); }
 .hero .btn-ghost { background: rgba(255,255,255,0.12); color: var(--white); }
 .hero .btn-ghost:hover { background: rgba(255,255,255,0.2); color: var(--white); }
 @keyframes hero-fade-up {
@@ -876,31 +877,10 @@ code {
 .hero-version a:hover { color: var(--white); }
 .hero-sub code { background: rgba(255,255,255,0.14); color: var(--white); }
 
-/* ============ Apoyo, dentro de «Libre para siempre» ============ */
-.impact-support {
-  display: flex; align-items: center; justify-content: space-between; gap: 48px;
-  margin-top: 48px; padding-top: 40px;
-  border-top: 1px solid rgba(255,255,255,0.12);
-}
-.impact-support-text { max-width: 680px; }
-.impact-support h3 {
-  font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2; font-weight: 700;
-  color: var(--white); letter-spacing: -0.01em; margin-bottom: 12px;
-}
-.impact .impact-support p { font-size: 16px; color: rgba(255,255,255,0.78); margin-bottom: 12px; }
-.impact-support p strong { color: var(--white); }
-.support-goal {
-  display: inline-block; margin-top: 4px; padding: 10px 14px;
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 10px; font-size: 15px !important;
-}
-.support-goal strong { color: var(--teal) !important; }
-.support-ctas { display: flex; flex-direction: column; align-items: center; gap: 10px; flex: none; text-align: center; }
-.support-ctas span { font-size: 13px; color: rgba(255,255,255,0.6); max-width: 260px; }
-@media (max-width: 860px) {
-  .impact-support { flex-direction: column; align-items: flex-start; gap: 28px; }
-  .support-ctas { align-items: flex-start; text-align: left; }
-}
+/* ============ Botón de apoyo bajo «Libre para siempre» ============ */
+.impact-support { margin-top: 32px; }
+.support-ctas { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+.support-ctas span { font-size: 13px; color: rgba(255,255,255,0.6); }
 
 /* ============ Descarga: botón para tu sistema ============ */
 .dl-primary { margin: -16px auto 40px; }
@@ -996,14 +976,6 @@ code {
   .steps-row { grid-template-columns: 1fr; gap: 12px; }
   .step + .step::before { content: '↓'; left: 26px; top: -17px; }
 }
-
-/* ============ Barra: Descargar como botón principal ============ */
-.nav-links > a[href$="#descargar"] {
-  background: var(--accent); color: var(--white); font-weight: 600;
-  padding: 7px 15px; border-radius: 999px;
-}
-.nav-links > a[href$="#descargar"]:hover { background: var(--accent-dk); color: var(--white); }
-@media (max-width: 900px) { .nav-links.open > a[href$="#descargar"] { align-self: flex-start; } }
 
 /* ============ Franja final ============ */
 .final-cta {
