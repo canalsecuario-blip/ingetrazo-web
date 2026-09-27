@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Pone en el HTML la versión publicada más reciente de IngeTrazo.
 
-script.js la trae en vivo desde GitHub, pero si esa consulta falla (GitHub
+script.js la trae en vivo desde GitHub (también la ficha de software
+y la fecha del sitemap se ponen al día aquí), pero si esa consulta falla (GitHub
 la limita a 60 por hora por IP) la página muestra lo que dice el HTML.
 Correr esto antes de cada `wrangler deploy` evita que se vea una versión vieja:
 
@@ -37,9 +38,20 @@ for nombre, meses in MESES.items():
     s = re.sub(r'(<span id="latest-version">)v[^<]*', rf'\g<1>v{v}', s)
     s = re.sub(r'(<span id="dl-version">)[^<]*', rf'\g<1>{v}', s)
     s = re.sub(r'(<span id="dl-date">)[^<]*', rf'\g<1>{fecha}', s)
+    s = re.sub(r'("softwareVersion": ")[^"]*', rf'\g<1>{v}', s)
     # nombres de archivo en los comandos copiables de AppImage y tar.gz
     s = re.sub(r'IngeTrazo-\d+(?:\.\d+)+(-x86_64\.AppImage|-linux-x86_64\.tar\.gz|/ingetrazo)',
                rf'IngeTrazo-{v}\1', s)
     with open(f, 'w', encoding='utf-8', newline='') as h:
         h.write(s)
     print(f'{nombre}: v{v} · {fecha}')
+
+# sitemap: la página cambió hoy
+import datetime
+f = raiz / 'sitemap.xml'
+with open(f, encoding='utf-8', newline='') as h:
+    s = h.read()
+s = re.sub(r'<lastmod>[^<]*</lastmod>', f'<lastmod>{datetime.date.today().isoformat()}</lastmod>', s)
+with open(f, 'w', encoding='utf-8', newline='') as h:
+    h.write(s)
+print('sitemap.xml: lastmod al día')

@@ -76,7 +76,7 @@ code {
 @media (max-width: 560px) { .container { padding: 0 20px; } }
 
 /* ============ Secciones de color a sangre (de borde a borde) ============ */
-.feat-bim, .feat-terra, .bridge, .impact, .support, .download-section, .section {
+.feat-bim, .feat-terra, .bridge, .impact, .download-section, .section {
   width: 100%;
   margin: 0;
   overflow: hidden;
@@ -202,9 +202,9 @@ code {
   object-fit: cover; object-position: 40% 60%;
   animation: hero-bg-in 1.6s ease both;
 }
-@keyframes hero-bg-in {
-  from { opacity: 0; transform: scale(1.05); }
-  to   { opacity: 1; transform: scale(1); }
+@keyframes hero-bg-in {            /* solo movimiento: la imagen se ve desde el primer cuadro */
+  from { transform: scale(1.04); }
+  to   { transform: scale(1); }
 }
 .hero-center {
   width: 100%;
@@ -245,8 +245,8 @@ code {
 .hero .btn-ghost { background: rgba(255,255,255,0.12); color: var(--white); }
 .hero .btn-ghost:hover { background: rgba(255,255,255,0.2); color: var(--white); }
 @keyframes hero-fade-up {
-  from { opacity: 0; transform: translateY(24px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { transform: translateY(14px); }
+  to   { transform: translateY(0); }
 }
 .hero-version { display: block; width: 100%; margin-top: 8px; font-size: 13px; color: rgba(255,255,255,0.55); }
 #latest-version { font-weight: 600; color: rgba(255,255,255,0.85); }
@@ -521,8 +521,8 @@ code {
 }
 .impact::after {                      /* hexágonos decorativos, como en blender.org */
   content: '';
-  position: absolute; right: max(32px, calc((100% - 1180px) / 2 + 32px)); top: 50%;
-  width: 150px; height: 170px; transform: translateY(-50%);
+  position: absolute; right: max(32px, calc((100% - 1180px) / 2 + 32px)); top: 88px;
+  width: 150px; height: 170px;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 170'%3E%3Cpath d='M70 6l38 22v44l-38 22-38-22V28z' fill='%2346EBC2'/%3E%3Cpath d='M36 104l24 14v28l-24 14-24-14v-28z' fill='%2346EBC2' opacity='.75'/%3E%3Cpath d='M112 112l18 10.5v21L112 154l-18-10.5v-21z' fill='%2346EBC2' opacity='.5'/%3E%3C/svg%3E") center / contain no-repeat;
   opacity: 0.9;
 }
@@ -857,29 +857,29 @@ code {
 .hero-version a:hover { color: var(--white); }
 .hero-sub code { background: rgba(255,255,255,0.14); color: var(--white); }
 
-/* ============ Franja de apoyo ============ */
-/* violeta, como el «It's about people» de blender.org */
-.support { padding: 72px 0; background: #F3EEFD; }
-.support .btn-primary { background: #7443D9; box-shadow: 0 6px 18px rgba(116,67,217,0.3); }
-.support .btn-primary:hover { background: #5B2FBF; }
-.support-row { display: flex; align-items: center; justify-content: space-between; gap: 48px; }
-.support-text { max-width: 680px; }
-.support h2 {
-  font-size: clamp(26px, 3.4vw, 40px); line-height: 1.1; font-weight: 800;
-  color: #6231C9; letter-spacing: -0.02em; margin-bottom: 14px;
+/* ============ Apoyo, dentro de «Libre para siempre» ============ */
+.impact-support {
+  display: flex; align-items: center; justify-content: space-between; gap: 48px;
+  margin-top: 48px; padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.12);
 }
-.support p { font-size: 16.5px; color: var(--text); line-height: 1.6; margin-bottom: 10px; }
+.impact-support-text { max-width: 680px; }
+.impact-support h3 {
+  font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2; font-weight: 700;
+  color: var(--white); letter-spacing: -0.01em; margin-bottom: 12px;
+}
+.impact .impact-support p { font-size: 16px; color: rgba(255,255,255,0.78); margin-bottom: 12px; }
+.impact-support p strong { color: var(--white); }
 .support-goal {
   display: inline-block; margin-top: 4px; padding: 10px 14px;
-  background: var(--white); border-radius: 10px; box-shadow: var(--shadow);
-  font-size: 15px !important;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 10px; font-size: 15px !important;
 }
-.support-goal strong { color: #6231C9; }
+.support-goal strong { color: var(--teal) !important; }
 .support-ctas { display: flex; flex-direction: column; align-items: center; gap: 10px; flex: none; text-align: center; }
-.support-ctas span { font-size: 13px; color: var(--muted); max-width: 260px; }
+.support-ctas span { font-size: 13px; color: rgba(255,255,255,0.6); max-width: 260px; }
 @media (max-width: 860px) {
-  .support { padding: 56px 0; }
-  .support-row { flex-direction: column; align-items: flex-start; gap: 28px; }
+  .impact-support { flex-direction: column; align-items: flex-start; gap: 28px; }
   .support-ctas { align-items: flex-start; text-align: left; }
 }
 
@@ -917,3 +917,25 @@ code {
   max-width: min(900px, 95vw); color: rgba(255,255,255,0.85);
   font-size: 14px; line-height: 1.55; text-align: center; cursor: default;
 }
+
+/* ============ «Y además»: IA, componentes y SketchUp ============ */
+.more-title {
+  font-size: clamp(26px, 3vw, 36px); line-height: 1.1; font-weight: 800;
+  color: var(--head); letter-spacing: -0.02em; margin-bottom: 32px;
+}
+.more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.more-card {
+  background: var(--card); border-radius: 14px; overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.more-img { background: var(--night); }
+.more-img img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center top; }
+.more-body { padding: 22px 22px 18px; }
+.more-body h3 {
+  font-size: 20px; line-height: 1.25; font-weight: 700; color: var(--head);
+  letter-spacing: -0.01em; margin-bottom: 10px;
+}
+.more-body > p { font-size: 15px; line-height: 1.6; color: var(--text); margin-bottom: 8px; }
+.more-body .feat-list { margin: 10px 0 6px; }
+.more-body .feat-list li { font-size: 14px; }
+@media (max-width: 960px) { .more-grid { grid-template-columns: 1fr; max-width: 640px; } }

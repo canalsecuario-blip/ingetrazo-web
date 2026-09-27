@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0B1220">
 
-  <title>IngeTrazo · Free 3D modeler for architecture, engineering and design</title>
+  <title>IngeTrazo · Free 3D modeler for architecture and engineering</title>
 
-  <meta name="description" content="Free, SketchUp-style 3D modeler with optional BIM: draw as if by hand, tag walls, slabs and columns, get the quantity takeoff and export IFC. 3D satellite terrain and profiles. Linux, Windows and macOS. Open source, GPL-3.0.">
+  <meta name="description" content="Free SketchUp-style 3D modeler: open and save .skp, tag BIM, get quantity takeoffs, export IFC and PDF drawings. Linux, Windows and macOS. Open source.">
   <meta name="keywords" content="free 3D modeler, SketchUp alternative, SketchUp for Linux, free BIM, IFC export, quantity takeoff, civil engineering software, 3D design, 3D modeling, Linux CAD, 3D terrain, longitudinal profile, open source, GPL">
   <meta name="author" content="Ing. Marco Sumari">
 
@@ -18,7 +18,7 @@
   <link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/">
 
   <meta property="og:site_name" content="IngeTrazo">
-  <meta property="og:title" content="IngeTrazo · Free 3D modeler for architecture, engineering and design">
+  <meta property="og:title" content="IngeTrazo · Free 3D modeler for architecture and engineering">
   <meta property="og:description" content="Draw as if by hand, tag BIM, get the quantity takeoff and export IFC. 3D satellite terrain. Free and open source (GPL-3.0). Linux, Windows and macOS.">
   <meta property="og:image" content="https://ingetrazo.com/images/og-banner.jpg">
   <meta property="og:image:width" content="1200">
@@ -28,7 +28,7 @@
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IngeTrazo · Free 3D modeler for architecture, engineering and design">
+  <meta name="twitter:title" content="IngeTrazo · Free 3D modeler for architecture and engineering">
   <meta name="twitter:description" content="Draw as if by hand, tag BIM, get the quantity takeoff and export IFC. Free and open source. Linux, Windows and macOS.">
   <meta name="twitter:image" content="https://ingetrazo.com/images/og-banner.jpg">
 
@@ -51,6 +51,9 @@
     "applicationCategory": "DesignApplication",
     "description": "Free, SketchUp-style 3D modeler for architecture, civil engineering and 3D design, with BIM as an optional layer: tag geometry as walls, slabs or columns, get quantities (takeoff) and export IFC 4. Includes a library of 1,510 components and 427 real-size textures with the 213 RAL Classic colors, sheet composition with drawings at exact scale and PDF export, 3D satellite terrain, drone photogrammetry surveys, longitudinal profiles, and native SketchUp models: opens .skp files from every version and saves to .skp (also .dae, .obj, glTF, STL). Open source under GPL-3.0.",
     "url": "https://ingetrazo.com/en/",
+    "softwareVersion": "0.5.4",
+    "downloadUrl": "https://github.com/ingelibre/ingetrazo/releases/latest",
+    "screenshot": "https://ingetrazo.com/images/screenshots/principal.jpeg",
     "image": "https://ingetrazo.com/images/logo.png",
     "author": {
       "@type": "Person",
@@ -311,76 +314,62 @@
       </div>
     </section>
 
-    <!-- ── Modela con la IA ── -->
-    <section class="feat reveal">
-      <div class="container feat-row feat-reverse">
-        <div class="feat-text">
-          <h2>Model with AI, inside the app or from Claude</h2>
-          <p>Describe what you want —or attach a photo— and the AI writes the <strong>recipe</strong>: revolves, extrusions, Python over IngeTrazo's action API. The deterministic engine runs it: <strong>every step is one undo</strong>, every recipe goes through the watertightness guard, and the model is still yours, editable by hand.</p>
-          <ul class="feat-list">
-            <li><strong>Built-in AI Assistant</strong> (Extensions ▸ AI Assistant, Ctrl+Shift+A) — a chat with your own key: Groq (with a free tier), Gemini, OpenAI, Anthropic, OpenRouter, DeepSeek or a local model with Ollama. No accounts, no middlemen</li>
-            <li><strong>It sees what it does</strong> — it gets viewport screenshots and corrects based on what it sees; with <strong>Photo…</strong> it rebuilds what an image shows, using the measurements you give it</li>
-            <li><strong>MCP bridge for Claude Desktop and Claude Code</strong> — the agent draws, queries and sees the model <em>live, in the open app</em>; one undo step per action and, if its code fails, the document comes back intact</li>
-            <li><strong>No black box</strong> — the AI never writes meshes: it generates recipes over the same engine you use by hand, and everything goes into the history</li>
-          </ul>
-          <p class="feat-muted"><a href="https://ingetrazo-docs.pages.dev/ia/" target="_blank" rel="noopener">Step-by-step guide in the manual (Spanish) →</a></p>
-        </div>
-        <div class="feat-imgs">
-          <figure class="feat-img">
+    <!-- ── Y además: IA, componentes y SketchUp ── -->
+    <section class="feat more reveal">
+      <div class="container">
+        <h2 class="more-title">And there’s more</h2>
+        <div class="more-grid">
+        <article class="more-card">
+          <figure class="more-img">
             <img class="zoomable" src="/images/screenshots/mcp-claude.webp"
                  data-caption="The MCP bridge on an uncropped Ubuntu desktop. Claude Code in the terminal has just drawn, in the app open next to it, a 1.40 × 0.80 × 0.75 m dining table with four chairs (0.45 × 0.45 seat at 0.45 m, backrest at 0.90 m) —“a table with 4 chairs, standard measurements”— and answers with the table of dimensions it used; on the right, the bridge dialog with the connection line. How it's done: Extensions ▸ AI Bridge (MCP), copy the line it shows you, paste it into the terminal (claude mcp add ingetrazo -- …) or into Claude Desktop's configuration, and ask for whatever you want with IngeTrazo open."
                  alt="Full Ubuntu desktop: Claude Code in a terminal on the left listing the measurements of the table with four chairs it just drew, and IngeTrazo on the right with the model and the AI Bridge (MCP) dialog open" width="1600" height="1000" loading="lazy">
           </figure>
-          <figure class="feat-img">
-            <img class="zoomable" src="/images/screenshots/asistente-ia.webp"
-                 data-caption="The AI Assistant, its dialog open over the solar light pole from the examples (also designed through the bridge). How it's done: Extensions ▸ AI Assistant (Ctrl+Shift+A), paste your provider's key, type the request with its measurements —or attach a photo— and Send; every step undoes with Ctrl+Z. Other modelers sell this as a subscription; here it's free and you use whichever key you choose."
-                 alt="IngeTrazo's AI Assistant open over a solar street-light pole modeled with recipes: provider, key, viewport screenshots and the typed request" width="1600" height="965" loading="lazy">
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 5. Import SketchUp ── -->
-    <!-- ── Biblioteca de componentes y materiales ── -->
-    <section class="feat reveal">
-      <div class="container feat-row">
-        <div class="feat-text">
-          <h2>Populating a scene shouldn't cost you the afternoon</h2>
-          <p>A model makes sense once it has people next to it, a tree and a car. IngeTrazo brings <strong>1,510 components</strong> one click away and <strong>427 textures</strong> — and each one arrives <strong>at its real size</strong>, not whatever size it happens to get.</p>
-          <ul class="feat-list">
-            <li><strong>1,510 models online</strong> — furniture, doors, windows, trees, vehicles and people. Browsing costs kilobytes: only the one you click is downloaded, and it's kept</li>
-            <li><strong>Offline too</strong> — eight models and six scale figures come inside the program</li>
-            <li><strong>427 textures at their real size</strong> — a brick looks like brick because the catalog says how big it is, not because you eyeballed it</li>
-            <li><strong>213 RAL Classic colors</strong> — paint with <em>RAL 7035 Light grey</em> and the drawing carries a reference a painter can actually buy, not three numbers</li>
-            <li><strong>Scale figures at their true height</strong> — to tell at a glance whether that door is 2.10 m</li>
-          </ul>
-          <p class="feat-muted">All the content comes from the free <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> library (CC0, CC BY and Free Art License); IngeTrazo always shows the license and author of each piece.</p>
-        </div>
-        <figure class="feat-img">
+          <div class="more-body">
+            <h3>Model with AI, inside the app or from Claude</h3>
+            <p>Describe what you want —or attach a photo— and the AI writes the <strong>recipe</strong>: revolves, extrusions, Python over IngeTrazo's action API. The deterministic engine runs it: <strong>every step is one undo</strong>, every recipe goes through the watertightness guard, and the model is still yours, editable by hand.</p>
+            <ul class="feat-list">
+              <li><strong>Built-in AI Assistant</strong> (Extensions ▸ AI Assistant, Ctrl+Shift+A) — a chat with your own key: Groq (with a free tier), Gemini, OpenAI, Anthropic, OpenRouter, DeepSeek or a local model with Ollama. No accounts, no middlemen</li>
+              <li><strong>It sees what it does</strong> — it gets viewport screenshots and corrects based on what it sees; with <strong>Photo…</strong> it rebuilds what an image shows, using the measurements you give it</li>
+              <li><strong>MCP bridge for Claude Desktop and Claude Code</strong> — the agent draws, queries and sees the model <em>live, in the open app</em>; one undo step per action and, if its code fails, the document comes back intact</li>
+            </ul>
+            <p class="feat-muted"><a href="https://ingetrazo-docs.pages.dev/ia/" target="_blank" rel="noopener">Step-by-step guide in the manual (Spanish) →</a></p>
+          </div>
+        </article>
+        <article class="more-card">
+          <figure class="more-img">
           <img class="zoomable" src="/images/screenshots/componentes.webp"
                data-caption="A SketchUp model opened with its textures and two figures placed, with the components tray on the right."
                alt="IngeTrazo with an urban model opened from SketchUp: two scale figures on the waterfront promenade and the components tray with furniture, trees and vehicles" width="1600" height="1005" loading="lazy">
         </figure>
-      </div>
-    </section>
-
-    <section class="feat feat-alt reveal">
-      <div class="container feat-row">
-        <div class="feat-text">
-          <h2>Open and save your SketchUp files</h2>
-          <p>Your years-long library doesn't get left behind — and neither do your colleagues: IngeTrazo opens <code>.skp</code> directly and <strong>saves to .skp</strong> whatever you model, thanks to <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, the free reader/writer for the SketchUp format — no converters, no extra installs.</p>
-          <ul class="feat-list">
-            <li><strong>Native SketchUp (.skp) import</strong> — every version, from the old ones (2013) to the current ones</li>
-            <li><strong>With everything inside</strong> — groups, components, materials, textures, layers, scenes, dimensions and leader texts</li>
-            <li><strong>Export to .skp</strong> — your model opens in SketchUp with its groups, named materials, dimensions and texts</li>
-            <li><strong>Plus OBJ, COLLADA, glTF, STL</strong> and <strong>IFC</strong></li>
-          </ul>
-        </div>
-        <figure class="feat-img">
+          <div class="more-body">
+            <h3>Populating a scene shouldn't cost you the afternoon</h3>
+            <p>A model makes sense once it has people next to it, a tree and a car. IngeTrazo brings <strong>1,510 components</strong> one click away and <strong>427 textures</strong> — and each one arrives <strong>at its real size</strong>, not whatever size it happens to get.</p>
+            <ul class="feat-list">
+              <li><strong>1,510 models online</strong> — furniture, doors, windows, trees, vehicles and people. Browsing costs kilobytes: only the one you click is downloaded, and it's kept</li>
+              <li><strong>Offline too</strong> — eight models and six scale figures come inside the program</li>
+              <li><strong>427 textures at their real size</strong> — a brick looks like brick because the catalog says how big it is, not because you eyeballed it</li>
+            </ul>
+            <p class="feat-muted">All the content comes from the free <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> library (CC0, CC BY and Free Art License); IngeTrazo always shows the license and author of each piece.</p>
+          </div>
+        </article>
+        <article class="more-card">
+          <figure class="more-img">
           <img class="zoomable" src="/images/screenshots/import-sketchup.webp"
                data-caption="A real park opened from its .skp — play equipment, stands and roofing, with its original layers. IngeTrazo contributes code to OpenSKP: every file it opens here improves the free reader for everyone."
                alt="Children's park opened from its .skp file: play equipment, stands and roofing, with the original SketchUp layers" width="1600" height="1005" loading="lazy">
         </figure>
+          <div class="more-body">
+            <h3>Open and save your SketchUp files</h3>
+            <p>Your years-long library doesn't get left behind — and neither do your colleagues: IngeTrazo opens <code>.skp</code> directly and <strong>saves to .skp</strong> whatever you model, thanks to <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, the free reader/writer for the SketchUp format — no converters, no extra installs.</p>
+            <ul class="feat-list">
+              <li><strong>Native SketchUp (.skp) import</strong> — every version, from the old ones (2013) to the current ones</li>
+              <li><strong>With everything inside</strong> — groups, components, materials, textures, layers, scenes, dimensions and leader texts</li>
+              <li><strong>Export to .skp</strong> — your model opens in SketchUp with its groups, named materials, dimensions and texts</li>
+            </ul>
+          </div>
+        </article>
+        </div>
       </div>
     </section>
 
@@ -425,14 +414,10 @@
   <section class="impact">
     <h2>Free and open source.<br>Forever.</h2>
     <p>IngeTrazo is free software under the GPL-3.0. No accounts, no mandatory cloud, no subscriptions: your models live on your computer, in an open format you'll always be able to read. Made in Peru for engineers, architects and designers across Latin America and beyond.</p>
-  </section>
-
-  <!-- ============ APOYO ============ -->
-  <section class="support reveal">
-    <div class="container support-row">
-      <div class="support-text">
-        <h2>Made by one person.<br>Sustained by the people who use it.</h2>
-        <p>IngeTrazo is developed by Marco Sumari, a civil engineer, on nights and weekends, and shared as free software. If it saves you hours of work, a contribution keeps it growing.</p>
+    <div class="impact-support">
+      <div class="impact-support-text">
+        <h3>Created by Marco Sumari. Sustained by the people who use it.</h3>
+        <p>Marco, a civil engineer, builds it on nights and weekends, and <strong data-stat="contributors">7</strong> people have already contributed code on GitHub. If IngeTrazo saves you hours of work, a contribution keeps it growing.</p>
         <p class="support-goal"><strong>Next goal:</strong> sign the Windows and macOS installers, so they install without security warnings.</p>
       </div>
       <div class="support-ctas">
@@ -441,6 +426,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- ============ DESCARGAR ============ -->
   <section id="descargar" class="download-section">
@@ -690,7 +676,7 @@ IngeTrazo-0.5.4/ingetrazo</code>
   <!-- Lightbox para ampliar capturas -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" type="button" aria-label="Close">×</button>
-    <img src="" alt="">
+    <img alt="">
   </div>
 
   <script src="/script.js"></script>

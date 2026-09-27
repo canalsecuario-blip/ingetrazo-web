@@ -58,6 +58,10 @@
     .then(function (r) { return r.ok ? r.json() : null; })
     .then(function (repo) { if (repo) setStat('stars', repo.stargazers_count); })
     .catch(function () {});
+  fetch('https://api.github.com/repos/ingelibre/ingetrazo/contributors?per_page=100')
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .then(function (list) { if (list && list.length) setStat('contributors', list.length); })
+    .catch(function () {});
 
   /* ── Versión + fecha desde GitHub Releases ─────────────────────────── */
   /* Una sola consulta trae la última versión y las descargas de todas. */
