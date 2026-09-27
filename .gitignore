@@ -16,3 +16,6 @@ biblioteca/
 # desde el .flatpak publicado, ver CLAUDE.md. Wrangler SÍ lo publica: no
 # añadirlo a .assetsignore. El descriptor ingetrazo.flatpakrepo sí va en git.
 flatpak/repo/
+
+# Notas privadas de trabajo: solo en la máquina del mantenedor
+CLAUDE.md
