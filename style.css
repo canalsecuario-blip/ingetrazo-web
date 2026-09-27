@@ -20,7 +20,7 @@
   --lime-soft:   #E9F4DE;   /* sección Terreno */
   --lime:        #68B723;
   --lime-dk:     #3F7F12;
-  --canvas:      #292D32;   /* lienzo entre tarjetas */
+  --canvas:      #FFFFFF;   /* lienzo entre tarjetas */
   --night:       #1B1D21;   /* tarjetas oscuras */
   --card:        #F0F1F3;   /* tarjetas claras */
   --head:        #2E3035;
@@ -199,8 +199,8 @@ code {
 .hero-screenshot-wrap::after {        /* velo para leer el texto */
   content: ''; position: absolute; inset: 0;
   background:
-    linear-gradient(90deg, rgba(20,22,26,0.94) 0%, rgba(20,22,26,0.82) 34%, rgba(20,22,26,0.35) 66%, rgba(20,22,26,0.1) 100%),
-    linear-gradient(0deg, rgba(20,22,26,0.55) 0%, transparent 35%);
+    linear-gradient(90deg, rgba(20,22,26,0.82) 0%, rgba(20,22,26,0.6) 36%, rgba(20,22,26,0.12) 68%, transparent 100%),
+    linear-gradient(0deg, rgba(20,22,26,0.35) 0%, transparent 30%);
 }
 .hero-img {
   /* más ancha que la portada: el panel lateral de la app queda fuera
@@ -682,9 +682,10 @@ code {
 .faq-item p { padding: 0 20px 18px; color: var(--text); font-size: 15px; line-height: 1.65; }
 .faq-item p strong { color: var(--head); }
 
-/* ============ Footer (sobre el lienzo) ============ */
+/* ============ Footer ============ */
 .footer {
-  background: transparent; color: rgba(255,255,255,0.7);
+  margin-top: 16px;
+  background: var(--night); color: rgba(255,255,255,0.7);
   padding: 56px 0 36px; font-size: 14px;
 }
 .footer-grid {
