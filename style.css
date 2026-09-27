@@ -273,7 +273,7 @@ code {
 @media (max-width: 760px) {
   .hero { min-height: 0; padding: 72px 0 64px; }
   /* en vertical la foto entra por la altura: sube la barra de menús fuera */
-  .hero-img { width: 100%; height: calc(100% + 64px); margin-top: -64px; object-position: 35% center; }
+  .hero-img { width: 100%; height: calc(100% + 110px); margin-top: -110px; object-position: 35% center; }
   .hero-screenshot-wrap::after {
     background: linear-gradient(0deg, rgba(20,22,26,0.96) 0%, rgba(20,22,26,0.82) 60%, rgba(20,22,26,0.6) 100%);
   }
@@ -958,3 +958,65 @@ code {
 .more-body .feat-list { margin: 10px 0 6px; }
 .more-body .feat-list li { font-size: 14px; }
 @media (max-width: 960px) { .more-grid { grid-template-columns: 1fr; max-width: 640px; } }
+
+/* ============ Portada: tres puntos con ✓ ============ */
+.hero-checks { margin: 0 0 18px; display: grid; gap: 8px; }
+.hero-checks li {
+  position: relative; padding-left: 30px;
+  font-size: clamp(15.5px, 1.6vw, 18px); line-height: 1.45; color: rgba(255,255,255,0.86);
+}
+.hero-checks li strong { color: var(--white); font-weight: 600; }
+.hero-checks li::before {
+  content: ''; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(70,235,194,0.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2346EBC2' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M4 8.5l2.6 2.5L12 5.5'/%3E%3C/svg%3E") center / 13px no-repeat;
+}
+.hero-checks code { background: rgba(255,255,255,0.14); color: var(--white); }
+.hero-platforms { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 26px; }
+
+/* ============ Del boceto a la obra en 3 pasos ============ */
+.steps { padding: 72px 0 8px; }
+.steps h2 {
+  font-size: clamp(26px, 3vw, 36px); line-height: 1.1; font-weight: 800;
+  color: var(--head); letter-spacing: -0.02em; margin-bottom: 28px;
+}
+.steps-row { list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; counter-reset: none; }
+.step { position: relative; padding: 24px 24px 22px; background: var(--card); border-radius: 14px; }
+.step + .step::before {                 /* flecha entre pasos */
+  content: '→'; position: absolute; left: -17px; top: 26px;
+  font-size: 18px; font-weight: 700; color: var(--accent);
+}
+.step-n {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 50%; margin-bottom: 12px;
+  background: var(--accent); color: var(--white); font-weight: 800; font-size: 16px;
+}
+.step h3 { font-size: 20px; font-weight: 700; color: var(--head); margin-bottom: 6px; }
+.step p { font-size: 15px; line-height: 1.55; color: var(--text); }
+@media (max-width: 860px) {
+  .steps-row { grid-template-columns: 1fr; gap: 12px; }
+  .step + .step::before { content: '↓'; left: 26px; top: -17px; }
+}
+
+/* ============ Barra: Descargar como botón principal ============ */
+.nav-links > a[href$="#descargar"] {
+  background: var(--accent); color: var(--white); font-weight: 600;
+  padding: 7px 15px; border-radius: 999px;
+}
+.nav-links > a[href$="#descargar"]:hover { background: var(--accent-dk); color: var(--white); }
+@media (max-width: 900px) { .nav-links.open > a[href$="#descargar"] { align-self: flex-start; } }
+
+/* ============ Franja final ============ */
+.final-cta {
+  padding: 80px 0; text-align: center;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dk) 100%);
+}
+.final-cta h2 {
+  font-size: clamp(30px, 4.4vw, 48px); line-height: 1.05; font-weight: 800;
+  color: var(--white); letter-spacing: -0.02em; margin-bottom: 12px;
+}
+.final-cta p { font-size: 17px; color: rgba(255,255,255,0.88); margin-bottom: 28px; }
+.final-cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.final-cta-dl { background: var(--white); color: var(--accent-dk); font-weight: 600; }
+.final-cta-dl:hover { background: #F0F6FE; color: var(--accent-dk); }
+.final-cta-man { background: rgba(255,255,255,0.14); color: var(--white); }
+.final-cta-man:hover { background: rgba(255,255,255,0.24); color: var(--white); }
