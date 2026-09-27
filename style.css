@@ -35,7 +35,6 @@
   --slate-300:   var(--muted);
   --silver-100:  var(--card);
   --radius:      12px;
-  --radius-card: 24px;
   --radius-sm:   6px;
   --shadow:      0 1px 3px rgba(0,0,0,0.08);
   --shadow-img:  0 10px 30px rgba(0,0,0,0.14);
@@ -262,13 +261,6 @@ code {
   animation: hero-fade-up 0.8s 0.08s ease both;
 }
 .grad-text { color: var(--accent-lt); }
-.hero-sub {
-  font-size: clamp(16px, 1.9vw, 20px);
-  color: rgba(255,255,255,0.86);
-  line-height: 1.5;
-  margin-bottom: 30px;
-  animation: hero-fade-up 0.8s 0.18s ease both;
-}
 .hero-ctas {
   display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
   animation: hero-fade-up 0.8s 0.3s ease both;
@@ -935,7 +927,6 @@ code {
 
 .hero-version a { color: rgba(255,255,255,0.85); text-decoration: underline; text-underline-offset: 3px; }
 .hero-version a:hover { color: var(--white); }
-.hero-sub code { background: rgba(255,255,255,0.14); color: var(--white); }
 
 /* ============ Descarga: botón para tu sistema ============ */
 .dl-primary { margin: -16px auto 40px; }
