@@ -7,8 +7,8 @@
 
   <title>IngeTrazo · Modelador 3D livre para arquitetura, engenharia e design</title>
 
-  <meta name="description" content="Modelador 3D livre no estilo SketchUp com BIM opcional: desenhe como à mão, classifique paredes, lajes e pilares, obtenha o levantamento de quantitativos e exporte IFC. Terreno de satélite em 3D e perfis. Linux, Windows e macOS. Código aberto GPL-3.0.">
-  <meta name="keywords" content="modelador 3D livre, alternativa ao SketchUp, SketchUp Linux, BIM livre, exportar IFC, levantamento de quantitativos, software engenharia civil, design 3D, modelagem 3D, CAD Linux, terreno 3D, perfil longitudinal, código aberto, GPL">
+  <meta name="description" content="Modelador 3D livre com BIM opcional: desenhe como à mão, classifique paredes, lajes e pilares, obtenha o levantamento de quantitativos e exporte IFC. Terreno de satélite em 3D e perfis. Linux, Windows e macOS. Código aberto GPL-3.0.">
+  <meta name="keywords" content="modelador 3D livre, modelador 3D Linux, BIM livre, exportar IFC, levantamento de quantitativos, software engenharia civil, design 3D, modelagem 3D, CAD Linux, terreno 3D, perfil longitudinal, código aberto, GPL">
   <meta name="author" content="Ing. Marco Sumari">
 
   <link rel="canonical" href="https://ingetrazo.com/pt/">
@@ -49,7 +49,7 @@
     "name": "IngeTrazo",
     "operatingSystem": "Linux, Windows, macOS",
     "applicationCategory": "DesignApplication",
-    "description": "Modelador 3D livre no estilo SketchUp para arquitetura, engenharia civil e design 3D, com BIM como camada opcional: classifique a geometria como paredes, lajes ou pilares, obtenha os quantitativos e exporte IFC 4. Inclui biblioteca de 1510 componentes e 427 texturas em tamanho real com as 213 cores RAL Classic, composição de pranchas com desenhos em escala exata e exportação para PDF, terreno de satélite em 3D, levantamentos fotogramétricos com drone, perfis longitudinais e modelos SketchUp nativos: abre .skp de todas as versões e salva em .skp (também .dae, .obj, glTF, STL). Código aberto sob GPL-3.0.",
+    "description": "Modelador 3D livre para arquitetura, engenharia civil e design 3D, com modelagem por empurrar/puxar que parece desenhar à mão e BIM como camada opcional: classifique a geometria como paredes, lajes ou pilares, obtenha os quantitativos e exporte IFC 4. Inclui biblioteca de 1510 componentes e 427 texturas em tamanho real com as 213 cores RAL Classic, composição de pranchas com desenhos em escala exata e exportação para PDF, terreno de satélite em 3D, levantamentos fotogramétricos com drone, perfis longitudinais; abre arquivos .skp do SketchUp de todas as versões, e importa e exporta .dae, .obj, glTF e STL. Código aberto sob GPL-3.0.",
     "url": "https://ingetrazo.com/pt/",
     "image": "https://ingetrazo.com/images/logo.png",
     "author": {
@@ -83,10 +83,10 @@
       },
       {
         "@type": "Question",
-        "name": "Qual é a diferença para o SketchUp?",
+        "name": "O que torna o IngeTrazo diferente?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O desenho é tão direto quanto (empurrar/puxar, inferências, medidas exatas pelo teclado), mas o IngeTrazo é livre, roda nativamente no Linux, garante sólidos estanques próprios para o levantamento de quantitativos e acrescenta a camada BIM: você classifica a geometria e obtém quantitativos e IFC."
+          "text": "É software livre (GPL-3.0) e roda nativamente no Linux, além de Windows e macOS. Garante sólidos estanques próprios para o levantamento de quantitativos e acrescenta a camada BIM: você classifica a geometria e obtém quantitativos e IFC. Compõe pranchas em escala em PDF, traz o terreno real (satélite, elevação, drone, pontos GPS) e se conecta a assistentes de IA que desenham com o mesmo motor, cada passo podendo ser desfeito."
         }
       },
       {
@@ -94,7 +94,7 @@
         "name": "Posso abrir meus modelos do SketchUp? E salvar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim para as duas coisas, o .skp diretamente e sem conversores: Arquivo ▸ Importar ▸ SketchUp para abrir, e Arquivo ▸ Exportar ▸ SketchUp para salvar. Construído sobre o OpenSKP, o leitor/gravador livre do formato para o qual o IngeTrazo contribui — lê arquivos de todas as versões (geometria, grupos, componentes, materiais, texturas, camadas, cenas, cotas e textos com chamada) e o que você exporta abre no SketchUp com as anotações incluídas. Também importa COLLADA (.dae) e OBJ."
+          "text": "Abrir, sim: Arquivo ▸ Importar ▸ SketchUp, diretamente e sem conversores, com o OpenSKP, o leitor livre do formato para o qual o IngeTrazo contribui — lê arquivos de todas as versões (geometria, grupos, componentes, materiais, texturas, camadas, cenas, cotas e textos com chamada). Salvar em .skp, não: para levar um modelo ao SketchUp, exporte COLLADA (.dae), que o SketchUp importa. Também importa COLLADA (.dae) e OBJ."
         }
       },
       {
@@ -118,7 +118,7 @@
         "name": "Posso adicionar funções com plugins?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim, desde a versão 0.3.2 o IngeTrazo tem um menu Extensões: você copia um plugin (um arquivo Python) para sua pasta pessoal e as ferramentas dele aparecem no menu — no estilo das extensões do SketchUp. Vêm duas incluídas: Info do modelo (estatísticas, materiais e objetos BIM) e um Console Python para inspecionar e automatizar o modelo por código, tudo integrado ao desfazer."
+          "text": "Sim, desde a versão 0.3.2 o IngeTrazo tem um menu Extensões: você copia um plugin (um arquivo Python) para sua pasta pessoal e as ferramentas dele aparecem no menu. Vêm duas incluídas: Info do modelo (estatísticas, materiais e objetos BIM) e um Console Python para inspecionar e automatizar o modelo por código, tudo integrado ao desfazer."
         }
       },
       {
@@ -194,6 +194,7 @@
   <section class="hero">
     <div class="container hero-center">
       <h1>O modelador 3D livre<br>para arquitetura, engenharia e design</h1>
+      <p class="hero-name"><strong>IngeTrazo</strong>, pronuncia-se <em>in-rre-TRA-sso</em>: do espanhol <em>inge</em>(niería), “engenharia”, + <em>trazo</em>, “traço” — o traço do engenheiro.</p>
       <p class="hero-sub">Desenhe como à mão. Classifique com BIM. Exporte IFC e pranchas em PDF.<br>Nativo no Linux — também Windows e macOS. Código aberto.</p>
       <div class="hero-ctas">
         <a href="#descargar" class="btn btn-primary btn-lg">Baixe o IngeTrazo grátis</a>
@@ -217,7 +218,7 @@
           <h2>Desenhe como à mão</h2>
           <p>Desenhe linhas, retângulos, círculos e arcos; empurre uma face e você já tem um sólido. Sem camadas de complexidade CAD entre a sua ideia e o modelo.</p>
           <ul class="feat-list">
-            <li><strong>Empurrar/Puxar, Siga-me, Equidistância</strong> — o fluxo do SketchUp que você já conhece</li>
+            <li><strong>Empurrar/Puxar, Siga-me, Equidistância</strong> — você modela empurrando faces, sem menus no caminho</li>
             <li><strong>Medidas exatas pelo teclado</strong> — digite <code>3.50</code> e a linha mede 3,50 m</li>
             <li><strong>Inferências inteligentes</strong> — eixos, prolongamentos, paralelas e perpendiculares</li>
             <li><strong>Materiais, texturas e cotas</strong> em qualquer face</li>
@@ -225,7 +226,7 @@
         </div>
         <figure class="feat-img">
           <img class="zoomable" src="/images/screenshots/modelado.jpeg"
-               alt="Construção de tijolos com pilares e vigas de cobertura, cotas no modelo e Empurrar/Puxar com a medida exata no VCB" width="1600" height="1005" loading="lazy">
+               alt="Banco com pérgola de Yanque modelado no IngeTrazo, com suas cotas e duas figuras de escala: o engenheiro de capacete e o autor" width="1600" height="1005" loading="lazy">
         </figure>
       </div>
     </section>
@@ -263,7 +264,7 @@
             <li><strong>Levantamento com drone (WebODM)</strong> — sua malha fotogramétrica texturizada como referência, com cotas reais</li>
             <li><strong>Pontos GPS / estação total</strong> — importe seu CSV em UTM e desenhe sobre pontos exatos</li>
             <li><strong>UTM WGS84 em toda a interface</strong> — digite Zona/E/N exatamente como o seu equipamento informa</li>
-            <li><strong>Norte do projeto</strong> — desenhe no esquadro com os eixos; o mapa, o terreno e as sombras giram por baixo, como no SketchUp</li>
+            <li><strong>Norte do projeto</strong> — desenhe no esquadro com os eixos; o mapa, o terreno e as sombras giram por baixo</li>
             <li><strong>Alinhamentos e divisas</strong> georreferenciados, com estaqueamento e áreas</li>
           </ul>
           <p class="feat-muted">O modelador completo funciona offline; só o mapa usa internet.</p>
@@ -340,11 +341,11 @@
             <li><strong>213 cores RAL Classic</strong> — você pinta com <em>RAL 7035 Cinza claro</em> e o desenho leva a referência que um pintor pode comprar, não três números</li>
             <li><strong>Figuras de escala na altura certa</strong> — para ver de relance se aquela porta é de 2,10 m</li>
           </ul>
-          <p class="feat-muted">Na captura: um modelo do SketchUp aberto com suas texturas e duas figuras posicionadas, com a bandeja de componentes à direita. Todo o material vem da biblioteca livre do <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> (CC0, CC BY e Arte Livre); o IngeTrazo sempre mostra a licença e o autor de cada peça.</p>
+          <p class="feat-muted">Na captura: um modelo urbano com suas texturas e duas figuras posicionadas, com a bandeja de componentes à direita. Todo o material vem da biblioteca livre do <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> (CC0, CC BY e Arte Livre); o IngeTrazo sempre mostra a licença e o autor de cada peça.</p>
         </div>
         <figure class="feat-img">
           <img class="zoomable" src="/images/screenshots/componentes.jpeg"
-               alt="IngeTrazo com um modelo urbano aberto a partir do SketchUp: duas figuras de escala no passeio junto à água e a bandeja de componentes com móveis, árvores e veículos" width="1600" height="1005" loading="lazy">
+               alt="IngeTrazo com um modelo urbano: duas figuras de escala no passeio junto à água e a bandeja de componentes com móveis, árvores e veículos" width="1600" height="1005" loading="lazy">
         </figure>
       </div>
     </section>
@@ -352,12 +353,12 @@
     <section class="feat feat-alt reveal">
       <div class="container feat-row">
         <div class="feat-text">
-          <h2>Abra e salve seus arquivos do SketchUp</h2>
-          <p>Sua biblioteca de anos não fica para trás — nem seus colegas: o IngeTrazo abre o <code>.skp</code> diretamente e <strong>salva em .skp</strong> o que você modela, graças ao <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, o leitor/gravador livre do formato SketchUp — sem conversores nem instalações extras.</p>
+          <h2>Abra seus arquivos do SketchUp (.skp)</h2>
+          <p>Sua biblioteca de anos não fica para trás — nem seus colegas: o IngeTrazo abre o <code>.skp</code> diretamente, graças ao <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, um leitor livre do formato — sem conversores nem instalações extras.</p>
           <ul class="feat-list">
             <li><strong>Importa SketchUp (.skp) nativo</strong> — todas as versões, das antigas (2013) às atuais</li>
             <li><strong>Com tudo dentro</strong> — grupos, componentes, materiais, texturas, camadas, cenas, cotas e textos com chamada</li>
-            <li><strong>Exporta para .skp</strong> — seu modelo abre no SketchUp com seus grupos, materiais com nome, cotas e textos</li>
+            <li><strong>Para levar seu modelo de volta</strong> — exporte COLLADA (.dae), que o SketchUp e quase qualquer programa 3D abrem</li>
             <li><strong>E ainda OBJ, COLLADA, glTF, STL</strong> e <strong>IFC</strong></li>
           </ul>
           <p class="feat-muted">Na captura: um parque real aberto a partir do seu .skp — brinquedos, arquibancadas e cobertura, com as camadas originais. O IngeTrazo contribui com código para o OpenSKP: cada arquivo aberto aqui melhora o leitor livre para todos.</p>
@@ -512,7 +513,7 @@ IngeTrazo-0.3.7.1/ingetrazo</code>
             </a>
           </div>
           <p class="dl-group-alt">Abra o <code>.dmg</code> e arraste o IngeTrazo para <strong>Aplicativos</strong>. Ele ainda não está assinado com uma conta da Apple, então <strong>na primeira vez</strong> o macOS não vai abri-lo com clique duplo: <strong>clique direito ▸ Abrir</strong> e confirme. Daí em diante ele abre normalmente, e os <code>.igz</code> e <code>.skp</code> abrem com clique duplo. Empacotado por <a href="https://github.com/felixriestra" target="_blank" rel="noopener">Félix Riestra</a>.</p>
-          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">Para Mac com Apple Silicon (M1 em diante). O que ainda não funciona no Mac: a importação de DWG e o conversor auxiliar <code>skp2dae</code>; abrir e salvar <code>.skp</code>, sim. Se algo falhar, conte para nós numa <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">issue do GitHub</a>.</p>
+          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">Para Mac com Apple Silicon (M1 em diante). O que ainda não funciona no Mac: a importação de DWG; abrir <code>.skp</code>, sim. Se algo falhar, conte para nós numa <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">issue do GitHub</a>.</p>
         </div>
       </div>
     </div>
@@ -568,12 +569,12 @@ IngeTrazo-0.3.7.1/ingetrazo</code>
           <p>Sim. O IngeTrazo é <strong>software livre sob GPL-3.0</strong>: gratuito hoje e para sempre, com o código-fonte publicado no GitHub. Sem contas, sem assinaturas, sem funções bloqueadas.</p>
         </details>
         <details class="faq-item">
-          <summary>Qual é a diferença para o SketchUp?</summary>
-          <p>O desenho é tão direto quanto (empurrar/puxar, inferências, medidas exatas pelo teclado), mas o IngeTrazo é livre, roda <strong>nativamente no Linux</strong>, garante <strong>sólidos estanques</strong> próprios para o levantamento de quantitativos e acrescenta a camada BIM: você classifica a geometria e obtém quantitativos e IFC.</p>
+          <summary>O que torna o IngeTrazo diferente?</summary>
+          <p>É <strong>software livre</strong> (GPL-3.0) e roda <strong>nativamente no Linux</strong>, além de Windows e macOS. Garante <strong>sólidos estanques</strong> próprios para o levantamento de quantitativos e acrescenta a <strong>camada BIM</strong>: você classifica a geometria e obtém quantitativos e IFC. Compõe <strong>pranchas em escala</strong> em PDF, traz o <strong>terreno real</strong> (satélite, elevação, drone, pontos GPS) e se conecta a <strong>assistentes de IA</strong> que desenham com o mesmo motor, cada passo podendo ser desfeito.</p>
         </details>
         <details class="faq-item">
           <summary>Posso abrir meus modelos do SketchUp? E salvar?</summary>
-          <p>Sim para as duas coisas, o <strong>.skp diretamente e sem conversores</strong>: Arquivo ▸ Importar ▸ SketchUp para abrir, e Arquivo ▸ Exportar ▸ SketchUp para salvar. Construído sobre o <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, o leitor/gravador livre do formato para o qual o IngeTrazo contribui — lê arquivos de <strong>todas as versões</strong> (geometria, grupos, componentes, materiais, texturas, camadas, cenas, cotas e textos com chamada) e o que você exporta abre no SketchUp com as anotações incluídas. Também importa <strong>COLLADA (.dae)</strong> e <strong>OBJ</strong>.</p>
+          <p><strong>Abrir, sim</strong>: Arquivo ▸ Importar ▸ SketchUp, diretamente e sem conversores, com o <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, o leitor livre do formato para o qual o IngeTrazo contribui — lê arquivos de <strong>todas as versões</strong> (geometria, grupos, componentes, materiais, texturas, camadas, cenas, cotas e textos com chamada). <strong>Salvar em .skp, não</strong>: para levar um modelo ao SketchUp, exporte <strong>COLLADA (.dae)</strong>, que o SketchUp importa. Também importa <strong>COLLADA (.dae)</strong> e <strong>OBJ</strong>.</p>
         </details>
         <details class="faq-item">
           <summary>O que são BIM e IFC?</summary>
@@ -585,7 +586,7 @@ IngeTrazo-0.3.7.1/ingetrazo</code>
         </details>
         <details class="faq-item">
           <summary>Posso adicionar funções com plugins?</summary>
-          <p>Sim, desde a versão 0.3.2 o IngeTrazo tem um <strong>menu Extensões</strong>: você copia um plugin (um arquivo Python) para sua pasta pessoal e as ferramentas dele aparecem no menu — no estilo das extensões do SketchUp. Vêm duas incluídas: <strong>Info do modelo</strong> (estatísticas, materiais com m² pintados e objetos BIM) e um <strong>Console Python</strong> para inspecionar e automatizar o modelo por código, tudo integrado ao desfazer. O guia está no <a href="https://ingetrazo-docs.pages.dev/extensiones/" target="_blank" rel="noopener">manual (em espanhol)</a>.</p>
+          <p>Sim, desde a versão 0.3.2 o IngeTrazo tem um <strong>menu Extensões</strong>: você copia um plugin (um arquivo Python) para sua pasta pessoal e as ferramentas dele aparecem no menu. Vêm duas incluídas: <strong>Info do modelo</strong> (estatísticas, materiais com m² pintados e objetos BIM) e um <strong>Console Python</strong> para inspecionar e automatizar o modelo por código, tudo integrado ao desfazer. O guia está no <a href="https://ingetrazo-docs.pages.dev/extensiones/" target="_blank" rel="noopener">manual (em espanhol)</a>.</p>
         </details>
         <details class="faq-item">
           <summary>Tem inteligência artificial?</summary>
@@ -651,6 +652,7 @@ IngeTrazo-0.3.7.1/ingetrazo</code>
         </ul>
       </div>
     </div>
+    <p class="container footer-legal">SketchUp é uma marca registrada da Trimble Inc.; o IngeTrazo é um projeto independente, sem relação com a Trimble.</p>
   </footer>
 
   <!-- Lightbox para ampliar capturas -->

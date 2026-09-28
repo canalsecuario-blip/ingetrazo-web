@@ -7,8 +7,8 @@
 
   <title>IngeTrazo · Free 3D modeler for architecture, engineering and design</title>
 
-  <meta name="description" content="Free, SketchUp-style 3D modeler with optional BIM: draw as if by hand, tag walls, slabs and columns, get the quantity takeoff and export IFC. 3D satellite terrain and profiles. Linux, Windows and macOS. Open source, GPL-3.0.">
-  <meta name="keywords" content="free 3D modeler, SketchUp alternative, SketchUp for Linux, free BIM, IFC export, quantity takeoff, civil engineering software, 3D design, 3D modeling, Linux CAD, 3D terrain, longitudinal profile, open source, GPL">
+  <meta name="description" content="Free 3D modeler with optional BIM: draw as if by hand, tag walls, slabs and columns, get the quantity takeoff and export IFC. 3D satellite terrain and profiles. Linux, Windows and macOS. Open source, GPL-3.0.">
+  <meta name="keywords" content="free 3D modeler, Linux 3D modeler, free BIM, IFC export, quantity takeoff, civil engineering software, 3D design, 3D modeling, Linux CAD, 3D terrain, longitudinal profile, open source, GPL">
   <meta name="author" content="Ing. Marco Sumari">
 
   <link rel="canonical" href="https://ingetrazo.com/en/">
@@ -49,7 +49,7 @@
     "name": "IngeTrazo",
     "operatingSystem": "Linux, Windows, macOS",
     "applicationCategory": "DesignApplication",
-    "description": "Free, SketchUp-style 3D modeler for architecture, civil engineering and 3D design, with BIM as an optional layer: tag geometry as walls, slabs or columns, get quantities (takeoff) and export IFC 4. Includes a library of 1,510 components and 427 real-size textures with the 213 RAL Classic colors, sheet composition with drawings at exact scale and PDF export, 3D satellite terrain, drone photogrammetry surveys, longitudinal profiles, and native SketchUp models: opens .skp files from every version and saves to .skp (also .dae, .obj, glTF, STL). Open source under GPL-3.0.",
+    "description": "Free 3D modeler for architecture, civil engineering and 3D design, with push/pull modeling that feels like drawing by hand and BIM as an optional layer: tag geometry as walls, slabs or columns, get quantities (takeoff) and export IFC 4. Includes a library of 1,510 components and 427 real-size textures with the 213 RAL Classic colors, sheet composition with drawings at exact scale and PDF export, 3D satellite terrain, drone photogrammetry surveys, longitudinal profiles; opens SketchUp .skp files from every version, and imports and exports .dae, .obj, glTF and STL. Open source under GPL-3.0.",
     "url": "https://ingetrazo.com/en/",
     "image": "https://ingetrazo.com/images/logo.png",
     "author": {
@@ -83,10 +83,10 @@
       },
       {
         "@type": "Question",
-        "name": "How is it different from SketchUp?",
+        "name": "What makes IngeTrazo different?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Drawing feels just as direct (push/pull, inferences, exact measurements typed on the keyboard), but IngeTrazo is free, runs natively on Linux, guarantees watertight solids fit for quantity takeoff, and adds the BIM layer: tag the geometry and get quantities and IFC."
+          "text": "It is free software (GPL-3.0) and runs natively on Linux, as well as Windows and macOS. It guarantees watertight solids fit for quantity takeoff and adds the BIM layer: tag the geometry and get quantities and IFC. It composes sheets at scale into PDF, brings in real terrain (satellite, elevation, drone, GPS points) and connects to AI assistants that draw with the same engine, every step undoable."
         }
       },
       {
@@ -94,7 +94,7 @@
         "name": "Can I open my SketchUp models? And save them?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes to both, .skp directly with no converters: File ▸ Import ▸ SketchUp to open, and File ▸ Export ▸ SketchUp to save. Built on OpenSKP, the free reader/writer for the format that IngeTrazo contributes to — it reads files from every version (geometry, groups, components, materials, textures, layers, scenes, dimensions and leader texts), and what you export opens in SketchUp with its annotations included. It also imports COLLADA (.dae) and OBJ."
+          "text": "Opening, yes: File ▸ Import ▸ SketchUp, directly and with no converters, through OpenSKP, the free reader for the format that IngeTrazo contributes to — it reads files from every version (geometry, groups, components, materials, textures, layers, scenes, dimensions and leader texts). Saving to .skp, no: to take a model to SketchUp, export COLLADA (.dae), which SketchUp imports. It also imports COLLADA (.dae) and OBJ."
         }
       },
       {
@@ -118,7 +118,7 @@
         "name": "Can I add features with plugins?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Since version 0.3.2 IngeTrazo has an Extensions menu: copy a plugin (a Python file) into your personal folder and its tools show up in the menu — much like SketchUp extensions. Two come built in: Model Info (statistics, materials and BIM objects) and a Python Console to inspect and automate the model with code, all tied into undo."
+          "text": "Yes. Since version 0.3.2 IngeTrazo has an Extensions menu: copy a plugin (a Python file) into your personal folder and its tools show up in the menu. Two come built in: Model Info (statistics, materials and BIM objects) and a Python Console to inspect and automate the model with code, all tied into undo."
         }
       },
       {
@@ -194,6 +194,7 @@
   <section class="hero">
     <div class="container hero-center">
       <h1>The free 3D modeler<br>for architecture, engineering and design</h1>
+      <p class="hero-name"><strong>IngeTrazo</strong>, pronounced <em>EEN-heh-TRAH-soh</em>: Spanish <em>inge</em>(niería), “engineering”, + <em>trazo</em>, “a drawn stroke” — the engineer’s stroke.</p>
       <p class="hero-sub">Draw as if by hand. Tag BIM. Export IFC and PDF drawings.<br>Native on Linux — also Windows and macOS. Open source.</p>
       <div class="hero-ctas">
         <a href="#descargar" class="btn btn-primary btn-lg">Get IngeTrazo for free</a>
@@ -217,7 +218,7 @@
           <h2>Draw as if by hand</h2>
           <p>Draw lines, rectangles, circles and arcs; push a face and you have a solid. No layers of CAD complexity between your idea and the model.</p>
           <ul class="feat-list">
-            <li><strong>Push/Pull, Follow Me, Offset</strong> — the SketchUp workflow you already know</li>
+            <li><strong>Push/Pull, Follow Me, Offset</strong> — you model by pushing faces, no menus in the way</li>
             <li><strong>Exact measurements from the keyboard</strong> — type <code>3.50</code> and the line is 3.50 m long</li>
             <li><strong>Smart inferences</strong> — axes, extensions, parallels and perpendiculars</li>
             <li><strong>Materials, textures and dimensions</strong> on any face</li>
@@ -225,7 +226,7 @@
         </div>
         <figure class="feat-img">
           <img class="zoomable" src="/images/screenshots/modelado.jpeg"
-               alt="Brick building with columns and roof beams, dimensions in the model, and Push/Pull with the exact measurement in the VCB" width="1600" height="1005" loading="lazy">
+               alt="A bench with a pergola from Yanque modeled in IngeTrazo, with its dimensions and two scale figures: the engineer in a hard hat and the author" width="1600" height="1005" loading="lazy">
         </figure>
       </div>
     </section>
@@ -263,7 +264,7 @@
             <li><strong>Drone survey (WebODM)</strong> — your textured photogrammetry mesh as a reference, with real elevations</li>
             <li><strong>GPS / total station points</strong> — import your CSV in UTM and draw on exact points</li>
             <li><strong>UTM WGS84 throughout the interface</strong> — type the Zone/E/N just as your instrument reports it</li>
-            <li><strong>Project north</strong> — draw square to the axes; the map, the terrain and the shadows rotate underneath, as in SketchUp</li>
+            <li><strong>Project north</strong> — draw square to the axes; the map, the terrain and the shadows rotate underneath</li>
             <li><strong>Georeferenced routes and boundaries</strong>, with chainages and areas</li>
           </ul>
           <p class="feat-muted">The whole modeler works offline; only the map uses the internet.</p>
@@ -340,11 +341,11 @@
             <li><strong>213 RAL Classic colors</strong> — paint with <em>RAL 7035 Light grey</em> and the drawing carries a reference a painter can actually buy, not three numbers</li>
             <li><strong>Scale figures at their true height</strong> — to tell at a glance whether that door is 2.10 m</li>
           </ul>
-          <p class="feat-muted">In the screenshot: a SketchUp model opened with its textures and two figures placed, with the components tray on the right. All the content comes from the free <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> library (CC0, CC BY and Free Art License); IngeTrazo always shows the license and author of each piece.</p>
+          <p class="feat-muted">In the screenshot: an urban model with its textures and two figures placed, with the components tray on the right. All the content comes from the free <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> library (CC0, CC BY and Free Art License); IngeTrazo always shows the license and author of each piece.</p>
         </div>
         <figure class="feat-img">
           <img class="zoomable" src="/images/screenshots/componentes.jpeg"
-               alt="IngeTrazo with an urban model opened from SketchUp: two scale figures on the waterfront promenade and the components tray with furniture, trees and vehicles" width="1600" height="1005" loading="lazy">
+               alt="IngeTrazo with an urban model: two scale figures on the waterfront promenade and the components tray with furniture, trees and vehicles" width="1600" height="1005" loading="lazy">
         </figure>
       </div>
     </section>
@@ -352,12 +353,12 @@
     <section class="feat feat-alt reveal">
       <div class="container feat-row">
         <div class="feat-text">
-          <h2>Open and save your SketchUp files</h2>
-          <p>Your years-long library doesn't get left behind — and neither do your colleagues: IngeTrazo opens <code>.skp</code> directly and <strong>saves to .skp</strong> whatever you model, thanks to <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, the free reader/writer for the SketchUp format — no converters, no extra installs.</p>
+          <h2>Open your SketchUp (.skp) files</h2>
+          <p>Your years-long library doesn't get left behind — and neither do your colleagues: IngeTrazo opens <code>.skp</code> directly, thanks to <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, a free reader for the format — no converters, no extra installs.</p>
           <ul class="feat-list">
             <li><strong>Native SketchUp (.skp) import</strong> — every version, from the old ones (2013) to the current ones</li>
             <li><strong>With everything inside</strong> — groups, components, materials, textures, layers, scenes, dimensions and leader texts</li>
-            <li><strong>Export to .skp</strong> — your model opens in SketchUp with its groups, named materials, dimensions and texts</li>
+            <li><strong>To take your model back</strong> — export COLLADA (.dae), which SketchUp and almost any 3D program open</li>
             <li><strong>Plus OBJ, COLLADA, glTF, STL</strong> and <strong>IFC</strong></li>
           </ul>
           <p class="feat-muted">In the screenshot: a real park opened from its .skp — play equipment, stands and roofing, with its original layers. IngeTrazo contributes code to OpenSKP: every file it opens here improves the free reader for everyone.</p>
@@ -512,7 +513,7 @@ IngeTrazo-0.3.7.1/ingetrazo</code>
             </a>
           </div>
           <p class="dl-group-alt">Open the <code>.dmg</code> and drag IngeTrazo to <strong>Applications</strong>. It isn't signed with an Apple account yet, so <strong>the first time</strong> macOS won't open it with a double-click: <strong>right-click ▸ Open</strong> and confirm. From then on it opens normally, and <code>.igz</code> and <code>.skp</code> files open with a double-click. Packaged by <a href="https://github.com/felixriestra" target="_blank" rel="noopener">Félix Riestra</a>.</p>
-          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">For Macs with Apple Silicon (M1 and later). What doesn't work on Mac yet: DWG import and the <code>skp2dae</code> helper converter; opening and saving <code>.skp</code> does. If something fails, tell us in a <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">GitHub issue</a>.</p>
+          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">For Macs with Apple Silicon (M1 and later). What doesn't work on Mac yet: DWG import; opening <code>.skp</code> does. If something fails, tell us in a <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">GitHub issue</a>.</p>
         </div>
       </div>
     </div>
@@ -568,12 +569,12 @@ IngeTrazo-0.3.7.1/ingetrazo</code>
           <p>Yes. IngeTrazo is <strong>free software under the GPL-3.0</strong>: free today and forever, with its source code published on GitHub. No accounts, no subscriptions, no locked features.</p>
         </details>
         <details class="faq-item">
-          <summary>How is it different from SketchUp?</summary>
-          <p>Drawing feels just as direct (push/pull, inferences, exact measurements typed on the keyboard), but IngeTrazo is free, runs <strong>natively on Linux</strong>, guarantees <strong>watertight solids</strong> fit for quantity takeoff, and adds the BIM layer: tag the geometry and get quantities and IFC.</p>
+          <summary>What makes IngeTrazo different?</summary>
+          <p>It is <strong>free software</strong> (GPL-3.0) and runs <strong>natively on Linux</strong>, as well as Windows and macOS. It guarantees <strong>watertight solids</strong> fit for quantity takeoff and adds the <strong>BIM layer</strong>: tag the geometry and get quantities and IFC. It composes <strong>sheets at scale</strong> into PDF, brings in <strong>real terrain</strong> (satellite, elevation, drone, GPS points) and connects to <strong>AI assistants</strong> that draw with the same engine, every step undoable.</p>
         </details>
         <details class="faq-item">
           <summary>Can I open my SketchUp models? And save them?</summary>
-          <p>Yes to both, <strong>.skp directly with no converters</strong>: File ▸ Import ▸ SketchUp to open, and File ▸ Export ▸ SketchUp to save. Built on <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, the free reader/writer for the format that IngeTrazo contributes to — it reads files from <strong>every version</strong> (geometry, groups, components, materials, textures, layers, scenes, dimensions and leader texts), and what you export opens in SketchUp with its annotations included. It also imports <strong>COLLADA (.dae)</strong> and <strong>OBJ</strong>.</p>
+          <p><strong>Opening, yes</strong>: File ▸ Import ▸ SketchUp, directly and with no converters, through <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, the free reader for the format that IngeTrazo contributes to — it reads files from <strong>every version</strong> (geometry, groups, components, materials, textures, layers, scenes, dimensions and leader texts). <strong>Saving to .skp, no</strong>: to take a model to SketchUp, export <strong>COLLADA (.dae)</strong>, which SketchUp imports. It also imports <strong>COLLADA (.dae)</strong> and <strong>OBJ</strong>.</p>
         </details>
         <details class="faq-item">
           <summary>What's all this about BIM and IFC?</summary>
@@ -585,7 +586,7 @@ IngeTrazo-0.3.7.1/ingetrazo</code>
         </details>
         <details class="faq-item">
           <summary>Can I add features with plugins?</summary>
-          <p>Yes. Since version 0.3.2 IngeTrazo has an <strong>Extensions menu</strong>: copy a plugin (a Python file) into your personal folder and its tools show up in the menu — much like SketchUp extensions. Two come built in: <strong>Model Info</strong> (statistics, materials with painted m², and BIM objects) and a <strong>Python Console</strong> to inspect and automate the model with code, all tied into undo. The guide is in the <a href="https://ingetrazo-docs.pages.dev/extensiones/" target="_blank" rel="noopener">manual (Spanish)</a>.</p>
+          <p>Yes. Since version 0.3.2 IngeTrazo has an <strong>Extensions menu</strong>: copy a plugin (a Python file) into your personal folder and its tools show up in the menu. Two come built in: <strong>Model Info</strong> (statistics, materials with painted m², and BIM objects) and a <strong>Python Console</strong> to inspect and automate the model with code, all tied into undo. The guide is in the <a href="https://ingetrazo-docs.pages.dev/extensiones/" target="_blank" rel="noopener">manual (Spanish)</a>.</p>
         </details>
         <details class="faq-item">
           <summary>Does it have artificial intelligence?</summary>
@@ -651,6 +652,7 @@ IngeTrazo-0.3.7.1/ingetrazo</code>
         </ul>
       </div>
     </div>
+    <p class="container footer-legal">SketchUp is a registered trademark of Trimble Inc.; IngeTrazo is an independent project, not affiliated with Trimble.</p>
   </footer>
 
   <!-- Lightbox para ampliar capturas -->
