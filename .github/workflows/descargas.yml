@@ -1,0 +1,48 @@
+# Registro horario de descargas de los releases de ingelibre/ingetrazo.
+# GitHub borra el contador de un archivo al borrarlo del release; este job
+# guarda el último valor visto de cada uno en la rama `datos-descargas`
+# (aparte de main, para no llenarla de commits) y la web lo lee en vivo,
+# así el total histórico no baja cuando se retiran versiones anteriores.
+name: Registro de descargas
+
+on:
+  schedule:
+    - cron: '17 * * * *'      # cada hora
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: registro-descargas
+  cancel-in-progress: false
+
+jobs:
+  registrar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Preparar la rama de datos
+        run: |
+          if git fetch --depth=1 origin datos-descargas 2>/dev/null; then
+            git worktree add -B datos-descargas datos FETCH_HEAD
+          else
+            git worktree add --orphan -b datos-descargas datos   # primera vez
+          fi
+
+      - name: Anotar los contadores
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 tools/registrar-descargas.py datos/descargas.json
+
+      - name: Guardar
+        working-directory: datos
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898283+github-actions[bot]@users.noreply.github.com'
+          git add descargas.json
+          if ! git diff --cached --quiet; then
+            git commit -q -m "descargas: registro $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push -q origin datos-descargas
+          fi

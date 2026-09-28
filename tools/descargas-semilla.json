@@ -1,5 +1,5 @@
 {
-  "nota": "Contadores de descarga de los releases de ingelibre/ingetrazo. GitHub borra el contador de un archivo al borrarlo, asi que aqui se guarda el ultimo valor visto de cada uno para que el total historico de la web no baje. Lo actualiza tools/actualizar-version.py; no editar a mano salvo \"retiradas_antes_del_registro\".",
+  "nota": "Semilla del registro de descargas. El registro vivo esta en la rama datos-descargas (descargas.json), lo actualiza cada hora .github/workflows/descargas.yml con tools/registrar-descargas.py. Esta semilla solo se usa la primera vez.",
   "retiradas_antes_del_registro": 6852,
   "origen_de_la_base": "2026-09-27: la suma de todos los releases era 7076; el 2026-09-28 se borraron los instaladores de versiones anteriores. 7076 menos lo que seguia publicado (224) = 6852, cifra conservadora.",
   "archivos": {

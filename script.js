@@ -63,6 +63,15 @@
      de un release, GitHub borra también su contador. La cifra la mantiene
      tools/actualizar-version.py (tools/descargas.json); no editar a mano. */
   var DESCARGAS_RETIRADAS = 6852;
+  /* Registro vivo (workflow horario, rama datos-descargas): lo retirado y el
+     último total visto. Si falla, queda la cifra de arriba. */
+  var registro = fetch('https://api.github.com/repos/ingelibre/ingetrazo-web/contents/descargas.json?ref=datos-descargas',
+                       { headers: { Accept: 'application/vnd.github.raw+json' } })
+    .then(function (r) { return r.ok ? r.json() : null; })
+    .catch(function () { return null; })
+    .then(function (j) {
+      return (j && typeof j.retiradas === 'number') ? j : { retiradas: DESCARGAS_RETIRADAS, total: 0 };
+    });
 
   /* ── Versión + fecha desde GitHub Releases ─────────────────────────── */
   /* Una sola consulta trae la última versión y las descargas de todas. */
@@ -74,8 +83,12 @@
       list.forEach(function (x) {
         (x.assets || []).forEach(function (a) { total += a.download_count || 0; });
       });
-      total += DESCARGAS_RETIRADAS;         /* total histórico, no solo lo que sigue publicado */
-      setStat('downloads', total, total >= 1000 ? 100 : 0);
+      /* total histórico: lo publicado hoy + lo retirado; si algo se borró
+         después del último registro, nunca menos que el último total visto */
+      registro.then(function (reg) {
+        var n = Math.max(total + reg.retiradas, reg.total || 0);
+        setStat('downloads', n, n >= 1000 ? 100 : 0);
+      });
       var rel = list.filter(function (x) { return !x.draft && !x.prerelease; })[0];
       if (!rel || !rel.tag_name) return;
       var v = rel.tag_name.replace(/^v/, '');

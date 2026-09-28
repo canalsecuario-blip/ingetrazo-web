@@ -4,11 +4,10 @@
 script.js la trae en vivo desde GitHub (también la ficha de software
 y la fecha del sitemap se ponen al día aquí), pero si esa consulta falla (GitHub
 la limita a 60 por hora por IP) la página muestra lo que dice el HTML.
-Además lleva el total histórico de descargas: GitHub borra el contador de un
-archivo al borrarlo del release, así que tools/descargas.json guarda el último
-valor visto de cada instalador y la web suma lo retirado a lo publicado.
-Correr esto antes de cada `wrangler deploy` evita que se vea una versión vieja
-(y conviene correrlo también antes de borrar instaladores viejos de GitHub):
+También deja al día la cifra de respaldo del total histórico de descargas,
+que lleva el workflow horario .github/workflows/descargas.yml (rama
+datos-descargas). Correr esto antes de cada `wrangler deploy` evita que se
+vea una versión vieja:
 
     python3 tools/actualizar-version.py
 """
@@ -41,19 +40,23 @@ v = rel['tag_name'].lstrip('v')
 anio, mes = int(rel['published_at'][:4]), int(rel['published_at'][5:7])
 
 # ── total histórico de descargas ─────────────────────────────────────────
-reg_f = raiz / 'tools' / 'descargas.json'
-reg = json.loads(reg_f.read_text(encoding='utf-8'))
-vivos = {str(a['id']): {'release': x['tag_name'], 'nombre': a['name'], 'descargas': a['download_count']}
-         for x in releases for a in x['assets']}
-for k, dato in vivos.items():                # el contador de GitHub solo sube
-    viejo = reg['archivos'].get(k, {}).get('descargas', 0)
-    reg['archivos'][k] = dict(dato, descargas=max(dato['descargas'], viejo))
-retiradas = reg['retiradas_antes_del_registro'] + sum(
-    d['descargas'] for k, d in reg['archivos'].items() if k not in vivos)
-total = retiradas + sum(d['descargas'] for d in vivos.values())
+# El registro vivo lo lleva el workflow horario en la rama datos-descargas;
+# aquí solo se lee para dejar la cifra de respaldo al día. Si esa rama aún
+# no existe (antes del primer registro), se calcula desde la semilla.
+REGISTRO = ('https://api.github.com/repos/ingelibre/ingetrazo-web/contents/'
+            'descargas.json?ref=datos-descargas')
+try:
+    req = urllib.request.Request(REGISTRO, headers={'Accept': 'application/vnd.github.raw+json'})
+    with urllib.request.urlopen(req, timeout=20) as r:
+        reg = json.load(r)
+except Exception:
+    import importlib.util, tempfile
+    spec = importlib.util.spec_from_file_location('registrar', raiz / 'tools' / 'registrar-descargas.py')
+    registrar = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(registrar)
+    reg = registrar.registrar(Path(tempfile.mkdtemp()) / 'descargas.json')
+retiradas, total = reg['retiradas'], reg['total']
 total_redondeado = total // 100 * 100
-with open(reg_f, 'w', encoding='utf-8', newline='') as h:
-    h.write(json.dumps(reg, ensure_ascii=False, indent=2) + '\n')
 js_f = raiz / 'script.js'
 with open(js_f, encoding='utf-8', newline='') as h:
     js = h.read()

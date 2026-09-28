@@ -968,14 +968,15 @@ code {
   font-size: clamp(26px, 3vw, 36px); line-height: 1.1; font-weight: 800;
   color: var(--head); letter-spacing: -0.02em; margin-bottom: 32px;
 }
-.more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }  /* tarjetas de la misma altura */
 .more-card {
   background: var(--card); border-radius: 14px; overflow: hidden;
   display: flex; flex-direction: column;
 }
 .more-img { background: var(--night); }
 .more-img img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: center top; }
-.more-body { padding: 22px 22px 18px; }
+.more-body { padding: 22px 22px 18px; flex: 1; display: flex; flex-direction: column; }
+.more-body .feat-list { flex: 1; }   /* la lista toma el sobrante: las notas finales quedan abajo */
 .more-body h3 {
   font-size: 20px; line-height: 1.25; font-weight: 700; color: var(--head);
   letter-spacing: -0.01em; margin-bottom: 10px;
