@@ -14,7 +14,7 @@
           dlLinuxSub: 'Se instala con doble clic. AppImage, tar.gz y los demás sistemas, abajo.',
           thanks: '¡Gracias por descargar IngeTrazo!',
           thanksSub: 'Es libre y lo hace una persona. Si te ahorra horas, puedes apoyarlo.',
-          thanksBtn: 'Apoyar', support: '/apoyar', close: 'Cerrar' },
+          thanksBtn: 'Apoyar', support: '/ingetrazo-web/apoyar', close: 'Cerrar' },
     en: { locale: 'en-US', copied: 'Copied!', copy: 'Copy',
           flatpak: 'double-click installs', appimage: 'installs nothing', tarball: 'no FUSE needed',
           dlWin: 'Download for Windows', dlMac: 'Download for Mac', dlLinux: 'Download for Linux (Flatpak)',
@@ -23,7 +23,7 @@
           dlLinuxSub: 'Installs with a double-click. AppImage, tar.gz and other systems below.',
           thanks: 'Thanks for downloading IngeTrazo!',
           thanksSub: 'It is free and made by one person. If it saves you hours, you can support it.',
-          thanksBtn: 'Support', support: '/en/apoyar', close: 'Close' },
+          thanksBtn: 'Support', support: '/ingetrazo-web/en/apoyar', close: 'Close' },
     pt: { locale: 'pt-BR', copied: 'Copiado!', copy: 'Copiar',
           flatpak: 'clique duplo instala', appimage: 'não instala nada', tarball: 'sem FUSE',
           dlWin: 'Baixar para Windows', dlMac: 'Baixar para Mac', dlLinux: 'Baixar para Linux (Flatpak)',
@@ -32,7 +32,7 @@
           dlLinuxSub: 'Instala com clique duplo. AppImage, tar.gz e outros sistemas, abaixo.',
           thanks: 'Obrigado por baixar o IngeTrazo!',
           thanksSub: 'É livre e feito por uma pessoa. Se ele te poupa horas, você pode apoiá-lo.',
-          thanksBtn: 'Apoiar', support: '/pt/apoyar', close: 'Fechar' }
+          thanksBtn: 'Apoiar', support: '/ingetrazo-web/pt/apoyar', close: 'Fechar' }
   };
   var T = STRINGS[LANG] || STRINGS.es;
 
