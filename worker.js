@@ -16,6 +16,7 @@ const SPANISH = new Set([
 ]);
 const PORTUGUESE = new Set(['AO', 'BR', 'CV', 'GW', 'MZ', 'PT', 'ST', 'TL']);
 const SUPPORTED = new Set(['es', 'en', 'pt']);
+const LANG_PAGES = new Set(['/', '/apoyar']);
 const BOT = /bot|crawl|spider|slurp|facebookexternalhit|embedly|preview|whatsapp|telegram|discord|lighthouse/i;
 
 export function firstLanguage(acceptLanguage) {
@@ -45,7 +46,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const ua = request.headers.get('User-Agent') || '';
-    if (!BOT.test(ua)) {
+    // Only the two pages this Worker is for pick a language. A path the
+    // assets do not have also reaches the Worker (Cloudflare's not-found
+    // fallback): redirecting it to /en/<path> found nothing again and came
+    // back here -- /en/en/en/..., the loop that broke Flatpak installs
+    // outside Hispanoamerica (issue #167: optional delta-indexes files).
+    if (LANG_PAGES.has(url.pathname) && !BOT.test(ua)) {
       const lang = pickLang({
         cookie: request.headers.get('Cookie'),
         acceptLanguage: request.headers.get('Accept-Language'),
