@@ -59,6 +59,11 @@
     .then(function (repo) { if (repo) setStat('stars', repo.stargazers_count); })
     .catch(function () {});
 
+  /* Descargas de instaladores que ya no están en GitHub: al borrar un archivo
+     de un release, GitHub borra también su contador. La cifra la mantiene
+     tools/actualizar-version.py (tools/descargas.json); no editar a mano. */
+  var DESCARGAS_RETIRADAS = 6852;
+
   /* ── Versión + fecha desde GitHub Releases ─────────────────────────── */
   /* Una sola consulta trae la última versión y las descargas de todas. */
   fetch('https://api.github.com/repos/ingelibre/ingetrazo/releases?per_page=100')
@@ -69,6 +74,7 @@
       list.forEach(function (x) {
         (x.assets || []).forEach(function (a) { total += a.download_count || 0; });
       });
+      total += DESCARGAS_RETIRADAS;         /* total histórico, no solo lo que sigue publicado */
       setStat('downloads', total, total >= 1000 ? 100 : 0);
       var rel = list.filter(function (x) { return !x.draft && !x.prerelease; })[0];
       if (!rel || !rel.tag_name) return;

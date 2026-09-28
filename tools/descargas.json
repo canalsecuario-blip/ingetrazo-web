@@ -1,0 +1,157 @@
+{
+  "nota": "Contadores de descarga de los releases de ingelibre/ingetrazo. GitHub borra el contador de un archivo al borrarlo, asi que aqui se guarda el ultimo valor visto de cada uno para que el total historico de la web no baje. Lo actualiza tools/actualizar-version.py; no editar a mano salvo \"retiradas_antes_del_registro\".",
+  "retiradas_antes_del_registro": 6852,
+  "origen_de_la_base": "2026-09-27: la suma de todos los releases era 7076; el 2026-09-28 se borraron los instaladores de versiones anteriores. 7076 menos lo que seguia publicado (224) = 6852, cifra conservadora.",
+  "archivos": {
+    "596205925": {
+      "release": "v0.5.5",
+      "nombre": "IngeTrazo-0.5.5-linux-x86_64.tar.gz",
+      "descargas": 7
+    },
+    "596184155": {
+      "release": "v0.5.5",
+      "nombre": "IngeTrazo-0.5.5-macos-arm64.dmg",
+      "descargas": 19
+    },
+    "596205929": {
+      "release": "v0.5.5",
+      "nombre": "IngeTrazo-0.5.5-x86_64.AppImage",
+      "descargas": 22
+    },
+    "596193105": {
+      "release": "v0.5.5",
+      "nombre": "IngeTrazo-0.5.5-x86_64.flatpak",
+      "descargas": 21
+    },
+    "596206257": {
+      "release": "v0.5.5",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 9
+    },
+    "596217231": {
+      "release": "v0.5.5",
+      "nombre": "ingetrazo-setup-v0.5.5.exe",
+      "descargas": 119
+    },
+    "596217227": {
+      "release": "v0.5.5",
+      "nombre": "ingetrazo-windows.zip",
+      "descargas": 52
+    },
+    "596192174": {
+      "release": "v0.5.5",
+      "nombre": "ingetrazo_0.5.5_amd64.snap",
+      "descargas": 0
+    },
+    "591561074": {
+      "release": "v0.5.4",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 45
+    },
+    "589780204": {
+      "release": "v0.5.3",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 27
+    },
+    "586806197": {
+      "release": "v0.5.2",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 29
+    },
+    "585224110": {
+      "release": "v0.5.1",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 12
+    },
+    "584217929": {
+      "release": "v0.5.0",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 13
+    },
+    "580363272": {
+      "release": "v0.4.9",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 44
+    },
+    "577130934": {
+      "release": "v0.4.8",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 26
+    },
+    "576254102": {
+      "release": "v0.4.7",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 6
+    },
+    "574821584": {
+      "release": "v0.4.6",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 7
+    },
+    "573700387": {
+      "release": "v0.4.5",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 0
+    },
+    "573542908": {
+      "release": "v0.4.4",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 0
+    },
+    "572552823": {
+      "release": "v0.4.3",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 0
+    },
+    "568186800": {
+      "release": "v0.4.2",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 1
+    },
+    "566123778": {
+      "release": "v0.4.1",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 4
+    },
+    "566068368": {
+      "release": "v0.4.0",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 2
+    },
+    "564292209": {
+      "release": "v0.3.20",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 1
+    },
+    "562788399": {
+      "release": "v0.3.19",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 0
+    },
+    "558678103": {
+      "release": "v0.3.18",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 2
+    },
+    "556023637": {
+      "release": "v0.3.17",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 2
+    },
+    "553692172": {
+      "release": "v0.3.16",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 0
+    },
+    "551903254": {
+      "release": "v0.3.15",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 2
+    },
+    "549655425": {
+      "release": "v0.3.14",
+      "nombre": "IngeTrazo-ejemplos.zip",
+      "descargas": 1
+    }
+  }
+}
