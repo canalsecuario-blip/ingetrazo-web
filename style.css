@@ -987,7 +987,7 @@ code {
 @media (max-width: 960px) { .more-grid { grid-template-columns: 1fr; max-width: 640px; } }
 
 /* ============ Portada: tres puntos con ✓ ============ */
-.hero-checks { margin: 0 0 18px; display: grid; gap: 8px; }
+.hero-checks { margin: 0 0 30px; display: grid; gap: 8px; }
 .hero-checks li {
   position: relative; padding-left: 30px;
   font-size: clamp(15.5px, 1.6vw, 18px); line-height: 1.45; color: rgba(255,255,255,0.86);
@@ -998,7 +998,6 @@ code {
   background: rgba(70,235,194,0.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2346EBC2' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M4 8.5l2.6 2.5L12 5.5'/%3E%3C/svg%3E") center / 13px no-repeat;
 }
 .hero-checks code { background: rgba(255,255,255,0.14); color: var(--white); }
-.hero-platforms { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 26px; }
 
 /* ============ Del boceto a la obra en 3 pasos: línea de tiempo ============ */
 .steps { padding: 72px 0 76px; background: #F4F7FB; }
@@ -1064,3 +1063,36 @@ code {
 }
 .footer-support::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23FFFFFF' d='M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") !important; width: 17px; height: 17px; }
 .footer-support:hover { background: var(--accent-dk); color: var(--white); box-shadow: 0 10px 28px rgba(54,137,230,0.55); }
+
+/* ============ Aviso de nueva versión (barra fina, arriba del todo) ============ */
+.announce {
+  position: relative; display: flex; align-items: center; justify-content: center;
+  min-height: 38px; padding: 8px 48px;
+  background: linear-gradient(90deg, #0D52BF, #3689E6);
+  color: rgba(255,255,255,0.92); font-size: 13.5px; line-height: 1.4; text-align: center;
+}
+.announce[hidden] { display: none; }
+.announce strong { color: var(--white); font-weight: 700; }
+.announce a { color: var(--white); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.announce a:hover { color: var(--white); text-decoration-thickness: 2px; }
+.announce-close {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  width: 28px; height: 28px; border: 0; border-radius: 50%;
+  background: transparent; color: rgba(255,255,255,0.8); font-size: 20px; line-height: 1; cursor: pointer;
+}
+.announce-close:hover { background: rgba(255,255,255,0.15); color: var(--white); }
+@media (max-width: 560px) { .announce { font-size: 12.5px; padding: 8px 40px 8px 16px; } }
+
+/* ============ Portada: descarga directa y frase de confianza ============ */
+#hero-dl svg { width: 18px; height: 18px; flex: none; color: currentColor; margin: 0; }
+.hero-more {
+  display: block; width: 100%; margin-top: 4px;
+  font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.85);
+}
+.hero-more:hover { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.hero-more[hidden] { display: none; }
+.hero-trust {
+  display: block; width: 100%; margin-top: 10px;
+  font-size: 13.5px; color: rgba(255,255,255,0.65);
+}
+.hero-trust + .hero-version { margin-top: 4px; }

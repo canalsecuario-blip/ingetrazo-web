@@ -71,6 +71,7 @@ for nombre, meses in MESES.items():
         s = h.read()
     fecha = f'{meses[mes - 1]} de {anio}' if nombre == 'pt/index.html' else f'{meses[mes - 1]} {anio}'
     s = re.sub(r'(<span id="latest-version">)v[^<]*', rf'\g<1>v{v}', s)
+    s = re.sub(r'(<span id="announce-version">)v[^<]*', rf'\g<1>v{v}', s)
     s = re.sub(r'(<span id="dl-version">)[^<]*', rf'\g<1>{v}', s)
     s = re.sub(r'(<span id="dl-date">)[^<]*', rf'\g<1>{fecha}', s)
     s = re.sub(r'("softwareVersion": ")[^"]*', rf'\g<1>{v}', s)

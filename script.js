@@ -92,6 +92,10 @@
       var rel = list.filter(function (x) { return !x.draft && !x.prerelease; })[0];
       if (!rel || !rel.tag_name) return;
       var v = rel.tag_name.replace(/^v/, '');
+      var av = document.getElementById('announce-version');
+      if (av) av.textContent = 'v' + v;
+      if (rel.published_at && Date.now() - new Date(rel.published_at) > 60 * 864e5) ocultarAviso();
+      else if (avisoCerrado() === 'v' + v) ocultarAviso();
       var el = document.getElementById('latest-version');
       if (el) el.textContent = 'v' + v;
       var dv = document.getElementById('dl-version');
@@ -170,6 +174,22 @@
         thanks();
       });
       primary.hidden = false;
+
+      /* Portada: el botón principal también descarga directo, con el logo
+         del sistema; debajo, el enlace a las demás versiones. */
+      var hbtn = document.getElementById('hero-dl');
+      if (hbtn) {
+        hbtn.textContent = pick[1];
+        var ico = card.querySelector('svg');
+        if (ico) hbtn.insertBefore(ico.cloneNode(true), hbtn.firstChild);
+        hbtn.addEventListener('click', function (e) {
+          e.preventDefault();
+          window.location.href = card.href;
+          thanks();
+        });
+        var more = document.getElementById('hero-more');
+        if (more) more.hidden = false;
+      }
     }
   }
 
@@ -198,6 +218,24 @@
   document.querySelectorAll('a.dl-card').forEach(function (c) {
     c.addEventListener('click', thanks);
   });
+
+  /* ── Aviso de nueva versión ─────────────────────────────────────────── */
+  function avisoCerrado() {
+    try { return localStorage.getItem('aviso-cerrado'); } catch (e) { return null; }
+  }
+  function ocultarAviso() {
+    var bar = document.getElementById('announce');
+    if (bar) bar.hidden = true;
+  }
+  var announce = document.getElementById('announce');
+  if (announce) {
+    var avEl = document.getElementById('announce-version');
+    if (avEl && avisoCerrado() === avEl.textContent) ocultarAviso();
+    announce.querySelector('.announce-close').addEventListener('click', function () {
+      try { localStorage.setItem('aviso-cerrado', avEl ? avEl.textContent : ''); } catch (e) {}
+      ocultarAviso();
+    });
+  }
 
   /* ── Menú móvil ─────────────────────────────────────────────────────── */
   var toggle = document.querySelector('.nav-toggle');

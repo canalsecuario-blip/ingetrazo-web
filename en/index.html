@@ -170,6 +170,12 @@
 </head>
 <body>
 
+  <!-- ============ AVISO DE NUEVA VERSIÓN ============ -->
+  <div class="announce" id="announce">
+    <p><strong>New:</strong> IngeTrazo <span id="announce-version">v0.5.5</span> is out — <a href="https://github.com/ingelibre/ingetrazo/releases/latest" target="_blank" rel="noopener">see what’s new →</a></p>
+    <button type="button" class="announce-close" aria-label="Close notice">×</button>
+  </div>
+
   <!-- ============ HEADER ============ -->
   <header class="nav">
     <div class="container nav-inner">
@@ -201,10 +207,11 @@
         <li><strong>Opens and saves your SketchUp files</strong> <code>.skp</code></li>
         <li><strong>BIM, quantity takeoff, IFC and PDF drawings</strong>, ready for the site</li>
       </ul>
-      <p class="hero-platforms">Native on Linux — also Windows and macOS. Open source.</p>
       <div class="hero-ctas">
-        <a href="#descargar" class="btn btn-primary btn-lg">Get IngeTrazo for free</a>
+        <a href="#descargar" class="btn btn-primary btn-lg" id="hero-dl">Get IngeTrazo for free</a>
         <a href="https://github.com/ingelibre/ingetrazo" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">View source</a>
+        <a class="hero-more" id="hero-more" href="#descargar" hidden>Other versions and systems ›</a>
+        <span class="hero-trust">Free, no account needed · Linux, Windows and macOS · Open source</span>
         <span class="hero-version">Latest version: <span id="latest-version">v0.5.5</span> · <a href="https://github.com/ingelibre/ingetrazo/releases/latest" target="_blank" rel="noopener">What’s new →</a></span>
       </div>
     </div>
