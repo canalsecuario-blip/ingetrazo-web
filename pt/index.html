@@ -469,10 +469,11 @@
             <div class="dl-panel" role="tabpanel" data-panel="flatpak" hidden>
               <p>Instale a partir do nosso repositório e o <code>flatpak update</code> trará cada nova versão. Ele fica no seu menu de aplicativos, com os <code>.igz</code> e <code>.skp</code> associados.</p>
               <div class="dl-code" id="dl-code-flatpak">
-                <code>flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo
+                <code>flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo
 flatpak install --user ingetrazo com.ingetrazo.IngeTrazo
 flatpak run com.ingetrazo.IngeTrazo</code>
-                <button class="dl-code-copy" type="button" data-copy="flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo && flatpak install --user ingetrazo com.ingetrazo.IngeTrazo && flatpak run com.ingetrazo.IngeTrazo">Copiar</button>
+                <button class="dl-code-copy" type="button" data-copy="flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo && flatpak install --user ingetrazo com.ingetrazo.IngeTrazo && flatpak run com.ingetrazo.IngeTrazo">Copiar</button>
               </div>
               <p class="dl-panel-small">Prefere o arquivo avulso? O cartão acima o baixa e ele se instala com clique duplo, mas assim <strong>não se atualiza sozinho</strong>.</p>
             </div>
@@ -497,7 +498,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
               <p class="dl-panel-small">Traz o mesmo que o AppImage: Python, Qt e o leitor de .skp vão dentro.</p>
             </div>
 
-            <p class="dl-howto-foot" hidden>Os três rodam no Ubuntu 22.04 ou posterior. Se algo falhar, <code>--check</code> diz o que está faltando.</p>
+            <p class="dl-howto-foot" hidden>Os três rodam no Ubuntu 22.04 ou posterior. Se algo falhar, execute-o com a opção <code>--check</code> e ele diz o que está faltando (por exemplo <code>flatpak run com.ingetrazo.IngeTrazo --check</code> ou <code>./IngeTrazo-*-x86_64.AppImage --check</code>).</p>
           </div>
           <p class="dl-note">Você também pode rodá-lo <a href="https://github.com/ingelibre/ingetrazo" target="_blank" rel="noopener">a partir do código-fonte</a> (3 comandos, README). Todos os arquivos nos <a href="https://github.com/ingelibre/ingetrazo/releases" target="_blank" rel="noopener">releases do GitHub</a>.</p>
         </div>

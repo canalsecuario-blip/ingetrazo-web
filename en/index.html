@@ -469,10 +469,11 @@
             <div class="dl-panel" role="tabpanel" data-panel="flatpak" hidden>
               <p>Install it from our repository and <code>flatpak update</code> will bring you every new version. It lands in your applications menu, with <code>.igz</code> and <code>.skp</code> files associated.</p>
               <div class="dl-code" id="dl-code-flatpak">
-                <code>flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo
+                <code>flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo
 flatpak install --user ingetrazo com.ingetrazo.IngeTrazo
 flatpak run com.ingetrazo.IngeTrazo</code>
-                <button class="dl-code-copy" type="button" data-copy="flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo && flatpak install --user ingetrazo com.ingetrazo.IngeTrazo && flatpak run com.ingetrazo.IngeTrazo">Copy</button>
+                <button class="dl-code-copy" type="button" data-copy="flatpak remote-add --user --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo && flatpak install --user ingetrazo com.ingetrazo.IngeTrazo && flatpak run com.ingetrazo.IngeTrazo">Copy</button>
               </div>
               <p class="dl-panel-small">Prefer the standalone file? The card above downloads it and it installs with a double-click, but that way it <strong>doesn't update itself</strong>.</p>
             </div>
@@ -497,7 +498,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
               <p class="dl-panel-small">It carries the same as the AppImage: Python, Qt and the .skp reader travel inside.</p>
             </div>
 
-            <p class="dl-howto-foot" hidden>All three run on Ubuntu 22.04 or later. If something fails, <code>--check</code> tells you what's missing.</p>
+            <p class="dl-howto-foot" hidden>All three run on Ubuntu 22.04 or later. If something fails, run it with the <code>--check</code> option and it tells you what's missing (for example <code>flatpak run com.ingetrazo.IngeTrazo --check</code> or <code>./IngeTrazo-*-x86_64.AppImage --check</code>).</p>
           </div>
           <p class="dl-note">You can also run it <a href="https://github.com/ingelibre/ingetrazo" target="_blank" rel="noopener">from source</a> (3 commands, see the README). All files are in the <a href="https://github.com/ingelibre/ingetrazo/releases" target="_blank" rel="noopener">GitHub releases</a>.</p>
         </div>
