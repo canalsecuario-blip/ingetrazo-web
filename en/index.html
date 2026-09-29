@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#273445">
+  <meta name="theme-color" content="#0B1220">
 
-  <title>IngeTrazo · Free 3D modeler for architecture, engineering and design</title>
+  <title>IngeTrazo · Free 3D modeler for architecture and engineering</title>
 
   <meta name="description" content="Free 3D modeler with optional BIM: draw as if by hand, tag walls, slabs and columns, get the quantity takeoff and export IFC. 3D satellite terrain and profiles. Linux, Windows and macOS. Open source, GPL-3.0.">
   <meta name="keywords" content="free 3D modeler, Linux 3D modeler, free BIM, IFC export, quantity takeoff, civil engineering software, 3D design, 3D modeling, Linux CAD, 3D terrain, longitudinal profile, open source, GPL">
@@ -18,7 +18,7 @@
   <link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/">
 
   <meta property="og:site_name" content="IngeTrazo">
-  <meta property="og:title" content="IngeTrazo · Free 3D modeler for architecture, engineering and design">
+  <meta property="og:title" content="IngeTrazo · Free 3D modeler for architecture and engineering">
   <meta property="og:description" content="Draw as if by hand, tag BIM, get the quantity takeoff and export IFC. 3D satellite terrain. Free and open source (GPL-3.0). Linux, Windows and macOS.">
   <meta property="og:image" content="https://ingetrazo.com/images/og-banner.jpg">
   <meta property="og:image:width" content="1200">
@@ -28,7 +28,7 @@
   <meta property="og:locale" content="en_US">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IngeTrazo · Free 3D modeler for architecture, engineering and design">
+  <meta name="twitter:title" content="IngeTrazo · Free 3D modeler for architecture and engineering">
   <meta name="twitter:description" content="Draw as if by hand, tag BIM, get the quantity takeoff and export IFC. Free and open source. Linux, Windows and macOS.">
   <meta name="twitter:image" content="https://ingetrazo.com/images/og-banner.jpg">
 
@@ -51,6 +51,9 @@
     "applicationCategory": "DesignApplication",
     "description": "Free 3D modeler for architecture, civil engineering and 3D design, with push/pull modeling that feels like drawing by hand and BIM as an optional layer: tag geometry as walls, slabs or columns, get quantities (takeoff) and export IFC 4. Includes a library of 1,510 components and 427 real-size textures with the 213 RAL Classic colors, sheet composition with drawings at exact scale and PDF export, 3D satellite terrain, drone photogrammetry surveys, longitudinal profiles; opens SketchUp .skp files from every version, and imports and exports .dae, .obj, glTF and STL. Open source under GPL-3.0.",
     "url": "https://ingetrazo.com/en/",
+    "softwareVersion": "0.5.5",
+    "downloadUrl": "https://github.com/ingelibre/ingetrazo/releases/latest",
+    "screenshot": "https://ingetrazo.com/images/screenshots/principal.jpeg",
     "image": "https://ingetrazo.com/images/logo.png",
     "author": {
       "@type": "Person",
@@ -167,6 +170,12 @@
 </head>
 <body>
 
+  <!-- ============ AVISO DE NUEVA VERSIÓN ============ -->
+  <div class="announce" id="announce">
+    <p><strong>New:</strong> IngeTrazo <span id="announce-version">v0.5.5</span> is out — <a href="https://github.com/ingelibre/ingetrazo/releases/latest" target="_blank" rel="noopener">see what’s new →</a></p>
+    <button type="button" class="announce-close" aria-label="Close notice">×</button>
+  </div>
+
   <!-- ============ HEADER ============ -->
   <header class="nav">
     <div class="container nav-inner">
@@ -177,10 +186,8 @@
       <nav class="nav-links">
         <a href="#features">Features</a>
         <a href="#descargar">Download</a>
-        <a href="#ejemplos">Examples</a>
         <a href="https://ingetrazo-docs.pages.dev" target="_blank" rel="noopener">Manual (Spanish)</a>
         <a href="https://github.com/ingelibre/ingetrazo" target="_blank" rel="noopener">GitHub</a>
-        <a href="#faq">FAQ</a>
         <a href="/en/apoyar">Support</a>
         <span class="lang-switch" aria-label="Language"><a href="/" hreflang="es" data-lang="es">ES</a><a href="/en/" hreflang="en" data-lang="en" aria-current="true">EN</a><a href="/pt/" hreflang="pt" data-lang="pt">PT</a></span>
       </nav>
@@ -193,23 +200,58 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="container hero-center">
-      <h1>The free 3D modeler<br>for architecture, engineering and design</h1>
+      <span class="hero-badge">Free software · GPL-3.0</span>
+      <h1>The <span class="grad-text">free</span> 3D modeler<br>for architecture, engineering and design</h1>
       <p class="hero-name"><strong>IngeTrazo</strong>, pronounced <em>EEN-heh-TRAH-soh</em>: Spanish <em>inge</em>(niería), “engineering”, + <em>trazo</em>, “a drawn stroke” — the engineer’s stroke.</p>
-      <p class="hero-sub">Draw as if by hand. Tag BIM. Export IFC and PDF drawings.<br>Native on Linux — also Windows and macOS. Open source.</p>
+      <ul class="hero-checks">
+        <li><strong>Free forever:</strong> no accounts, no subscriptions, nothing locked</li>
+        <li><strong>Opens SketchUp files</strong> <code>.skp</code> of every version</li>
+        <li><strong>BIM, quantity takeoff, IFC and PDF drawings</strong>, ready for the site</li>
+      </ul>
       <div class="hero-ctas">
-        <a href="#descargar" class="btn btn-primary btn-lg">Get IngeTrazo for free</a>
-        <span class="hero-version">Latest version: <span id="latest-version">v0.5.5</span></span>
+        <a href="#descargar" class="btn btn-primary btn-lg" id="hero-dl">Get IngeTrazo for free</a>
+        <a href="https://github.com/ingelibre/ingetrazo" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">View source</a>
+        <a class="hero-more" id="hero-more" href="#descargar" hidden>Other versions and systems ›</a>
+        <span class="hero-trust">Free, no account needed · Linux, Windows and macOS · Open source</span>
+        <span class="hero-version">Latest version: <span id="latest-version">v0.5.5</span> · <a href="https://github.com/ingelibre/ingetrazo/releases/latest" target="_blank" rel="noopener">What’s new →</a></span>
       </div>
     </div>
     <div class="hero-screenshot-wrap">
-      <img class="hero-img" src="/images/screenshots/principal.jpeg"
+      <img class="hero-img zoomable" src="/images/screenshots/principal.webp"
+               srcset="/images/screenshots/principal-480.webp 480w, /images/screenshots/principal-960.webp 960w, /images/screenshots/principal.webp 1600w"
+               sizes="(max-width: 900px) calc(100vw - 40px), 560px"
            alt="IngeTrazo: a bullring with terraces, stands, arches and spectators, with the layers, scenes and materials panels"
            width="1600" height="1005" loading="eager" fetchpriority="high">
     </div>
   </section>
 
+  <!-- ============ CIFRAS ============ -->
+  <section class="stats" aria-label="IngeTrazo in numbers">
+    <div class="container stats-row">
+        <div class="stat"><strong data-stat="downloads">7,300+</strong><span>downloads</span></div>
+        <div class="stat"><strong data-stat="stars">150</strong><span>stars on GitHub</span></div>
+        <div class="stat"><strong>1,510</strong><span>components</span></div>
+        <div class="stat"><strong>.skp</strong><span>opens SketchUp files</span></div>
+        <div class="stat"><strong>IFC 4</strong><span>open BIM standard</span></div>
+        <div class="stat"><strong>3</strong><span>Linux · Windows · macOS</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 3 PASOS ============ -->
+  <section class="steps" aria-label="How it works">
+    <div class="container">
+      <h2>From sketch to site in 3 steps</h2>
+      <ol class="steps-row">
+        <li class="step"><span class="step-n">1</span><h3>Draw</h3><p>Draw as if by hand with exact measurements, or open your SketchUp model.</p></li>
+        <li class="step"><span class="step-n">2</span><h3>Tag</h3><p>Mark walls, slabs and columns: IngeTrazo computes the quantity takeoff instantly.</p></li>
+        <li class="step"><span class="step-n">3</span><h3>Deliver</h3><p>Scaled PDF drawings, an IFC file and the budget in IngePresupuestos.</p></li>
+      </ol>
+    </div>
+  </section>
+
   <!-- ============ FEATURES ============ -->
   <div id="features">
+    <div class="container features-head"><h2>Everything you need to model, tag and draw</h2></div>
 
     <!-- ── 1. Modelado freeform ── -->
     <section class="feat reveal">
@@ -225,7 +267,9 @@
           </ul>
         </div>
         <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/modelado.jpeg"
+          <img class="zoomable" src="/images/screenshots/modelado.webp"
+               srcset="/images/screenshots/modelado-480.webp 480w, /images/screenshots/modelado-960.webp 960w, /images/screenshots/modelado.webp 1600w"
+               sizes="(max-width: 860px) calc(100vw - 64px), 640px"
                alt="Drawing Yanque's bench with pergola in IngeTrazo: a rectangle half-drawn on the concrete footing with its size, 0.65 × 1.35 m, in the value box, next to the engineer figure in a hard hat" width="1600" height="1007" loading="lazy">
         </figure>
       </div>
@@ -246,7 +290,9 @@
           <p class="feat-muted-light">Solids guaranteed watertight: if an operation would break the volume, the engine rejects it instead of corrupting your takeoff.</p>
         </div>
         <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/bim.jpeg"
+          <img class="zoomable" src="/images/screenshots/bim.webp"
+               srcset="/images/screenshots/bim-480.webp 480w, /images/screenshots/bim-960.webp 960w, /images/screenshots/bim.webp 1600w"
+               sizes="(max-width: 860px) calc(100vw - 64px), 640px"
                alt="Industrial shed with steel trusses and a curved roof, with the BIM tagging panel (IfcColumn) open" width="1600" height="1005" loading="lazy">
         </figure>
       </div>
@@ -270,7 +316,9 @@
           <p class="feat-muted">The whole modeler works offline; only the map uses the internet.</p>
         </div>
         <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/terreno.jpeg"
+          <img class="zoomable" src="/images/screenshots/terreno.webp"
+               srcset="/images/screenshots/terreno-480.webp 480w, /images/screenshots/terreno-960.webp 960w, /images/screenshots/terreno.webp 1600w"
+               sizes="(max-width: 860px) calc(100vw - 64px), 640px"
                alt="Drone photogrammetry survey of a valley with a route drawn on it, its longitudinal profile and a live UTM readout" width="1600" height="1057" loading="lazy">
         </figure>
       </div>
@@ -290,70 +338,70 @@
             <li><strong>Editable title block, graphic scale and north arrow</strong> — and several sheets per document, to PDF in one click</li>
             <li><strong>DXF to <a href="https://ingecad.org" target="_blank" rel="noopener">IngeCAD</a></strong> — the vector view, with one layer per line class, ready to finish the 2D details in the ecosystem's free CAD</li>
           </ul>
-          <p class="feat-muted">In the screenshot: the sheet composer open on sheet D02, the detail of a bench with a pergola for the Yanque plaza — front view, side view with a section cut, plan and 3D, all at 1:20, with dimensions, material callouts, a scale figure and title block; on the right, the properties of the selected view: scene, scale, Architectural style and annotation size.</p>
         </div>
         <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/laminas.jpeg"
+          <img class="zoomable" src="/images/screenshots/laminas.webp"
+               srcset="/images/screenshots/laminas-480.webp 480w, /images/screenshots/laminas-960.webp 960w, /images/screenshots/laminas.webp 1600w"
+               sizes="(max-width: 860px) calc(100vw - 64px), 640px"
+               data-caption="IngeTrazo's sheet composer with an A3 sheet of Yanque's square: front, left and right views at 1:100, a 3D view on the satellite terrain and the title block"
                alt="IngeTrazo's sheet composer with an A3 sheet of Yanque's square: front, left and right views at 1:100, a 3D view on the satellite terrain and the title block" width="1600" height="1007" loading="lazy">
         </figure>
       </div>
     </section>
 
-    <!-- ── Modela con la IA ── -->
-    <section class="feat reveal">
-      <div class="container feat-row feat-reverse">
-        <div class="feat-text">
-          <h2>Model with AI, inside the app or from Claude</h2>
-          <p>Describe what you want —or attach a photo— and the AI writes the <strong>recipe</strong>: revolves, extrusions, Python over IngeTrazo's action API. The deterministic engine runs it: <strong>every step is one undo</strong>, every recipe goes through the watertightness guard, and the model is still yours, editable by hand.</p>
-          <ul class="feat-list">
-            <li><strong>Built-in AI Assistant</strong> (Extensions ▸ AI Assistant, Ctrl+Shift+A) — a chat with your own key: Groq (with a free tier), Gemini, OpenAI, Anthropic, OpenRouter, DeepSeek or a local model with Ollama. No accounts, no middlemen</li>
-            <li><strong>It sees what it does</strong> — it gets viewport screenshots and corrects based on what it sees; with <strong>Photo…</strong> it rebuilds what an image shows, using the measurements you give it</li>
-            <li><strong>MCP bridge for Claude Desktop and Claude Code</strong> — the agent draws, queries and sees the model <em>live, in the open app</em>; one undo step per action and, if its code fails, the document comes back intact</li>
-            <li><strong>No black box</strong> — the AI never writes meshes: it generates recipes over the same engine you use by hand, and everything goes into the history</li>
-          </ul>
-          <p class="feat-muted"><strong>Top: the MCP bridge</strong> on an uncropped Ubuntu desktop. Claude Code in the terminal has just drawn, in the app open next to it, a 1.40 × 0.80 × 0.75 m dining table with four chairs (0.45 × 0.45 seat at 0.45 m, backrest at 0.90 m) —“a table with 4 chairs, standard measurements”— and answers with the table of dimensions it used; on the right, the bridge dialog with the connection line. How it's done: Extensions ▸ AI Bridge (MCP), copy the line it shows you, paste it into the terminal (<code>claude mcp add ingetrazo -- …</code>) or into Claude Desktop's configuration, and ask for whatever you want with IngeTrazo open.</p>
-          <p class="feat-muted"><strong>Bottom: the AI Assistant</strong>, its dialog open over the solar light pole from the examples (also designed through the bridge). How it's done: Extensions ▸ AI Assistant (Ctrl+Shift+A), paste your provider's key, type the request with its measurements —or attach a photo— and Send; every step undoes with Ctrl+Z. Other modelers sell this as a subscription; here it's free and you use whichever key you choose. <a href="https://ingetrazo-docs.pages.dev/ia/" target="_blank" rel="noopener">Step-by-step guide in the manual (Spanish) →</a></p>
-        </div>
-        <div class="feat-imgs">
-          <figure class="feat-img">
-            <img class="zoomable" src="/images/screenshots/mcp-claude.jpeg"
+    <!-- ── Y además: IA, componentes y SketchUp ── -->
+    <section class="feat more reveal">
+      <div class="container">
+        <h2 class="more-title">And there’s more</h2>
+        <div class="more-grid">
+        <article class="more-card">
+          <figure class="more-img">
+            <img class="zoomable" src="/images/screenshots/mcp-claude.webp"
+               srcset="/images/screenshots/mcp-claude-480.webp 480w, /images/screenshots/mcp-claude-960.webp 960w, /images/screenshots/mcp-claude.webp 1600w"
+               sizes="(max-width: 960px) min(640px, calc(100vw - 40px)), 380px"
+                 data-caption="The MCP bridge on an uncropped Ubuntu desktop. Claude Code in the terminal has just drawn, in the app open next to it, a 1.40 × 0.80 × 0.75 m dining table with four chairs (0.45 × 0.45 seat at 0.45 m, backrest at 0.90 m) —“a table with 4 chairs, standard measurements”— and answers with the table of dimensions it used; on the right, the bridge dialog with the connection line. How it's done: Extensions ▸ AI Bridge (MCP), copy the line it shows you, paste it into the terminal (claude mcp add ingetrazo -- …) or into Claude Desktop's configuration, and ask for whatever you want with IngeTrazo open."
                  alt="Full Ubuntu desktop: Claude Code in a terminal on the left listing the measurements of the table with four chairs it just drew, and IngeTrazo on the right with the model and the AI Bridge (MCP) dialog open" width="1600" height="1000" loading="lazy">
           </figure>
-          <figure class="feat-img">
-            <img class="zoomable" src="/images/screenshots/asistente-ia.jpeg"
-                 alt="IngeTrazo's AI Assistant open over a solar street-light pole modeled with recipes: provider, key, viewport screenshots and the typed request" width="1600" height="965" loading="lazy">
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 5. Import SketchUp ── -->
-    <!-- ── Biblioteca de componentes y materiales ── -->
-    <section class="feat reveal">
-      <div class="container feat-row">
-        <div class="feat-text">
-          <h2>Populating a scene shouldn't cost you the afternoon</h2>
-          <p>A model makes sense once it has people next to it, a tree and a car. IngeTrazo brings <strong>1,510 components</strong> one click away and <strong>427 textures</strong> — and each one arrives <strong>at its real size</strong>, not whatever size it happens to get.</p>
-          <ul class="feat-list">
-            <li><strong>1,510 models online</strong> — furniture, doors, windows, trees, vehicles and people. Browsing costs kilobytes: only the one you click is downloaded, and it's kept</li>
-            <li><strong>Offline too</strong> — eight models and six scale figures come inside the program</li>
-            <li><strong>427 textures at their real size</strong> — a brick looks like brick because the catalog says how big it is, not because you eyeballed it</li>
-            <li><strong>213 RAL Classic colors</strong> — paint with <em>RAL 7035 Light grey</em> and the drawing carries a reference a painter can actually buy, not three numbers</li>
-            <li><strong>Scale figures at their true height</strong> — to tell at a glance whether that door is 2.10 m</li>
-          </ul>
-          <p class="feat-muted">In the screenshot: an urban model with its textures and two figures placed, with the components tray on the right. All the content comes from the free <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> library (CC0, CC BY and Free Art License); IngeTrazo always shows the license and author of each piece.</p>
-        </div>
-        <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/componentes.jpeg"
+          <div class="more-body">
+            <h3>Model with AI, inside the app or from Claude</h3>
+            <p>Describe what you want —or attach a photo— and the AI writes the <strong>recipe</strong>: revolves, extrusions, Python over IngeTrazo's action API. The deterministic engine runs it: <strong>every step is one undo</strong>, every recipe goes through the watertightness guard, and the model is still yours, editable by hand.</p>
+            <ul class="feat-list">
+              <li><strong>Built-in AI Assistant</strong> (the AI tab of the sidebar, Ctrl+Shift+A) — a chat with your own key: Groq (with a free tier), Gemini, OpenAI, Anthropic, OpenRouter, DeepSeek or a local model with Ollama. No accounts, no middlemen</li>
+              <li><strong>It sees what it does</strong> — it gets viewport screenshots and corrects based on what it sees; with <strong>Photo…</strong> it rebuilds what an image shows, using the measurements you give it</li>
+              <li><strong>MCP bridge for Claude Desktop and Claude Code</strong> — the agent draws, queries and sees the model <em>live, in the open app</em>; one undo step per action and, if its code fails, the document comes back intact</li>
+            </ul>
+            <p class="feat-muted"><a href="https://ingetrazo-docs.pages.dev/ia/" target="_blank" rel="noopener">Step-by-step guide in the manual (Spanish) →</a></p>
+          </div>
+        </article>
+        <article class="more-card">
+          <figure class="more-img">
+          <img class="zoomable" src="/images/screenshots/componentes.webp"
+               srcset="/images/screenshots/componentes-480.webp 480w, /images/screenshots/componentes-960.webp 960w, /images/screenshots/componentes.webp 1600w"
+               sizes="(max-width: 960px) min(640px, calc(100vw - 40px)), 380px"
+               data-caption="A scene populated from IngeTrazo's component tray: a tree casting shadows, a pickup, a sofa, a fountain and scale figures, with the library of people, furniture, trees and vehicles on the right"
                alt="A scene populated from IngeTrazo's component tray: a tree casting shadows, a pickup, a sofa, a fountain and scale figures, with the library of people, furniture, trees and vehicles on the right" width="1600" height="1007" loading="lazy">
         </figure>
-      </div>
-    </section>
-
-    <section class="feat feat-alt reveal">
-      <div class="container feat-row">
-        <div class="feat-text">
-          <h2>Open your SketchUp (.skp) files</h2>
+          <div class="more-body">
+            <h3>Populating a scene shouldn't cost you the afternoon</h3>
+            <p>A model makes sense once it has people next to it, a tree and a car. IngeTrazo brings <strong>1,510 components</strong> one click away and <strong>427 textures</strong> — and each one arrives <strong>at its real size</strong>, not whatever size it happens to get.</p>
+            <ul class="feat-list">
+              <li><strong>1,510 models online</strong> — furniture, doors, windows, trees, vehicles and people. Browsing costs kilobytes: only the one you click is downloaded, and it's kept</li>
+              <li><strong>Offline too</strong> — eight models and six scale figures come inside the program</li>
+              <li><strong>427 textures at their real size</strong> — a brick looks like brick because the catalog says how big it is, not because you eyeballed it</li>
+            </ul>
+            <p class="feat-muted">All the content comes from the free <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> library (CC0, CC BY and Free Art License); IngeTrazo always shows the license and author of each piece.</p>
+          </div>
+        </article>
+        <article class="more-card">
+          <figure class="more-img">
+          <img class="zoomable" src="/images/screenshots/import-sketchup.webp"
+               srcset="/images/screenshots/import-sketchup-480.webp 480w, /images/screenshots/import-sketchup-960.webp 960w, /images/screenshots/import-sketchup.webp 1600w"
+               sizes="(max-width: 960px) min(640px, calc(100vw - 40px)), 380px"
+               data-caption="Yanque's main square modelled in IngeTrazo on its satellite terrain: welcome arch, pergolas, gardens, fountain, solar lamp posts and flags, with its layers and scenes in the side panel"
+               alt="Yanque's main square modelled in IngeTrazo on its satellite terrain: welcome arch, pergolas, gardens, fountain, solar lamp posts and flags, with its layers and scenes in the side panel" width="1600" height="1007" loading="lazy">
+        </figure>
+          <div class="more-body">
+            <h3>Open your SketchUp (.skp) files</h3>
           <p>Your years-long library doesn't get left behind — and neither do your colleagues: IngeTrazo opens <code>.skp</code> directly, thanks to <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, a free reader for the format — no converters, no extra installs.</p>
           <ul class="feat-list">
             <li><strong>Native SketchUp (.skp) import</strong> — every version, from the old ones (2013) to the current ones</li>
@@ -361,12 +409,9 @@
             <li><strong>To take your model back</strong> — export COLLADA (.dae), which SketchUp and almost any 3D program open</li>
             <li><strong>Plus OBJ, COLLADA, glTF, STL</strong> and <strong>IFC</strong></li>
           </ul>
-          <p class="feat-muted">In the screenshot: a real park opened from its .skp — play equipment, stands and roofing, with its original layers. IngeTrazo contributes code to OpenSKP: every file it opens here improves the free reader for everyone.</p>
+          </div>
+        </article>
         </div>
-        <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/import-sketchup.jpeg"
-               alt="Yanque's main square modelled in IngeTrazo on its satellite terrain: welcome arch, pergolas, gardens, fountain, solar lamp posts and flags, with its layers and scenes in the side panel" width="1600" height="1007" loading="lazy">
-        </figure>
       </div>
     </section>
 
@@ -380,7 +425,9 @@
       <div class="fam-grid">
         <article class="fam-card fam-lime">
           <a class="fam-shot" href="https://ingecad.org" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="/images/familia/ingecad.jpg" alt="" width="960" height="540" loading="lazy">
+            <img src="/images/familia/ingecad.webp"
+               srcset="/images/familia/ingecad-480.webp 480w, /images/familia/ingecad.webp 960w"
+               sizes="(max-width: 700px) calc(100vw - 40px), 460px" alt="" width="960" height="540" loading="lazy">
           </a>
           <span class="fam-tag">2D CAD · Linux</span>
           <h3>IngeCAD</h3>
@@ -392,7 +439,9 @@
         </article>
         <article class="fam-card fam-orange">
           <a class="fam-shot" href="https://ingepresupuestos.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="/images/familia/ingepresupuestos.jpg" alt="" width="960" height="540" loading="lazy">
+            <img src="/images/familia/ingepresupuestos.webp"
+               srcset="/images/familia/ingepresupuestos-480.webp 480w, /images/familia/ingepresupuestos.webp 960w"
+               sizes="(max-width: 700px) calc(100vw - 40px), 460px" alt="" width="960" height="540" loading="lazy">
           </a>
           <span class="fam-tag">Construction cost estimating</span>
           <h3>IngePresupuestos</h3>
@@ -411,13 +460,25 @@
   <section class="impact">
     <h2>Free and open source.<br>Forever.</h2>
     <p>IngeTrazo is free software under the GPL-3.0. No accounts, no mandatory cloud, no subscriptions: your models live on your computer, in an open format you'll always be able to read. Made in Peru for engineers, architects and designers across Latin America and beyond.</p>
+    <aside class="impact-card">
+      <p class="impact-card-q">Help keep it free</p>
+      <p class="impact-card-sub">Every contribution, however small, keeps development going.</p>
+      <a class="btn btn-lg impact-card-btn" href="/en/apoyar">Support the project</a>
+      <ul class="pay-chips" aria-label="Payment methods"><li>Liberapay</li><li>PayPal</li><li>Yape</li><li>Plin</li></ul>
+      <p class="impact-card-alt">No budget? Telling a colleague or leaving a star on <a href="https://github.com/ingelibre/ingetrazo" target="_blank" rel="noopener">GitHub</a> helps too.</p>
+    </aside>
   </section>
+
 
   <!-- ============ DESCARGAR ============ -->
   <section id="descargar" class="download-section">
     <div class="container">
       <h2>Get IngeTrazo</h2>
       <p class="download-sub">Free and complete. Version <span id="dl-version">0.5.5</span> — <span id="dl-date">September 2026</span>.</p>
+      <div class="dl-primary" id="dl-primary" hidden>
+        <a class="btn btn-primary btn-lg" id="dl-primary-btn" href="#descargar"></a>
+        <p class="dl-primary-sub" id="dl-primary-sub"></p>
+      </div>
       <div class="dl-row">
         <div class="dl-group">
           <span class="dl-group-label">Windows</span>
@@ -433,8 +494,8 @@
               <span>no installation</span>
             </a>
           </div>
-          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">If SmartScreen warns you: “More info → Run anyway” (the installer isn't digitally signed).</p>
-          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">Free code signing provided by SignPath.io, certificate by SignPath Foundation (being set up) — <a href="/en/firma" style="color:#fff;text-decoration:underline">code signing policy</a>.</p>
+          <p class="dl-group-alt">This is normal: the installer isn't digitally signed yet. If SmartScreen warns you, choose “More info → Run anyway”.</p>
+          <p class="dl-group-alt">Free code signing provided by SignPath.io, certificate by SignPath Foundation (being set up) — <a href="/en/firma">code signing policy</a>.</p>
         </div>
 
         <div class="dl-divider"></div>
@@ -515,7 +576,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
             </a>
           </div>
           <p class="dl-group-alt">Open the <code>.dmg</code> and drag IngeTrazo to <strong>Applications</strong>. It isn't signed with an Apple account yet, so <strong>the first time</strong> macOS won't open it with a double-click: <strong>right-click ▸ Open</strong> and confirm. From then on it opens normally, and <code>.igz</code> and <code>.skp</code> files open with a double-click. Packaged by <a href="https://github.com/felixriestra" target="_blank" rel="noopener">Félix Riestra</a>.</p>
-          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">For Macs with Apple Silicon (M1 and later). What doesn't work on Mac yet: DWG import; opening <code>.skp</code> does. If something fails, tell us in a <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">GitHub issue</a>.</p>
+          <p class="dl-group-alt">For Macs with Apple Silicon (M1 and later). What doesn't work on Mac yet: DWG import; opening <code>.skp</code> does. If something fails, tell us in a <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">GitHub issue</a>.</p>
         </div>
       </div>
     </div>
@@ -530,25 +591,33 @@ IngeTrazo-0.5.5/ingetrazo</code>
       </div>
       <div class="ej-grid">
         <article class="ej-card">
-          <img class="zoomable" src="/images/ejemplos/pileta-fuente-yanque.jpg" alt="A3 sheet of the ornamental fountain: front view, 3D, plan and section at 1:40 with dimensions and title block" width="993" height="702" loading="lazy">
+          <img class="zoomable" src="/images/ejemplos/pileta-fuente-yanque.webp"
+               srcset="/images/ejemplos/pileta-fuente-yanque-480.webp 480w, /images/ejemplos/pileta-fuente-yanque.webp 993w"
+               sizes="(max-width: 560px) calc(100vw - 40px), 280px" alt="A3 sheet of the ornamental fountain: front view, 3D, plan and section at 1:40 with dimensions and title block" width="993" height="702" loading="lazy">
           <h3>Fountain</h3>
           <p>Octagonal pedestal, fluted shaft and two basins with wavy rims: 22 component instances, shadows from the real sun and a section plane. The sheet has front view, 3D, plan and section at 1:40.</p>
           <p class="ej-links"><a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/pileta-fuente-yanque.igz">Open in IngeTrazo — .igz (1.8 MB)</a> · <a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/pileta-fuente-yanque.pdf" target="_blank" rel="noopener">Sheet PDF</a></p>
         </article>
         <article class="ej-card">
-          <img class="zoomable" src="/images/ejemplos/banca-pergola-yanque.jpg" alt="A3 sheet of the bench with pergola: views, chained dimensions and labels" width="993" height="702" loading="lazy">
+          <img class="zoomable" src="/images/ejemplos/banca-pergola-yanque.webp"
+               srcset="/images/ejemplos/banca-pergola-yanque-480.webp 480w, /images/ejemplos/banca-pergola-yanque.webp 993w"
+               sizes="(max-width: 560px) calc(100vw - 40px), 280px" alt="A3 sheet of the bench with pergola: views, chained dimensions and labels" width="993" height="702" loading="lazy">
           <h3>Bench with pergola</h3>
           <p>A concrete bench with a timber pergola, built from components and with five saved scenes. The sheet: four views, 23 dimensions and 12 leader labels.</p>
           <p class="ej-links"><a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/banca-pergola-yanque.igz">Open in IngeTrazo — .igz (0.5 MB)</a> · <a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/banca-pergola-yanque.pdf" target="_blank" rel="noopener">Sheet PDF</a></p>
         </article>
         <article class="ej-card">
-          <img class="zoomable" src="/images/ejemplos/luminaria-solar-yanque.jpg" alt="A3 sheet of the solar street light: pole, concrete pedestal and reinforcement detail" width="993" height="702" loading="lazy">
+          <img class="zoomable" src="/images/ejemplos/luminaria-solar-yanque.webp"
+               srcset="/images/ejemplos/luminaria-solar-yanque-480.webp 480w, /images/ejemplos/luminaria-solar-yanque.webp 993w"
+               sizes="(max-width: 560px) calc(100vw - 40px), 280px" alt="A3 sheet of the solar street light: pole, concrete pedestal and reinforcement detail" width="993" height="702" loading="lazy">
           <h3>Solar street light</h3>
           <p>A 4.5 m pole with two floodlights and its panel, a truncated-cone pedestal, a buried footing and the 3/8&quot; rebar drawn inside — modeled with recipes by the AI Assistant. The sheet includes the pedestal detail.</p>
           <p class="ej-links"><a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/luminaria-solar-yanque.igz">Open in IngeTrazo — .igz (0.5 MB)</a> · <a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/luminaria-solar-yanque.pdf" target="_blank" rel="noopener">Sheet PDF</a></p>
         </article>
         <article class="ej-card">
-          <img class="zoomable" src="/images/ejemplos/arco-yanque.jpg" alt="A3 sheet D04 of the YANQUE welcome arch: front, right side, plan and 3D at 1:50, lettering and sculpture detail at 1:25 and ashlar capital detail at 1:20, with dimensions, levels, ground line and title block" width="993" height="702" loading="lazy">
+          <img class="zoomable" src="/images/ejemplos/arco-yanque.webp"
+               srcset="/images/ejemplos/arco-yanque-480.webp 480w, /images/ejemplos/arco-yanque.webp 993w"
+               sizes="(max-width: 560px) calc(100vw - 40px), 280px" alt="A3 sheet D04 of the YANQUE welcome arch: front, right side, plan and 3D at 1:50, lettering and sculpture detail at 1:25 and ashlar capital detail at 1:20, with dimensions, levels, ground line and title block" width="993" height="702" loading="lazy">
           <h3>“YANQUE” welcome arch</h3>
           <p>Following structural sheet E02: concrete and <strong>all the reinforcing steel</strong> (footings, columns, segmental arch, beam and tympanum), ashlar capitals, four ornamental lamps, lettering and sculpture; look at it in X-Ray. Sheet D04: front, side, plan and 3D at 1:50, the lettering and sculpture detail at 1:25 and the capital detail at 1:20, with levels, ground line and leader labels.</p>
           <p class="ej-links"><a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/arco-yanque.igz">Open in IngeTrazo — .igz (3.6 MB)</a> · <a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/arco-yanque.pdf" target="_blank" rel="noopener">Sheet PDF</a></p>
@@ -614,6 +683,18 @@ IngeTrazo-0.5.5/ingetrazo</code>
     </div>
   </section>
 
+  <!-- ============ FRANJA FINAL ============ -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Start modeling today</h2>
+      <p>Free and complete, on Linux, Windows and macOS. No accounts, no subscriptions.</p>
+      <div class="final-cta-btns">
+        <a href="#descargar" class="btn btn-lg final-cta-dl">Download for free</a>
+        <a href="https://ingetrazo-docs.pages.dev" class="btn btn-lg final-cta-man" target="_blank" rel="noopener">Read the manual</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FOOTER ============ -->
   <footer id="contacto" class="footer">
     <div class="container footer-grid">
@@ -623,6 +704,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
           <strong>IngeTrazo</strong>
         </div>
         <p>Free 3D modeler for architecture, engineering and design.</p>
+        <a class="btn btn-heart footer-support" href="/en/apoyar">Support the project</a>
         <p class="footer-copy">© 2026 Marco Sumari Tellez · Free software, GPL-3.0</p>
       </div>
       <div class="footer-col">
@@ -631,7 +713,6 @@ IngeTrazo-0.5.5/ingetrazo</code>
           <li><a href="#features">Features</a></li>
           <li><a href="#descargar">Download</a></li>
           <li><a href="https://github.com/ingelibre/ingetrazo/releases" target="_blank" rel="noopener">Releases</a></li>
-          <li><a href="/en/apoyar">Support the project</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
@@ -661,7 +742,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
   <!-- Lightbox para ampliar capturas -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" type="button" aria-label="Close">×</button>
-    <img src="" alt="">
+    <img alt="">
   </div>
 
   <script src="/script.js"></script>

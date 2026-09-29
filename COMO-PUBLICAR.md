@@ -16,6 +16,7 @@ ingepresupuestos.com). La configuración vive en `wrangler.jsonc`
 
 ```bash
 cd ~/ingetrazo-web
+python3 tools/actualizar-version.py   # versión de respaldo en el HTML
 npx wrangler deploy    # sube solo los assets que cambiaron, ~5 s y queda live
 git add . && git commit -m "..."
 ```

@@ -9,3 +9,5 @@ README.md
 wrangler.jsonc
 node_modules
 worker.js
+.github
+tools

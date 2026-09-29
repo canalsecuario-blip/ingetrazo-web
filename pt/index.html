@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#273445">
+  <meta name="theme-color" content="#0B1220">
 
-  <title>IngeTrazo · Modelador 3D livre para arquitetura, engenharia e design</title>
+  <title>IngeTrazo · Modelador 3D livre para arquitetura e engenharia</title>
 
   <meta name="description" content="Modelador 3D livre com BIM opcional: desenhe como à mão, classifique paredes, lajes e pilares, obtenha o levantamento de quantitativos e exporte IFC. Terreno de satélite em 3D e perfis. Linux, Windows e macOS. Código aberto GPL-3.0.">
   <meta name="keywords" content="modelador 3D livre, modelador 3D Linux, BIM livre, exportar IFC, levantamento de quantitativos, software engenharia civil, design 3D, modelagem 3D, CAD Linux, terreno 3D, perfil longitudinal, código aberto, GPL">
@@ -18,7 +18,7 @@
   <link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/">
 
   <meta property="og:site_name" content="IngeTrazo">
-  <meta property="og:title" content="IngeTrazo · Modelador 3D livre para arquitetura, engenharia e design">
+  <meta property="og:title" content="IngeTrazo · Modelador 3D livre para arquitetura e engenharia">
   <meta property="og:description" content="Desenhe como à mão, classifique com BIM, obtenha os quantitativos e exporte IFC. Terreno de satélite em 3D. Livre e de código aberto (GPL-3.0). Linux, Windows e macOS.">
   <meta property="og:image" content="https://ingetrazo.com/images/og-banner.jpg">
   <meta property="og:image:width" content="1200">
@@ -28,7 +28,7 @@
   <meta property="og:locale" content="pt_BR">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IngeTrazo · Modelador 3D livre para arquitetura, engenharia e design">
+  <meta name="twitter:title" content="IngeTrazo · Modelador 3D livre para arquitetura e engenharia">
   <meta name="twitter:description" content="Desenhe como à mão, classifique com BIM, obtenha os quantitativos e exporte IFC. Livre e de código aberto. Linux, Windows e macOS.">
   <meta name="twitter:image" content="https://ingetrazo.com/images/og-banner.jpg">
 
@@ -51,6 +51,9 @@
     "applicationCategory": "DesignApplication",
     "description": "Modelador 3D livre para arquitetura, engenharia civil e design 3D, com modelagem por empurrar/puxar que parece desenhar à mão e BIM como camada opcional: classifique a geometria como paredes, lajes ou pilares, obtenha os quantitativos e exporte IFC 4. Inclui biblioteca de 1510 componentes e 427 texturas em tamanho real com as 213 cores RAL Classic, composição de pranchas com desenhos em escala exata e exportação para PDF, terreno de satélite em 3D, levantamentos fotogramétricos com drone, perfis longitudinais; abre arquivos .skp do SketchUp de todas as versões, e importa e exporta .dae, .obj, glTF e STL. Código aberto sob GPL-3.0.",
     "url": "https://ingetrazo.com/pt/",
+    "softwareVersion": "0.5.5",
+    "downloadUrl": "https://github.com/ingelibre/ingetrazo/releases/latest",
+    "screenshot": "https://ingetrazo.com/images/screenshots/principal.jpeg",
     "image": "https://ingetrazo.com/images/logo.png",
     "author": {
       "@type": "Person",
@@ -167,6 +170,12 @@
 </head>
 <body>
 
+  <!-- ============ AVISO DE NUEVA VERSIÓN ============ -->
+  <div class="announce" id="announce">
+    <p><strong>Novo:</strong> IngeTrazo <span id="announce-version">v0.5.5</span> já disponível — <a href="https://github.com/ingelibre/ingetrazo/releases/latest" target="_blank" rel="noopener">veja as novidades →</a></p>
+    <button type="button" class="announce-close" aria-label="Fechar aviso">×</button>
+  </div>
+
   <!-- ============ HEADER ============ -->
   <header class="nav">
     <div class="container nav-inner">
@@ -177,10 +186,8 @@
       <nav class="nav-links">
         <a href="#features">Recursos</a>
         <a href="#descargar">Baixar</a>
-        <a href="#ejemplos">Exemplos</a>
         <a href="https://ingetrazo-docs.pages.dev" target="_blank" rel="noopener">Manual (em espanhol)</a>
         <a href="https://github.com/ingelibre/ingetrazo" target="_blank" rel="noopener">GitHub</a>
-        <a href="#faq">FAQ</a>
         <a href="/pt/apoyar">Apoiar</a>
         <span class="lang-switch" aria-label="Idioma"><a href="/" hreflang="es" data-lang="es">ES</a><a href="/en/" hreflang="en" data-lang="en">EN</a><a href="/pt/" hreflang="pt" data-lang="pt" aria-current="true">PT</a></span>
       </nav>
@@ -193,23 +200,58 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="container hero-center">
-      <h1>O modelador 3D livre<br>para arquitetura, engenharia e design</h1>
+      <span class="hero-badge">Software livre · GPL-3.0</span>
+      <h1>O modelador 3D <span class="grad-text">livre</span><br>para arquitetura, engenharia e design</h1>
       <p class="hero-name"><strong>IngeTrazo</strong>, pronuncia-se <em>in-rre-TRA-sso</em>: do espanhol <em>inge</em>(niería), “engenharia”, + <em>trazo</em>, “traço” — o traço do engenheiro.</p>
-      <p class="hero-sub">Desenhe como à mão. Classifique com BIM. Exporte IFC e pranchas em PDF.<br>Nativo no Linux — também Windows e macOS. Código aberto.</p>
+      <ul class="hero-checks">
+        <li><strong>Grátis para sempre:</strong> sem contas, sem assinaturas, nada bloqueado</li>
+        <li><strong>Abre arquivos do SketchUp</strong> <code>.skp</code> de todas as versões</li>
+        <li><strong>BIM, quantitativos, IFC e pranchas em PDF</strong>, prontos para a obra</li>
+      </ul>
       <div class="hero-ctas">
-        <a href="#descargar" class="btn btn-primary btn-lg">Baixe o IngeTrazo grátis</a>
-        <span class="hero-version">Última versão: <span id="latest-version">v0.5.5</span></span>
+        <a href="#descargar" class="btn btn-primary btn-lg" id="hero-dl">Baixe o IngeTrazo grátis</a>
+        <a href="https://github.com/ingelibre/ingetrazo" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">Ver o código</a>
+        <a class="hero-more" id="hero-more" href="#descargar" hidden>Outras versões e sistemas ›</a>
+        <span class="hero-trust">Grátis e sem contas · Linux, Windows e macOS · Código aberto</span>
+        <span class="hero-version">Última versão: <span id="latest-version">v0.5.5</span> · <a href="https://github.com/ingelibre/ingetrazo/releases/latest" target="_blank" rel="noopener">Novidades →</a></span>
       </div>
     </div>
     <div class="hero-screenshot-wrap">
-      <img class="hero-img" src="/images/screenshots/principal.jpeg"
+      <img class="hero-img zoomable" src="/images/screenshots/principal.webp"
+               srcset="/images/screenshots/principal-480.webp 480w, /images/screenshots/principal-960.webp 960w, /images/screenshots/principal.webp 1600w"
+               sizes="(max-width: 900px) calc(100vw - 40px), 560px"
            alt="IngeTrazo: praça de touros com terraços, arquibancadas, arcos e público, com os painéis de camadas, cenas e materiais"
            width="1600" height="1005" loading="eager" fetchpriority="high">
     </div>
   </section>
 
+  <!-- ============ CIFRAS ============ -->
+  <section class="stats" aria-label="IngeTrazo em números">
+    <div class="container stats-row">
+        <div class="stat"><strong data-stat="downloads">7.300+</strong><span>downloads</span></div>
+        <div class="stat"><strong data-stat="stars">150</strong><span>estrelas no GitHub</span></div>
+        <div class="stat"><strong>1.510</strong><span>componentes</span></div>
+        <div class="stat"><strong>.skp</strong><span>abre arquivos do SketchUp</span></div>
+        <div class="stat"><strong>IFC 4</strong><span>padrão BIM aberto</span></div>
+        <div class="stat"><strong>3</strong><span>Linux · Windows · macOS</span></div>
+    </div>
+  </section>
+
+  <!-- ============ 3 PASOS ============ -->
+  <section class="steps" aria-label="Como funciona">
+    <div class="container">
+      <h2>Do esboço à obra em 3 passos</h2>
+      <ol class="steps-row">
+        <li class="step"><span class="step-n">1</span><h3>Desenhe</h3><p>Desenhe como à mão com medidas exatas, ou abra seu modelo do SketchUp.</p></li>
+        <li class="step"><span class="step-n">2</span><h3>Classifique</h3><p>Marque paredes, lajes e pilares: o IngeTrazo calcula os quantitativos na hora.</p></li>
+        <li class="step"><span class="step-n">3</span><h3>Entregue</h3><p>Pranchas em PDF em escala, arquivo IFC e o orçamento no IngePresupuestos.</p></li>
+      </ol>
+    </div>
+  </section>
+
   <!-- ============ FEATURES ============ -->
   <div id="features">
+    <div class="container features-head"><h2>Tudo o que você precisa para modelar, classificar e desenhar</h2></div>
 
     <!-- ── 1. Modelado freeform ── -->
     <section class="feat reveal">
@@ -225,7 +267,9 @@
           </ul>
         </div>
         <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/modelado.jpeg"
+          <img class="zoomable" src="/images/screenshots/modelado.webp"
+               srcset="/images/screenshots/modelado-480.webp 480w, /images/screenshots/modelado-960.webp 960w, /images/screenshots/modelado.webp 1600w"
+               sizes="(max-width: 860px) calc(100vw - 64px), 640px"
                alt="Desenhando no IngeTrazo o banco com pérgola de Yanque: um retângulo sendo traçado sobre a base de concreto com a medida 0,65 × 1,35 m na caixa de valores, ao lado da figura do engenheiro de capacete" width="1600" height="1007" loading="lazy">
         </figure>
       </div>
@@ -246,7 +290,9 @@
           <p class="feat-muted-light">Sólidos garantidamente estanques: se uma operação quebraria o volume, o motor a rejeita em vez de corromper seus quantitativos.</p>
         </div>
         <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/bim.jpeg"
+          <img class="zoomable" src="/images/screenshots/bim.webp"
+               srcset="/images/screenshots/bim-480.webp 480w, /images/screenshots/bim-960.webp 960w, /images/screenshots/bim.webp 1600w"
+               sizes="(max-width: 860px) calc(100vw - 64px), 640px"
                alt="Galpão industrial com tesouras metálicas e cobertura curva, com o painel de classificação BIM (IfcColumn) aberto" width="1600" height="1005" loading="lazy">
         </figure>
       </div>
@@ -270,7 +316,9 @@
           <p class="feat-muted">O modelador completo funciona offline; só o mapa usa internet.</p>
         </div>
         <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/terreno.jpeg"
+          <img class="zoomable" src="/images/screenshots/terreno.webp"
+               srcset="/images/screenshots/terreno-480.webp 480w, /images/screenshots/terreno-960.webp 960w, /images/screenshots/terreno.webp 1600w"
+               sizes="(max-width: 860px) calc(100vw - 64px), 640px"
                alt="Levantamento fotogramétrico com drone de um vale com alinhamento traçado, perfil longitudinal e leitura UTM ao vivo" width="1600" height="1057" loading="lazy">
         </figure>
       </div>
@@ -290,70 +338,70 @@
             <li><strong>Carimbo editável, escala gráfica e norte</strong> — e várias pranchas por documento, em PDF com um clique</li>
             <li><strong>DXF para o <a href="https://ingecad.org" target="_blank" rel="noopener">IngeCAD</a></strong> — a vista vetorial, com uma camada por tipo de linha, pronta para finalizar os detalhes 2D no CAD livre do ecossistema</li>
           </ul>
-          <p class="feat-muted">Na captura: o compositor de pranchas aberto na prancha D02, detalhe de um banco com pérgola para a praça de Yanque — vista frontal, lateral com corte, planta e 3D, todas em 1:20, com cotas, chamadas de material, figura de escala e carimbo; à direita, as propriedades da vista selecionada: cena, escala, estilo Arquitetônico e tamanho das anotações.</p>
         </div>
         <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/laminas.jpeg"
+          <img class="zoomable" src="/images/screenshots/laminas.webp"
+               srcset="/images/screenshots/laminas-480.webp 480w, /images/screenshots/laminas-960.webp 960w, /images/screenshots/laminas.webp 1600w"
+               sizes="(max-width: 860px) calc(100vw - 64px), 640px"
+               data-caption="Compositor de pranchas do IngeTrazo com uma prancha A3 da praça de Yanque: vistas frontal, esquerda e direita a 1:100, uma vista 3D sobre o terreno de satélite e o carimbo"
                alt="Compositor de pranchas do IngeTrazo com uma prancha A3 da praça de Yanque: vistas frontal, esquerda e direita a 1:100, uma vista 3D sobre o terreno de satélite e o carimbo" width="1600" height="1007" loading="lazy">
         </figure>
       </div>
     </section>
 
-    <!-- ── Modela con la IA ── -->
-    <section class="feat reveal">
-      <div class="container feat-row feat-reverse">
-        <div class="feat-text">
-          <h2>Modele com IA, dentro do aplicativo ou a partir do Claude</h2>
-          <p>Descreva o que você quer —ou anexe uma foto— e a IA escreve a <strong>receita</strong>: revoluções, extrusões, Python sobre a API de ações do IngeTrazo. O motor determinístico a executa: <strong>cada passo é um desfazer</strong>, cada receita passa pela verificação de estanqueidade e o modelo continua sendo seu, editável à mão.</p>
-          <ul class="feat-list">
-            <li><strong>Assistente IA integrado</strong> (Extensões ▸ Assistente IA, Ctrl+Shift+A) — chat com a sua própria chave: Groq (com cota gratuita), Gemini, OpenAI, Anthropic, OpenRouter, DeepSeek ou um modelo local com Ollama. Sem contas nem intermediários</li>
-            <li><strong>Vê o que faz</strong> — recebe capturas da viewport e corrige com base no que vê; com <strong>Foto…</strong> reconstrói o que uma imagem mostra com as medidas que você der</li>
-            <li><strong>Ponte MCP para Claude Desktop e Claude Code</strong> — o agente desenha, consulta e vê o modelo <em>ao vivo, no aplicativo aberto</em>; um passo de desfazer por ação e, se o código dele falhar, o documento volta inteiro</li>
-            <li><strong>Sem caixa-preta</strong> — a IA nunca escreve malhas: gera receitas sobre o mesmo motor que você usa à mão, e tudo fica no histórico</li>
-          </ul>
-          <p class="feat-muted"><strong>Acima, a ponte MCP</strong> num desktop Ubuntu, sem cortes: o Claude Code no terminal acabou de desenhar, no aplicativo aberto ao lado, uma mesa de jantar de 1,40 × 0,80 × 0,75 m com quatro cadeiras (assento de 0,45 × 0,45 a 0,45 m, encosto a 0,90 m) —«uma mesa com 4 cadeiras, medidas padrão»— e responde com a tabela de dimensões que usou; à direita, o diálogo da ponte com a linha de conexão. Como fazer: Extensões ▸ Ponte IA (MCP), copiar a linha exibida, colá-la no terminal (<code>claude mcp add ingetrazo -- …</code>) ou na configuração do Claude Desktop, e pedir o que quiser com o IngeTrazo aberto.</p>
-          <p class="feat-muted"><strong>Abaixo, o Assistente IA:</strong> o diálogo aberto sobre o poste solar dos exemplos (projetado também pela ponte). Como fazer: Extensões ▸ Assistente IA (Ctrl+Shift+A), colar a chave do provedor, escrever o pedido com as medidas —ou anexar uma foto— e Enviar; cada passo se desfaz com Ctrl+Z. Outros modeladores vendem isso por assinatura; aqui é livre e você usa a chave que escolher. <a href="https://ingetrazo-docs.pages.dev/ia/" target="_blank" rel="noopener">Guia passo a passo no manual (em espanhol) →</a></p>
-        </div>
-        <div class="feat-imgs">
-          <figure class="feat-img">
-            <img class="zoomable" src="/images/screenshots/mcp-claude.jpeg"
+    <!-- ── Y además: IA, componentes y SketchUp ── -->
+    <section class="feat more reveal">
+      <div class="container">
+        <h2 class="more-title">E tem mais</h2>
+        <div class="more-grid">
+        <article class="more-card">
+          <figure class="more-img">
+            <img class="zoomable" src="/images/screenshots/mcp-claude.webp"
+               srcset="/images/screenshots/mcp-claude-480.webp 480w, /images/screenshots/mcp-claude-960.webp 960w, /images/screenshots/mcp-claude.webp 1600w"
+               sizes="(max-width: 960px) min(640px, calc(100vw - 40px)), 380px"
+                 data-caption="A ponte MCP num desktop Ubuntu, sem cortes: o Claude Code no terminal acabou de desenhar, no aplicativo aberto ao lado, uma mesa de jantar de 1,40 × 0,80 × 0,75 m com quatro cadeiras (assento de 0,45 × 0,45 a 0,45 m, encosto a 0,90 m) —«uma mesa com 4 cadeiras, medidas padrão»— e responde com a tabela de dimensões que usou; à direita, o diálogo da ponte com a linha de conexão. Como fazer: Extensões ▸ Ponte IA (MCP), copiar a linha exibida, colá-la no terminal (claude mcp add ingetrazo -- …) ou na configuração do Claude Desktop, e pedir o que quiser com o IngeTrazo aberto."
                  alt="Desktop Ubuntu completo: Claude Code num terminal à esquerda listando as medidas da mesa com quatro cadeiras que acabou de desenhar, e o IngeTrazo à direita com o modelo e o diálogo da Ponte IA (MCP) aberto" width="1600" height="1000" loading="lazy">
           </figure>
-          <figure class="feat-img">
-            <img class="zoomable" src="/images/screenshots/asistente-ia.jpeg"
-                 alt="Assistente IA do IngeTrazo aberto sobre um poste de iluminação solar modelado por receitas: provedor, chave, capturas da viewport e o pedido escrito em espanhol" width="1600" height="965" loading="lazy">
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 5. Import SketchUp ── -->
-    <!-- ── Biblioteca de componentes y materiales ── -->
-    <section class="feat reveal">
-      <div class="container feat-row">
-        <div class="feat-text">
-          <h2>Popular a cena não deveria custar a sua tarde</h2>
-          <p>Um modelo se entende quando tem gente ao lado, uma árvore e um carro. O IngeTrazo traz <strong>1.510 componentes</strong> a um clique e <strong>427 texturas</strong> — e cada um chega <strong>no seu tamanho real</strong>, não em qualquer tamanho.</p>
-          <ul class="feat-list">
-            <li><strong>1.510 modelos on-line</strong> — móveis, portas, janelas, árvores, veículos e pessoas. Navegar custa kilobytes: só se baixa o que você clica, e ele fica salvo</li>
-            <li><strong>Sem conexão também</strong> — oito modelos e seis figuras de escala vêm dentro do programa</li>
-            <li><strong>427 texturas com a medida real</strong> — um tijolo parece tijolo porque o catálogo diz quanto ele mede, não porque você ajustou a olho</li>
-            <li><strong>213 cores RAL Classic</strong> — você pinta com <em>RAL 7035 Cinza claro</em> e o desenho leva a referência que um pintor pode comprar, não três números</li>
-            <li><strong>Figuras de escala na altura certa</strong> — para ver de relance se aquela porta é de 2,10 m</li>
-          </ul>
-          <p class="feat-muted">Na captura: um modelo urbano com suas texturas e duas figuras posicionadas, com a bandeja de componentes à direita. Todo o material vem da biblioteca livre do <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> (CC0, CC BY e Arte Livre); o IngeTrazo sempre mostra a licença e o autor de cada peça.</p>
-        </div>
-        <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/componentes.jpeg"
+          <div class="more-body">
+            <h3>Modele com IA, dentro do aplicativo ou a partir do Claude</h3>
+            <p>Descreva o que você quer —ou anexe uma foto— e a IA escreve a <strong>receita</strong>: revoluções, extrusões, Python sobre a API de ações do IngeTrazo. O motor determinístico a executa: <strong>cada passo é um desfazer</strong>, cada receita passa pela verificação de estanqueidade e o modelo continua sendo seu, editável à mão.</p>
+            <ul class="feat-list">
+              <li><strong>Assistente IA integrado</strong> (aba IA da barra lateral, Ctrl+Shift+A) — chat com a sua própria chave: Groq (com cota gratuita), Gemini, OpenAI, Anthropic, OpenRouter, DeepSeek ou um modelo local com Ollama. Sem contas nem intermediários</li>
+              <li><strong>Vê o que faz</strong> — recebe capturas da viewport e corrige com base no que vê; com <strong>Foto…</strong> reconstrói o que uma imagem mostra com as medidas que você der</li>
+              <li><strong>Ponte MCP para Claude Desktop e Claude Code</strong> — o agente desenha, consulta e vê o modelo <em>ao vivo, no aplicativo aberto</em>; um passo de desfazer por ação e, se o código dele falhar, o documento volta inteiro</li>
+            </ul>
+            <p class="feat-muted"><a href="https://ingetrazo-docs.pages.dev/ia/" target="_blank" rel="noopener">Guia passo a passo no manual (em espanhol) →</a></p>
+          </div>
+        </article>
+        <article class="more-card">
+          <figure class="more-img">
+          <img class="zoomable" src="/images/screenshots/componentes.webp"
+               srcset="/images/screenshots/componentes-480.webp 480w, /images/screenshots/componentes-960.webp 960w, /images/screenshots/componentes.webp 1600w"
+               sizes="(max-width: 960px) min(640px, calc(100vw - 40px)), 380px"
+               data-caption="Cena povoada com a bandeja de componentes do IngeTrazo: árvore com sombras, caminhonete, sofá, fonte e figuras de escala, com a biblioteca de pessoas, móveis, árvores e veículos à direita"
                alt="Cena povoada com a bandeja de componentes do IngeTrazo: árvore com sombras, caminhonete, sofá, fonte e figuras de escala, com a biblioteca de pessoas, móveis, árvores e veículos à direita" width="1600" height="1007" loading="lazy">
         </figure>
-      </div>
-    </section>
-
-    <section class="feat feat-alt reveal">
-      <div class="container feat-row">
-        <div class="feat-text">
-          <h2>Abra seus arquivos do SketchUp (.skp)</h2>
+          <div class="more-body">
+            <h3>Popular a cena não deveria custar a sua tarde</h3>
+            <p>Um modelo se entende quando tem gente ao lado, uma árvore e um carro. O IngeTrazo traz <strong>1.510 componentes</strong> a um clique e <strong>427 texturas</strong> — e cada um chega <strong>no seu tamanho real</strong>, não em qualquer tamanho.</p>
+            <ul class="feat-list">
+              <li><strong>1.510 modelos on-line</strong> — móveis, portas, janelas, árvores, veículos e pessoas. Navegar custa kilobytes: só se baixa o que você clica, e ele fica salvo</li>
+              <li><strong>Sem conexão também</strong> — oito modelos e seis figuras de escala vêm dentro do programa</li>
+              <li><strong>427 texturas com a medida real</strong> — um tijolo parece tijolo porque o catálogo diz quanto ele mede, não porque você ajustou a olho</li>
+            </ul>
+            <p class="feat-muted">Todo o material vem da biblioteca livre do <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> (CC0, CC BY e Arte Livre); o IngeTrazo sempre mostra a licença e o autor de cada peça.</p>
+          </div>
+        </article>
+        <article class="more-card">
+          <figure class="more-img">
+          <img class="zoomable" src="/images/screenshots/import-sketchup.webp"
+               srcset="/images/screenshots/import-sketchup-480.webp 480w, /images/screenshots/import-sketchup-960.webp 960w, /images/screenshots/import-sketchup.webp 1600w"
+               sizes="(max-width: 960px) min(640px, calc(100vw - 40px)), 380px"
+               data-caption="A praça principal de Yanque modelada no IngeTrazo sobre o terreno de satélite: arco de boas-vindas, pérgolas, jardins, fonte, postes solares e bandeiras, com as camadas e cenas no painel"
+               alt="A praça principal de Yanque modelada no IngeTrazo sobre o terreno de satélite: arco de boas-vindas, pérgolas, jardins, fonte, postes solares e bandeiras, com as camadas e cenas no painel" width="1600" height="1007" loading="lazy">
+        </figure>
+          <div class="more-body">
+            <h3>Abra seus arquivos do SketchUp (.skp)</h3>
           <p>Sua biblioteca de anos não fica para trás — nem seus colegas: o IngeTrazo abre o <code>.skp</code> diretamente, graças ao <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, um leitor livre do formato — sem conversores nem instalações extras.</p>
           <ul class="feat-list">
             <li><strong>Importa SketchUp (.skp) nativo</strong> — todas as versões, das antigas (2013) às atuais</li>
@@ -361,12 +409,9 @@
             <li><strong>Para levar seu modelo de volta</strong> — exporte COLLADA (.dae), que o SketchUp e quase qualquer programa 3D abrem</li>
             <li><strong>E ainda OBJ, COLLADA, glTF, STL</strong> e <strong>IFC</strong></li>
           </ul>
-          <p class="feat-muted">Na captura: um parque real aberto a partir do seu .skp — brinquedos, arquibancadas e cobertura, com as camadas originais. O IngeTrazo contribui com código para o OpenSKP: cada arquivo aberto aqui melhora o leitor livre para todos.</p>
+          </div>
+        </article>
         </div>
-        <figure class="feat-img">
-          <img class="zoomable" src="/images/screenshots/import-sketchup.jpeg"
-               alt="A praça principal de Yanque modelada no IngeTrazo sobre o terreno de satélite: arco de boas-vindas, pérgolas, jardins, fonte, postes solares e bandeiras, com as camadas e cenas no painel" width="1600" height="1007" loading="lazy">
-        </figure>
       </div>
     </section>
 
@@ -380,7 +425,9 @@
       <div class="fam-grid">
         <article class="fam-card fam-lime">
           <a class="fam-shot" href="https://ingecad.org" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="/images/familia/ingecad.jpg" alt="" width="960" height="540" loading="lazy">
+            <img src="/images/familia/ingecad.webp"
+               srcset="/images/familia/ingecad-480.webp 480w, /images/familia/ingecad.webp 960w"
+               sizes="(max-width: 700px) calc(100vw - 40px), 460px" alt="" width="960" height="540" loading="lazy">
           </a>
           <span class="fam-tag">CAD 2D · Linux</span>
           <h3>IngeCAD</h3>
@@ -392,7 +439,9 @@
         </article>
         <article class="fam-card fam-orange">
           <a class="fam-shot" href="https://ingepresupuestos.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="/images/familia/ingepresupuestos.jpg" alt="" width="960" height="540" loading="lazy">
+            <img src="/images/familia/ingepresupuestos.webp"
+               srcset="/images/familia/ingepresupuestos-480.webp 480w, /images/familia/ingepresupuestos.webp 960w"
+               sizes="(max-width: 700px) calc(100vw - 40px), 460px" alt="" width="960" height="540" loading="lazy">
           </a>
           <span class="fam-tag">Orçamentos de obra</span>
           <h3>IngePresupuestos</h3>
@@ -411,13 +460,25 @@
   <section class="impact">
     <h2>Livre e de código aberto.<br>Para sempre.</h2>
     <p>O IngeTrazo é software livre sob GPL-3.0. Sem contas, sem nuvem obrigatória, sem assinaturas: seus modelos ficam no seu computador, num formato aberto que você sempre poderá ler. Feito no Peru para engenheiros, arquitetos e designers de toda a América Latina.</p>
+    <aside class="impact-card">
+      <p class="impact-card-q">Ajude a mantê-lo livre</p>
+      <p class="impact-card-sub">Cada contribuição, por menor que seja, sustenta o desenvolvimento.</p>
+      <a class="btn btn-lg impact-card-btn" href="/pt/apoyar">Apoiar o projeto</a>
+      <ul class="pay-chips" aria-label="Formas de pagamento"><li>Liberapay</li><li>PayPal</li><li>Yape</li><li>Plin</li></ul>
+      <p class="impact-card-alt">Sem orçamento? Contar a um colega ou deixar uma estrela no <a href="https://github.com/ingelibre/ingetrazo" target="_blank" rel="noopener">GitHub</a> também ajuda.</p>
+    </aside>
   </section>
+
 
   <!-- ============ DESCARGAR ============ -->
   <section id="descargar" class="download-section">
     <div class="container">
       <h2>Baixe o IngeTrazo</h2>
       <p class="download-sub">Grátis e completo. Versão <span id="dl-version">0.5.5</span> — <span id="dl-date">setembro de 2026</span>.</p>
+      <div class="dl-primary" id="dl-primary" hidden>
+        <a class="btn btn-primary btn-lg" id="dl-primary-btn" href="#descargar"></a>
+        <p class="dl-primary-sub" id="dl-primary-sub"></p>
+      </div>
       <div class="dl-row">
         <div class="dl-group">
           <span class="dl-group-label">Windows</span>
@@ -433,8 +494,8 @@
               <span>sem instalação</span>
             </a>
           </div>
-          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">Se o SmartScreen avisar: «Mais informações → Executar assim mesmo» (instalador sem assinatura digital).</p>
-          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">Assinatura de código gratuita da SignPath.io, certificado da SignPath Foundation (em configuração) — <a href="/pt/firma" style="color:#fff;text-decoration:underline">política de assinatura</a>.</p>
+          <p class="dl-group-alt">É normal: o instalador ainda não tem assinatura digital. Se o SmartScreen avisar, escolha «Mais informações → Executar assim mesmo».</p>
+          <p class="dl-group-alt">Assinatura de código gratuita da SignPath.io, certificado da SignPath Foundation (em configuração) — <a href="/pt/firma">política de assinatura</a>.</p>
         </div>
 
         <div class="dl-divider"></div>
@@ -515,7 +576,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
             </a>
           </div>
           <p class="dl-group-alt">Abra o <code>.dmg</code> e arraste o IngeTrazo para <strong>Aplicativos</strong>. Ele ainda não está assinado com uma conta da Apple, então <strong>na primeira vez</strong> o macOS não vai abri-lo com clique duplo: <strong>clique direito ▸ Abrir</strong> e confirme. Daí em diante ele abre normalmente, e os <code>.igz</code> e <code>.skp</code> abrem com clique duplo. Empacotado por <a href="https://github.com/felixriestra" target="_blank" rel="noopener">Félix Riestra</a>.</p>
-          <p class="dl-group-alt" style="font-size:12px;color:rgba(255,255,255,0.75)">Para Mac com Apple Silicon (M1 em diante). O que ainda não funciona no Mac: a importação de DWG; abrir <code>.skp</code>, sim. Se algo falhar, conte para nós numa <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">issue do GitHub</a>.</p>
+          <p class="dl-group-alt">Para Mac com Apple Silicon (M1 em diante). O que ainda não funciona no Mac: a importação de DWG; abrir <code>.skp</code>, sim. Se algo falhar, conte para nós numa <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">issue do GitHub</a>.</p>
         </div>
       </div>
     </div>
@@ -530,25 +591,33 @@ IngeTrazo-0.5.5/ingetrazo</code>
       </div>
       <div class="ej-grid">
         <article class="ej-card">
-          <img class="zoomable" src="/images/ejemplos/pileta-fuente-yanque.jpg" alt="Prancha A3 do chafariz ornamental: vista frontal, 3D, planta e corte em 1:40 com cotas e carimbo" width="993" height="702" loading="lazy">
+          <img class="zoomable" src="/images/ejemplos/pileta-fuente-yanque.webp"
+               srcset="/images/ejemplos/pileta-fuente-yanque-480.webp 480w, /images/ejemplos/pileta-fuente-yanque.webp 993w"
+               sizes="(max-width: 560px) calc(100vw - 40px), 280px" alt="Prancha A3 do chafariz ornamental: vista frontal, 3D, planta e corte em 1:40 com cotas e carimbo" width="993" height="702" loading="lazy">
           <h3>Chafariz com fonte</h3>
           <p>Pedestal octogonal, fuste canelado e dois pratos de borda ondulada: 22 instâncias de componente, sombras com o sol real e um plano de corte. A prancha traz frontal, 3D, planta e corte em 1:40.</p>
           <p class="ej-links"><a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/pileta-fuente-yanque.igz">Abrir no IngeTrazo — .igz (1,8 MB)</a> · <a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/pileta-fuente-yanque.pdf" target="_blank" rel="noopener">PDF da prancha</a></p>
         </article>
         <article class="ej-card">
-          <img class="zoomable" src="/images/ejemplos/banca-pergola-yanque.jpg" alt="Prancha A3 do banco com pérgola: vistas, cotas em cadeia e rótulos" width="993" height="702" loading="lazy">
+          <img class="zoomable" src="/images/ejemplos/banca-pergola-yanque.webp"
+               srcset="/images/ejemplos/banca-pergola-yanque-480.webp 480w, /images/ejemplos/banca-pergola-yanque.webp 993w"
+               sizes="(max-width: 560px) calc(100vw - 40px), 280px" alt="Prancha A3 do banco com pérgola: vistas, cotas em cadeia e rótulos" width="993" height="702" loading="lazy">
           <h3>Banco com pérgola</h3>
           <p>Banco de concreto com pérgola de madeira, feito de componentes e com cinco cenas salvas. A prancha: quatro vistas, 23 cotas e 12 rótulos com chamada.</p>
           <p class="ej-links"><a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/banca-pergola-yanque.igz">Abrir no IngeTrazo — .igz (0,5 MB)</a> · <a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/banca-pergola-yanque.pdf" target="_blank" rel="noopener">PDF da prancha</a></p>
         </article>
         <article class="ej-card">
-          <img class="zoomable" src="/images/ejemplos/luminaria-solar-yanque.jpg" alt="Prancha A3 da luminária solar: poste, bloco de concreto e detalhe da armadura" width="993" height="702" loading="lazy">
+          <img class="zoomable" src="/images/ejemplos/luminaria-solar-yanque.webp"
+               srcset="/images/ejemplos/luminaria-solar-yanque-480.webp 480w, /images/ejemplos/luminaria-solar-yanque.webp 993w"
+               sizes="(max-width: 560px) calc(100vw - 40px), 280px" alt="Prancha A3 da luminária solar: poste, bloco de concreto e detalhe da armadura" width="993" height="702" loading="lazy">
           <h3>Luminária solar</h3>
           <p>Poste de 4,5 m com dois refletores e seu painel, bloco tronco-cônico, fundação enterrada e a armadura de 3/8&quot; desenhada dentro — modelado por receitas com o Assistente IA. Prancha com o detalhe do bloco.</p>
           <p class="ej-links"><a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/luminaria-solar-yanque.igz">Abrir no IngeTrazo — .igz (0,5 MB)</a> · <a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/luminaria-solar-yanque.pdf" target="_blank" rel="noopener">PDF da prancha</a></p>
         </article>
         <article class="ej-card">
-          <img class="zoomable" src="/images/ejemplos/arco-yanque.jpg" alt="Prancha A3 D04 do arco de boas-vindas YANQUE: vista frontal, lateral direita, planta e 3D em 1:50, detalhe de letra e escultura em 1:25 e do capitel de pedra sillar em 1:20, com cotas, níveis, linha de terreno e carimbo" width="993" height="702" loading="lazy">
+          <img class="zoomable" src="/images/ejemplos/arco-yanque.webp"
+               srcset="/images/ejemplos/arco-yanque-480.webp 480w, /images/ejemplos/arco-yanque.webp 993w"
+               sizes="(max-width: 560px) calc(100vw - 40px), 280px" alt="Prancha A3 D04 do arco de boas-vindas YANQUE: vista frontal, lateral direita, planta e 3D em 1:50, detalhe de letra e escultura em 1:25 e do capitel de pedra sillar em 1:20, com cotas, níveis, linha de terreno e carimbo" width="993" height="702" loading="lazy">
           <h3>Arco de boas-vindas «YANQUE»</h3>
           <p>Conforme a prancha estrutural E02: concreto e <strong>toda a armadura</strong> (sapatas, pilares, arco segmentado, viga e tímpano), capitéis de pedra sillar, quatro luminárias ornamentais, letras e escultura; veja em Raio X. A prancha D04: frente, lateral, planta e 3D em 1:50, o detalhe de letra e escultura em 1:25 e o do capitel em 1:20, com níveis, linha de terreno e rótulos com chamada.</p>
           <p class="ej-links"><a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/arco-yanque.igz">Abrir no IngeTrazo — .igz (3,6 MB)</a> · <a href="https://github.com/ingelibre/ingetrazo/raw/main/examples/arco-yanque.pdf" target="_blank" rel="noopener">PDF da prancha</a></p>
@@ -614,6 +683,18 @@ IngeTrazo-0.5.5/ingetrazo</code>
     </div>
   </section>
 
+  <!-- ============ FRANJA FINAL ============ -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Comece a modelar hoje</h2>
+      <p>Grátis e completo, no Linux, Windows e macOS. Sem contas nem assinaturas.</p>
+      <div class="final-cta-btns">
+        <a href="#descargar" class="btn btn-lg final-cta-dl">Baixar grátis</a>
+        <a href="https://ingetrazo-docs.pages.dev" class="btn btn-lg final-cta-man" target="_blank" rel="noopener">Ler o manual</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FOOTER ============ -->
   <footer id="contacto" class="footer">
     <div class="container footer-grid">
@@ -623,6 +704,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
           <strong>IngeTrazo</strong>
         </div>
         <p>Modelador 3D livre para arquitetura, engenharia e design.</p>
+        <a class="btn btn-heart footer-support" href="/pt/apoyar">Apoiar o projeto</a>
         <p class="footer-copy">© 2026 Marco Sumari Tellez · Software livre GPL-3.0</p>
       </div>
       <div class="footer-col">
@@ -631,7 +713,6 @@ IngeTrazo-0.5.5/ingetrazo</code>
           <li><a href="#features">Recursos</a></li>
           <li><a href="#descargar">Baixar</a></li>
           <li><a href="https://github.com/ingelibre/ingetrazo/releases" target="_blank" rel="noopener">Releases</a></li>
-          <li><a href="/pt/apoyar">Apoiar o projeto</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
@@ -661,7 +742,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
   <!-- Lightbox para ampliar capturas -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" type="button" aria-label="Fechar">×</button>
-    <img src="" alt="">
+    <img alt="">
   </div>
 
   <script src="/script.js"></script>
