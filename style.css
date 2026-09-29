@@ -1122,3 +1122,22 @@ code {
 }
 .hero .hero-name { color: rgba(255,255,255,0.78); margin: 0 0 22px; }
 .hero .hero-name em { color: rgba(255,255,255,0.9); }
+
+/* ============ Menú oscuro: se funde con la portada ============ */
+.nav {
+  background: rgba(11,18,32,0.94);
+  -webkit-backdrop-filter: saturate(140%) blur(10px);
+  backdrop-filter: saturate(140%) blur(10px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.07);
+}
+.nav-brand, .nav-brand:hover { color: var(--white); }
+.nav-links > a { color: rgba(255,255,255,0.74); }
+.nav-links > a:hover { color: var(--white); }
+.lang-switch { border-color: rgba(255,255,255,0.16); }
+.nav-links .lang-switch a { color: rgba(255,255,255,0.6); }
+.nav-links .lang-switch a:hover { color: var(--white); }
+.nav-links .lang-switch a[aria-current] { background: rgba(255,255,255,0.12); color: var(--white); }
+.nav-toggle span { background: var(--white); }
+@media (max-width: 900px) {
+  .nav-links.open { background: #0B1220; box-shadow: 0 12px 24px rgba(0,0,0,0.35); }
+}
