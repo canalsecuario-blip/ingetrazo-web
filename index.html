@@ -7,7 +7,7 @@
 
   <title>IngeTrazo · Modelador 3D libre para arquitectura e ingeniería</title>
 
-  <meta name="description" content="Modelador 3D libre con BIM opcional: traza como a mano, etiqueta muros, losas y columnas, obtén el metrado y exporta IFC. Terreno satelital 3D y perfiles. Linux, Windows y macOS. Código abierto GPL-3.0.">
+  <meta name="description" content="Modelador 3D libre para arquitectura, ingeniería y diseño: traza como a mano, compón planos en PDF a escala y renderiza con Blender. Terreno satelital 3D y perfiles. Linux, Windows y macOS. Código abierto GPL-3.0.">
   <meta name="keywords" content="modelador 3D libre, modelador 3D Linux, BIM libre, exportar IFC, metrados, software ingeniería civil, diseño 3D, modelado 3D, CAD Linux, terreno 3D, perfil longitudinal, código abierto, GPL">
   <meta name="author" content="Ing. Marco Sumari">
 
@@ -19,7 +19,7 @@
 
   <meta property="og:site_name" content="IngeTrazo">
   <meta property="og:title" content="IngeTrazo · Modelador 3D libre para arquitectura e ingeniería">
-  <meta property="og:description" content="Traza como a mano, etiqueta BIM, obtén el metrado y exporta IFC. Terreno satelital 3D. Libre y de código abierto (GPL-3.0). Linux, Windows y macOS.">
+  <meta property="og:description" content="Traza como a mano: modela empujando caras, compón planos en PDF a escala y renderiza con Blender. Terreno satelital 3D. Libre y de código abierto (GPL-3.0). Linux, Windows y macOS.">
   <meta property="og:image" content="https://ingetrazo.com/images/og-banner.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -29,7 +29,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="IngeTrazo · Modelador 3D libre para arquitectura e ingeniería">
-  <meta name="twitter:description" content="Traza como a mano, etiqueta BIM, obtén el metrado y exporta IFC. Libre y de código abierto. Linux, Windows y macOS.">
+  <meta name="twitter:description" content="Traza como a mano: planos en PDF a escala, renders con Blender y terreno satelital 3D. Libre y de código abierto. Linux, Windows y macOS.">
   <meta name="twitter:image" content="https://ingetrazo.com/images/og-banner.jpg">
 
   <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
@@ -49,7 +49,7 @@
     "name": "IngeTrazo",
     "operatingSystem": "Linux, Windows, macOS",
     "applicationCategory": "DesignApplication",
-    "description": "Modelador 3D libre para arquitectura, ingeniería civil y diseño 3D, con modelado por empujar/tirar que se siente como trazar a mano y BIM como capa opcional: etiqueta la geometría como muros, losas o columnas, obtén cantidades (metrado) y exporta IFC 4. Incluye biblioteca de 1510 componentes y 427 texturas a tamaño real con los 213 colores RAL Classic, composición de láminas con planos a escala exacta y export a PDF, terreno satelital 3D, levantamientos fotogramétricos de dron, perfiles longitudinales; abre archivos .skp de SketchUp de todas las versiones, e importa y exporta .dae, .obj, glTF y STL. Código abierto bajo GPL-3.0.",
+    "description": "Modelador 3D libre para arquitectura, ingeniería civil y diseño 3D, con modelado por empujar/tirar que se siente como trazar a mano y una capa BIM opcional en desarrollo (etiquetas y exportación IFC). Incluye biblioteca de 1510 componentes y 427 texturas a tamaño real con los 213 colores RAL Classic, composición de láminas con planos a escala exacta y export a PDF, terreno satelital 3D, levantamientos fotogramétricos de dron, perfiles longitudinales; abre archivos .skp de SketchUp de todas las versiones, e importa y exporta .dae, .obj, glTF y STL. Código abierto bajo GPL-3.0.",
     "url": "https://ingetrazo.com/",
     "softwareVersion": "0.5.5",
     "downloadUrl": "https://github.com/ingelibre/ingetrazo/releases/latest",
@@ -66,7 +66,7 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      "description": "Software libre y gratuito bajo licencia GPL-3.0. Sin cuentas, sin suscripciones, sin límites."
+      "description": "Software libre bajo licencia GPL-3.0. Sin cuentas, sin suscripciones, sin límites."
     }
   }
   </script>
@@ -89,7 +89,7 @@
         "name": "¿Qué hace distinto a IngeTrazo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Es libre (GPL-3.0) y corre nativo en Linux, además de Windows y macOS. Garantiza sólidos herméticos aptos para metrado y suma la capa BIM: etiquetas la geometría y obtienes cantidades e IFC. Compone láminas a escala en PDF, trae el terreno real (satélite, elevación, dron, puntos GPS) y se conecta a asistentes de IA que dibujan con el mismo motor, con cada paso deshacible."
+          "text": "Es libre (GPL-3.0) y corre nativo en Linux, además de Windows y macOS. Garantiza sólidos herméticos y trae una capa BIM opcional, en desarrollo. Compone láminas a escala en PDF, trae el terreno real (satélite, elevación, dron, puntos GPS) y se conecta a asistentes de IA que dibujan con el mismo motor, con cada paso deshacible."
         }
       },
       {
@@ -102,10 +102,10 @@
       },
       {
         "@type": "Question",
-        "name": "¿Qué es eso de BIM e IFC?",
+        "name": "¿Tiene BIM?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "BIM significa darle semántica al modelo: este sólido ES un muro, esta cara ES una puerta. Con eso IngeTrazo calcula las cantidades de obra (m², m³, unidades) y las exporta en IFC, el formato estándar que entienden los programas de presupuestos — incluido IngePresupuestos."
+          "text": "Una capa opcional, en desarrollo: puedes etiquetar la geometría como muro, losa, columna o puerta, obtener sus cantidades (m², m³, unidades) y exportarla en IFC, el formato estándar que leen otros programas — incluido IngePresupuestos. La vamos ampliando con cada versión."
         }
       },
       {
@@ -276,17 +276,17 @@
       </div>
     </section>
 
-    <!-- ── 2. BIM (la tesis) — azul ── -->
+    <!-- ── 2. BIM (en desarrollo) ── -->
     <section class="feat feat-bim reveal">
       <div class="container feat-row feat-reverse">
         <div class="feat-text">
-          <h2>BIM cuando lo necesitas, libertad siempre</h2>
-          <p>El BIM en IngeTrazo no es una jaula de familias rígidas: modelas libre y <strong>etiquetas</strong> lo que quieras como muro, losa, columna o puerta.</p>
+          <h2>BIM, paso a paso</h2>
+          <p>Una capa opcional que <strong>estamos construyendo</strong>: modelas libre y, si lo necesitas, <strong>etiquetas</strong> la geometría como muro, losa, columna o puerta.</p>
           <ul class="feat-list">
-            <li><strong>Metrado en vivo</strong> — m² de muro, m³ de columna, unidades de puerta</li>
-            <li><strong>Etiqueta al dibujar</strong> — activa una clase y todo lo que traces la asume</li>
-            <li><strong>Exporta IFC 4 validado</strong> — lo abre cualquier visor y software BIM</li>
-            <li><strong>CSV de cantidades</strong> — tu tabla de metrados en un clic</li>
+            <li><strong>Etiquetas BIM</strong> — marca muros, losas, columnas y puertas sobre lo que ya trazaste</li>
+            <li><strong>Cantidades</strong> — m² de muro y m³ de columna de lo etiquetado, en una tabla CSV</li>
+            <li><strong>Exporta IFC 4</strong> — un archivo abierto para llevar el modelo a otros programas</li>
+            <li><strong>En desarrollo</strong> — crece con cada versión; cuéntanos qué necesitas en GitHub</li>
           </ul>
           <p class="feat-muted-light">Sólidos garantizados herméticos: si una operación rompería el volumen, el motor la rechaza en vez de corromper tu metrado.</p>
         </div>
@@ -642,15 +642,15 @@ IngeTrazo-0.5.5/ingetrazo</code>
         </details>
         <details class="faq-item">
           <summary>¿Qué hace distinto a IngeTrazo?</summary>
-          <p>Es <strong>libre</strong> (GPL-3.0) y corre <strong>nativo en Linux</strong>, además de Windows y macOS. Garantiza <strong>sólidos herméticos</strong> aptos para metrado y suma la <strong>capa BIM</strong>: etiquetas la geometría y obtienes cantidades e IFC. Compone <strong>láminas a escala</strong> en PDF, trae el <strong>terreno real</strong> (satélite, elevación, dron, puntos GPS) y se conecta a <strong>asistentes de IA</strong> que dibujan con el mismo motor, con cada paso deshacible.</p>
+          <p>Es <strong>libre</strong> (GPL-3.0) y corre <strong>nativo en Linux</strong>, además de Windows y macOS. Garantiza <strong>sólidos herméticos</strong> y trae una <strong>capa BIM</strong> opcional, en desarrollo. Compone <strong>láminas a escala</strong> en PDF, trae el <strong>terreno real</strong> (satélite, elevación, dron, puntos GPS) y se conecta a <strong>asistentes de IA</strong> que dibujan con el mismo motor, con cada paso deshacible.</p>
         </details>
         <details class="faq-item">
           <summary>¿Puedo abrir mis modelos de SketchUp? ¿Y guardar?</summary>
           <p><strong>Abrir, sí</strong>: Archivo ▸ Importar ▸ SketchUp, directo y sin conversores, con <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, el lector libre del formato al que IngeTrazo contribuye — lee archivos de <strong>todas las versiones</strong> (geometría, grupos, componentes, materiales, texturas, capas, escenas, cotas y textos guía). <strong>Guardar en .skp, no</strong>: para llevar un modelo a SketchUp, exporta <strong>COLLADA (.dae)</strong>, que SketchUp importa. También importa <strong>COLLADA (.dae)</strong> y <strong>OBJ</strong>.</p>
         </details>
         <details class="faq-item">
-          <summary>¿Qué es eso de BIM e IFC?</summary>
-          <p>BIM significa darle <strong>semántica</strong> al modelo: este sólido ES un muro, esta cara ES una puerta. Con eso IngeTrazo calcula las cantidades de obra (m², m³, unidades) y las exporta en <strong>IFC</strong>, el formato estándar que entienden los programas de presupuestos — incluido IngePresupuestos.</p>
+          <summary>¿Tiene BIM?</summary>
+          <p>Una capa opcional, <strong>en desarrollo</strong>: puedes etiquetar la geometría como muro, losa, columna o puerta, obtener sus cantidades (m², m³, unidades) y exportarla en <strong>IFC</strong>, el formato estándar que leen otros programas — incluido IngePresupuestos. La vamos ampliando con cada versión.</p>
         </details>
         <details class="faq-item">
           <summary>¿Puedo generar los planos del proyecto?</summary>
