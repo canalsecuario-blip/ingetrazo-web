@@ -8,36 +8,38 @@
    sección puente con IngePresupuestos.
    ──────────────────────────────────────────────────────────────────────── */
 
+/* IngeTrazo's own palette — the program's icon: Blueberry lines, Orange
+   nodes, slate faces (elementary OS colours). */
 :root {
   --accent:      #3689E6;   /* Blueberry — acento IngeTrazo */
   --accent-dk:   #0D52BF;
-  --accent-lt:   #6FB1FF;
-  --accent-soft: #EAF2FC;
-  --teal:        #46EBC2;   /* «Libre para siempre» */
+  --accent-lt:   #64BAFF;   /* Blueberry claro, sobre fondo oscuro */
+  --accent-soft: #EBF4FD;
+  --teal:        #FFC27D;   /* Orange 100: los nodos del ícono (antes turquesa) */
   --orange:      #F37329;   /* IngePresupuestos (sección puente) */
   --orange-dk:   #C0621A;
-  --orange-soft: #FDF1E7;
-  --lime-soft:   #E9F4DE;   /* sección Terreno */
+  --orange-soft: #FEF5EB;
+  --lime-soft:   #F2F9EC;   /* sección Terreno */
   --lime:        #68B723;
   --lime-dk:     #3F7F12;
-  --canvas:      #FFFFFF;   /* lienzo entre tarjetas */
-  --night:       #1B1D21;   /* tarjetas oscuras */
-  --card:        #F0F1F3;   /* tarjetas claras */
-  --head:        #2E3035;
-  --text:        #4C4D52;
-  --muted:       #75777D;
-  --line:        rgba(0,0,0,0.08);
+  --slate-900:   #1A2434;
+  --slate-700:   #273445;
+  --slate-500:   #485A6C;
+  --slate-300:   #667885;
+  --silver-100:  #F8F9FA;
+  --silver-300:  #D4D4D4;
   --white:       #FFFFFF;
-  /* alias que usa la página /apoyar */
-  --slate-900:   var(--head);
-  --slate-700:   var(--text);
-  --slate-500:   var(--text);
-  --slate-300:   var(--muted);
-  --silver-100:  var(--card);
+  --canvas:      #FFFFFF;   /* lienzo entre tarjetas */
+  --night:       #1A2434;   /* tarjetas y secciones oscuras */
+  --card:        #F8F9FA;   /* tarjetas claras */
+  --head:        #1A2434;
+  --text:        #273445;
+  --muted:       #667885;
+  --line:        rgba(26,36,52,0.10);
   --radius:      12px;
   --radius-sm:   6px;
-  --shadow:      0 1px 3px rgba(0,0,0,0.08);
-  --shadow-img:  0 10px 30px rgba(0,0,0,0.14);
+  --shadow:      0 2px 8px rgba(0,0,0,0.06);
+  --shadow-img:  0 12px 40px rgba(0,0,0,0.10), 0 2px 8px rgba(0,0,0,0.06);
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -207,9 +209,9 @@ code {
   padding: 88px max(32px, calc((100% - 1180px) / 2 + 32px)) 96px;
   background:
     radial-gradient(60% 55% at 30% 0%, rgba(54,137,230,0.32) 0%, transparent 70%),
-    radial-gradient(45% 50% at 85% 70%, rgba(63,208,230,0.14) 0%, transparent 70%),
+    radial-gradient(45% 50% at 85% 70%, rgba(255,194,125,0.10) 0%, transparent 70%),
     radial-gradient(40% 40% at 5% 90%, rgba(104,183,35,0.10) 0%, transparent 70%),
-    #0B1220;
+    #1A2434;
   overflow: hidden;
   isolation: isolate;
 }
@@ -476,7 +478,7 @@ code {
 .bridge h2 {
   font-size: clamp(30px, 4.4vw, 52px);
   line-height: 1.05;
-  font-weight: 800; color: #E0661F; letter-spacing: -0.02em;
+  font-weight: 800; color: var(--orange); letter-spacing: -0.02em;
   max-width: 760px; margin: 0 0 18px;
 }
 .bridge p {
@@ -574,7 +576,7 @@ code {
   position: relative; overflow: hidden;
   padding: 30px 28px 24px; text-align: center;
   background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(70,235,194,0.28);
+  border: 1px solid rgba(255,194,125,0.28);
   border-radius: 18px;
 }
 .impact-card-q {
@@ -584,14 +586,14 @@ code {
 .impact .impact-card-sub { font-size: 14.5px; line-height: 1.5; color: rgba(255,255,255,0.7); margin: 0 auto 20px; max-width: 290px; }
 .impact-card-btn {
   display: flex; justify-content: center; width: 100%;
-  background: var(--teal); color: #0B1220; font-weight: 700; border-radius: 999px;
-  box-shadow: 0 8px 24px rgba(70,235,194,0.25);
+  background: var(--teal); color: #1A2434; font-weight: 700; border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(255,194,125,0.25);
 }
 .impact-card-btn::before {
   content: ''; width: 16px; height: 16px; flex: none;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%230B1220' d='M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%231A2434' d='M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.6 0 5.7 3.7 4.2 7.2C19.5 16.4 12 21 12 21z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
-.impact-card-btn:hover { background: #6FF2D2; color: #0B1220; }
+.impact-card-btn:hover { background: #FFD6A6; color: #1A2434; }
 .impact-card-btn:hover::before { animation: latido 0.9s ease; }
 .pay-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin: 16px 0 18px; }
 .pay-chips li {
@@ -690,7 +692,7 @@ code {
   font-family: inherit;
 }
 .dl-tab em { font-style: normal; font-weight: 500; font-size: 11px; opacity: 0.7; margin-left: 4px; }
-.dl-tab:hover { background: #E4E6EA; }
+.dl-tab:hover { background: #E3E8EE; }
 .dl-tab.is-active::after { content: ' ▴'; font-size: 10px; }
 .dl-tab.is-active { background: var(--accent); color: var(--white); }
 .dl-panel p { font-size: 14px; color: var(--text); margin: 0; }
@@ -1012,12 +1014,12 @@ code {
 .hero-checks li strong { color: var(--white); font-weight: 600; }
 .hero-checks li::before {
   content: ''; position: absolute; left: 0; top: 2px; width: 20px; height: 20px; border-radius: 50%;
-  background: rgba(70,235,194,0.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%2346EBC2' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M4 8.5l2.6 2.5L12 5.5'/%3E%3C/svg%3E") center / 13px no-repeat;
+  background: rgba(255,194,125,0.18) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23FFC27D' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M4 8.5l2.6 2.5L12 5.5'/%3E%3C/svg%3E") center / 13px no-repeat;
 }
 .hero-checks code { background: rgba(255,255,255,0.14); color: var(--white); }
 
 /* ============ Del boceto a la obra en 3 pasos: línea de tiempo ============ */
-.steps { padding: 72px 0 76px; background: #F4F7FB; }
+.steps { padding: 72px 0 76px; background: var(--silver-100); }
 .steps h2 {
   font-size: clamp(26px, 3vw, 38px); line-height: 1.1; font-weight: 800;
   color: var(--head); letter-spacing: -0.02em; margin-bottom: 44px; text-align: center;
@@ -1033,14 +1035,14 @@ code {
   top: calc(var(--dot) / 2 - 1px); height: 3px; border-radius: 3px;
   left: calc((100% - 2 * var(--gap)) / 6);           /* centro de la 1.ª columna */
   right: calc((100% - 2 * var(--gap)) / 6);          /* centro de la 3.ª */
-  background: linear-gradient(90deg, var(--accent), #7CB8FF);
+  background: linear-gradient(90deg, var(--accent), #64BAFF);
 }
 .step { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .step-n {
   display: flex; align-items: center; justify-content: center;
   width: var(--dot); height: var(--dot); border-radius: 50%; margin-bottom: 22px;
   background: var(--accent); color: var(--white); font-weight: 800; font-size: 22px;
-  box-shadow: 0 0 0 7px #F4F7FB, 0 8px 22px rgba(54,137,230,0.35);
+  box-shadow: 0 0 0 7px var(--silver-100), 0 8px 22px rgba(54,137,230,0.35);
 }
 .step h3 { font-size: 22px; font-weight: 800; color: var(--head); letter-spacing: -0.01em; margin-bottom: 8px; }
 .step p { font-size: 15.5px; line-height: 1.6; color: var(--text); max-width: 300px; }
@@ -1049,7 +1051,7 @@ code {
   .steps-row::before {                 /* en vertical, a la izquierda */
     top: calc(var(--dot) / 2); bottom: calc(var(--dot) / 2); left: calc(var(--dot) / 2 - 1px);
     right: auto; width: 3px; height: auto;
-    background: linear-gradient(180deg, var(--accent), #7CB8FF);
+    background: linear-gradient(180deg, var(--accent), #64BAFF);
   }
   .step { display: block; text-align: left; padding-left: calc(var(--dot) + 20px); min-height: var(--dot); }
   .step-n { position: absolute; left: 0; top: 0; margin: 0; font-size: 19px; }
@@ -1125,7 +1127,7 @@ code {
 
 /* ============ Menú oscuro: se funde con la portada ============ */
 .nav {
-  background: rgba(11,18,32,0.94);
+  background: rgba(26,36,52,0.95);
   -webkit-backdrop-filter: saturate(140%) blur(10px);
   backdrop-filter: saturate(140%) blur(10px);
   box-shadow: 0 1px 0 rgba(255,255,255,0.07);
@@ -1139,6 +1141,6 @@ code {
 .nav-links .lang-switch a[aria-current] { background: rgba(255,255,255,0.12); color: var(--white); }
 .nav-toggle span { background: var(--white); }
 @media (max-width: 900px) {
-  .nav-links.open { background: #0B1220; box-shadow: 0 12px 24px rgba(0,0,0,0.35); }
+  .nav-links.open { background: #1A2434; box-shadow: 0 12px 24px rgba(0,0,0,0.35); }
 }
 .nav-links > a { font-weight: 600; }       /* menú en negrita (Marco) */
