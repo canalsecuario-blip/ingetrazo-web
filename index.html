@@ -49,7 +49,7 @@
     "name": "IngeTrazo",
     "operatingSystem": "Linux, Windows, macOS",
     "applicationCategory": "DesignApplication",
-    "description": "Modelador 3D libre para arquitectura, ingeniería civil y diseño 3D, con modelado por empujar/tirar que se siente como trazar a mano y una capa BIM opcional en desarrollo (etiquetas y exportación IFC). Incluye biblioteca de 1510 componentes y 427 texturas a tamaño real con los 213 colores RAL Classic, composición de láminas con planos a escala exacta y export a PDF, terreno satelital 3D, levantamientos fotogramétricos de dron, perfiles longitudinales; abre archivos .skp de SketchUp de todas las versiones, e importa y exporta .dae, .obj, glTF y STL. Código abierto bajo GPL-3.0.",
+    "description": "Modelador 3D libre para arquitectura, ingeniería civil y diseño 3D, con modelado por empujar/tirar que se siente como trazar a mano y una capa BIM opcional en desarrollo (etiquetas y exportación IFC). Incluye biblioteca de 1510 componentes y 427 texturas a tamaño real con los 213 colores RAL Classic, composición de láminas con planos a escala exacta y export a PDF, terreno satelital 3D, levantamientos fotogramétricos de dron, perfiles longitudinales; abre archivos .skp de todas las versiones, e importa y exporta .dae, .obj, glTF y STL. Código abierto bajo GPL-3.0.",
     "url": "https://ingetrazo.com/",
     "softwareVersion": "0.5.5",
     "downloadUrl": "https://github.com/ingelibre/ingetrazo/releases/latest",
@@ -94,10 +94,10 @@
       },
       {
         "@type": "Question",
-        "name": "¿Puedo abrir mis modelos de SketchUp? ¿Y guardar?",
+        "name": "¿Qué formatos abre y guarda?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Abrir, sí: Archivo ▸ Importar ▸ SketchUp, directo y sin conversores, con OpenSKP, el lector libre del formato al que IngeTrazo contribuye — lee archivos de todas las versiones (geometría, grupos, componentes, materiales, texturas, capas, escenas, cotas y textos guía). Guardar en .skp, no: para llevar un modelo a SketchUp, exporta COLLADA (.dae), que SketchUp importa. También importa COLLADA (.dae) y OBJ."
+          "text": "Abre sus documentos .igz, planos DWG y DXF, modelos .skp de todas las versiones (con OpenSKP, un lector libre al que IngeTrazo contribuye), COLLADA (.dae), OBJ, glTF y STL. Guarda en .igz, un formato abierto, y exporta COLLADA, OBJ, glTF, STL, IFC, DXF y planos en PDF."
         }
       },
       {
@@ -395,8 +395,8 @@
         </article>
         <article class="more-card">
           <figure class="more-img">
-          <img class="zoomable" src="/images/screenshots/import-sketchup.webp"
-               srcset="/images/screenshots/import-sketchup-480.webp 480w, /images/screenshots/import-sketchup-960.webp 960w, /images/screenshots/import-sketchup.webp 1600w"
+          <img class="zoomable" src="/images/screenshots/importar.webp"
+               srcset="/images/screenshots/importar-480.webp 480w, /images/screenshots/importar-960.webp 960w, /images/screenshots/importar.webp 1600w"
                sizes="(max-width: 960px) min(640px, calc(100vw - 40px)), 380px"
                data-caption="La plaza principal de Yanque modelada en IngeTrazo sobre su terreno satelital: arco de bienvenida, pérgolas, jardines, pileta, postes solares y banderas, con sus capas y escenas en el panel"
                alt="La plaza principal de Yanque modelada en IngeTrazo sobre su terreno satelital: arco de bienvenida, pérgolas, jardines, pileta, postes solares y banderas, con sus capas y escenas en el panel" width="1600" height="1007" loading="lazy">
@@ -645,8 +645,8 @@ IngeTrazo-0.5.5/ingetrazo</code>
           <p>Es <strong>libre</strong> (GPL-3.0) y corre <strong>nativo en Linux</strong>, además de Windows y macOS. Garantiza <strong>sólidos herméticos</strong> y trae una <strong>capa BIM</strong> opcional, en desarrollo. Compone <strong>láminas a escala</strong> en PDF, trae el <strong>terreno real</strong> (satélite, elevación, dron, puntos GPS) y se conecta a <strong>asistentes de IA</strong> que dibujan con el mismo motor, con cada paso deshacible.</p>
         </details>
         <details class="faq-item">
-          <summary>¿Puedo abrir mis modelos de SketchUp? ¿Y guardar?</summary>
-          <p><strong>Abrir, sí</strong>: Archivo ▸ Importar ▸ SketchUp, directo y sin conversores, con <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, el lector libre del formato al que IngeTrazo contribuye — lee archivos de <strong>todas las versiones</strong> (geometría, grupos, componentes, materiales, texturas, capas, escenas, cotas y textos guía). <strong>Guardar en .skp, no</strong>: para llevar un modelo a SketchUp, exporta <strong>COLLADA (.dae)</strong>, que SketchUp importa. También importa <strong>COLLADA (.dae)</strong> y <strong>OBJ</strong>.</p>
+          <summary>¿Qué formatos abre y guarda?</summary>
+          <p>Abre sus documentos <strong>.igz</strong>, planos <strong>DWG y DXF</strong>, modelos <strong>.skp</strong> de todas las versiones (con <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, un lector libre al que IngeTrazo contribuye), <strong>COLLADA (.dae)</strong>, <strong>OBJ</strong>, <strong>glTF</strong> y <strong>STL</strong>. Guarda en <strong>.igz</strong>, un formato abierto, y exporta COLLADA, OBJ, glTF, STL, IFC, DXF y planos en PDF.</p>
         </details>
         <details class="faq-item">
           <summary>¿Tiene BIM?</summary>
@@ -737,7 +737,6 @@ IngeTrazo-0.5.5/ingetrazo</code>
         </ul>
       </div>
     </div>
-    <p class="container footer-legal">SketchUp es una marca registrada de Trimble Inc.; IngeTrazo es un proyecto independiente, sin relación con Trimble.</p>
   </footer>
 
   <!-- Lightbox para ampliar capturas -->
