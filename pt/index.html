@@ -78,10 +78,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "É gratuito mesmo?",
+        "name": "O que significa ser livre?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim. O IngeTrazo é software livre sob a licença GPL-3.0: gratuito hoje e para sempre, com o código-fonte publicado no GitHub. Sem contas, sem assinaturas, sem funções bloqueadas."
+          "text": "O IngeTrazo é software livre sob a licença GPL-3.0: você pode usá-lo em qualquer projeto, estudar como funciona, melhorá-lo e compartilhá-lo, com o código-fonte publicado no GitHub. Sem contas, sem assinaturas, sem funções bloqueadas: seus modelos são seus."
         }
       },
       {
@@ -201,18 +201,19 @@
   <section class="hero">
     <div class="container hero-center">
       <span class="hero-badge">Software livre · GPL-3.0</span>
-      <h1>O modelador 3D <span class="grad-text">livre</span><br>para arquitetura, engenharia e design</h1>
+      <h1>Trace como <span class="grad-text">à mão</span>.</h1>
+      <p class="hero-lead">O modelador 3D livre para arquitetura, engenharia e design.</p>
       <p class="hero-name"><strong>IngeTrazo</strong>, pronuncia-se <em>in-rre-TRA-sso</em>: do espanhol <em>inge</em>(niería), “engenharia”, + <em>trazo</em>, “traço” — o traço do engenheiro.</p>
       <ul class="hero-checks">
-        <li><strong>Grátis para sempre:</strong> sem contas, sem assinaturas, nada bloqueado</li>
-        <li><strong>Abre arquivos do SketchUp</strong> <code>.skp</code> de todas as versões</li>
+        <li><strong>Modele empurrando faces</strong>, com medidas exatas e inferências</li>
         <li><strong>BIM, quantitativos, IFC e pranchas em PDF</strong>, prontos para a obra</li>
+        <li><strong>Terreno real:</strong> satélite, drone e pontos GPS</li>
       </ul>
       <div class="hero-ctas">
-        <a href="#descargar" class="btn btn-primary btn-lg" id="hero-dl">Baixe o IngeTrazo grátis</a>
+        <a href="#descargar" class="btn btn-primary btn-lg" id="hero-dl">Baixar o IngeTrazo</a>
         <a href="https://github.com/ingelibre/ingetrazo" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">Ver o código</a>
         <a class="hero-more" id="hero-more" href="#descargar" hidden>Outras versões e sistemas ›</a>
-        <span class="hero-trust">Grátis e sem contas · Linux, Windows e macOS · Código aberto</span>
+        <span class="hero-trust">Livre · GPL-3.0 · Linux, Windows e macOS</span>
         <span class="hero-version">Última versão: <span id="latest-version">v0.5.5</span> · <a href="https://github.com/ingelibre/ingetrazo/releases/latest" target="_blank" rel="noopener">Novidades →</a></span>
       </div>
     </div>
@@ -231,7 +232,7 @@
         <div class="stat"><strong data-stat="downloads">7.300+</strong><span>downloads</span></div>
         <div class="stat"><strong data-stat="stars">150</strong><span>estrelas no GitHub</span></div>
         <div class="stat"><strong>1.510</strong><span>componentes</span></div>
-        <div class="stat"><strong>.skp</strong><span>abre arquivos do SketchUp</span></div>
+        <div class="stat"><strong>PDF</strong><span>pranchas em escala</span></div>
         <div class="stat"><strong>IFC 4</strong><span>padrão BIM aberto</span></div>
         <div class="stat"><strong>3</strong><span>Linux · Windows · macOS</span></div>
     </div>
@@ -242,7 +243,7 @@
     <div class="container">
       <h2>Do esboço à obra em 3 passos</h2>
       <ol class="steps-row">
-        <li class="step"><span class="step-n">1</span><h3>Desenhe</h3><p>Desenhe como à mão com medidas exatas, ou abra seu modelo do SketchUp.</p></li>
+        <li class="step"><span class="step-n">1</span><h3>Desenhe</h3><p>Desenhe como à mão com medidas exatas, ou importe suas plantas e modelos.</p></li>
         <li class="step"><span class="step-n">2</span><h3>Classifique</h3><p>Marque paredes, lajes e pilares: o IngeTrazo calcula os quantitativos na hora.</p></li>
         <li class="step"><span class="step-n">3</span><h3>Entregue</h3><p>Pranchas em PDF em escala, arquivo IFC e o orçamento no IngePresupuestos.</p></li>
       </ol>
@@ -349,7 +350,7 @@
       </div>
     </section>
 
-    <!-- ── Y además: IA, componentes y SketchUp ── -->
+    <!-- ── Y además: IA, componentes e importar ── -->
     <section class="feat more reveal">
       <div class="container">
         <h2 class="more-title">E tem mais</h2>
@@ -401,12 +402,12 @@
                alt="A praça principal de Yanque modelada no IngeTrazo sobre o terreno de satélite: arco de boas-vindas, pérgolas, jardins, fonte, postes solares e bandeiras, com as camadas e cenas no painel" width="1600" height="1007" loading="lazy">
         </figure>
           <div class="more-body">
-            <h3>Abra seus arquivos do SketchUp (.skp)</h3>
-          <p>Sua biblioteca de anos não fica para trás — nem seus colegas: o IngeTrazo abre o <code>.skp</code> diretamente, graças ao <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, um leitor livre do formato — sem conversores nem instalações extras.</p>
+            <h3>Traga suas plantas e modelos</h3>
+          <p>Sua biblioteca de anos não fica para trás — nem seus colegas: o IngeTrazo importa plantas DWG e DXF, modelos <code>.skp</code> de todas as versões graças ao <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, um leitor livre, e OBJ, COLLADA, glTF e STL — sem conversores nem instalações extras.</p>
           <ul class="feat-list">
-            <li><strong>Importa SketchUp (.skp) nativo</strong> — todas as versões, das antigas (2013) às atuais</li>
+            <li><strong>Plantas DWG e DXF</strong> — cada camada como grupo, prontas para decalcar e levantar</li>
             <li><strong>Com tudo dentro</strong> — grupos, componentes, materiais, texturas, camadas, cenas, cotas e textos com chamada</li>
-            <li><strong>Para levar seu modelo de volta</strong> — exporte COLLADA (.dae), que o SketchUp e quase qualquer programa 3D abrem</li>
+            <li><strong>Para levar seu modelo de volta</strong> — exporte COLLADA (.dae), glTF ou OBJ, que quase qualquer programa 3D abre</li>
             <li><strong>E ainda OBJ, COLLADA, glTF, STL</strong> e <strong>IFC</strong></li>
           </ul>
           </div>
@@ -474,7 +475,7 @@
   <section id="descargar" class="download-section">
     <div class="container">
       <h2>Baixe o IngeTrazo</h2>
-      <p class="download-sub">Grátis e completo. Versão <span id="dl-version">0.5.5</span> — <span id="dl-date">setembro de 2026</span>.</p>
+      <p class="download-sub">Completo, sem contas nem assinaturas. Versão <span id="dl-version">0.5.5</span> — <span id="dl-date">setembro de 2026</span>.</p>
       <div class="dl-primary" id="dl-primary" hidden>
         <a class="btn btn-primary btn-lg" id="dl-primary-btn" href="#descargar"></a>
         <p class="dl-primary-sub" id="dl-primary-sub"></p>
@@ -636,8 +637,8 @@ IngeTrazo-0.5.5/ingetrazo</code>
       </div>
       <div class="faq-list">
         <details class="faq-item">
-          <summary>É gratuito mesmo?</summary>
-          <p>Sim. O IngeTrazo é <strong>software livre sob GPL-3.0</strong>: gratuito hoje e para sempre, com o código-fonte publicado no GitHub. Sem contas, sem assinaturas, sem funções bloqueadas.</p>
+          <summary>O que significa ser livre?</summary>
+          <p>O IngeTrazo é <strong>software livre sob GPL-3.0</strong>: você pode usá-lo em qualquer projeto, estudar como funciona, melhorá-lo e compartilhá-lo, com o código-fonte publicado no GitHub. Sem contas, sem assinaturas, sem funções bloqueadas: seus modelos são seus.</p>
         </details>
         <details class="faq-item">
           <summary>O que torna o IngeTrazo diferente?</summary>
@@ -687,9 +688,9 @@ IngeTrazo-0.5.5/ingetrazo</code>
   <section class="final-cta">
     <div class="container">
       <h2>Comece a modelar hoje</h2>
-      <p>Grátis e completo, no Linux, Windows e macOS. Sem contas nem assinaturas.</p>
+      <p>Completo, no Linux, Windows e macOS. Sem contas nem assinaturas.</p>
       <div class="final-cta-btns">
-        <a href="#descargar" class="btn btn-lg final-cta-dl">Baixar grátis</a>
+        <a href="#descargar" class="btn btn-lg final-cta-dl">Baixar o IngeTrazo</a>
         <a href="https://ingetrazo-docs.pages.dev" class="btn btn-lg final-cta-man" target="_blank" rel="noopener">Ler o manual</a>
       </div>
     </div>

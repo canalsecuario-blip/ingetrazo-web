@@ -1113,3 +1113,12 @@ code {
   font-size: 13.5px; color: rgba(255,255,255,0.65);
 }
 .hero-trust + .hero-version { margin-top: 4px; }
+
+/* ============ Portada: el lema arriba, qué es debajo ============ */
+.hero-lead {
+  font-size: clamp(18px, 2vw, 23px); line-height: 1.4; font-weight: 500;
+  color: rgba(255,255,255,0.88); margin: -6px 0 16px; max-width: 30ch;
+  animation: hero-fade-up 0.8s 0.1s ease both;
+}
+.hero .hero-name { color: rgba(255,255,255,0.78); margin: 0 0 22px; }
+.hero .hero-name em { color: rgba(255,255,255,0.9); }
