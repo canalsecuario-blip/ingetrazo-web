@@ -55,4 +55,31 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://ingetrazo.com/firma</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ingetrazo.com/firma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ingetrazo.com/en/firma"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ingetrazo.com/pt/firma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/firma"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ingetrazo.com/en/firma</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ingetrazo.com/firma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ingetrazo.com/en/firma"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ingetrazo.com/pt/firma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/firma"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ingetrazo.com/pt/firma</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ingetrazo.com/firma"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ingetrazo.com/en/firma"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://ingetrazo.com/pt/firma"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ingetrazo.com/firma"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

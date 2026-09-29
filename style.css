@@ -794,3 +794,12 @@ code {
      ahí manda el número copiable, no el código. */
   .aporte-qr       { display: none; }
 }
+
+/* ── Política de firma de código (/firma) — texto largo sobre la tarjeta de /apoyar ── */
+.policy h3 { font-size: 17px; margin: 26px 0 10px; color: var(--slate-700, #334155); }
+.policy ul { margin: 0 0 8px; padding-left: 20px; color: var(--slate-500); font-size: 15px; line-height: 1.65; }
+.policy li { margin-bottom: 6px; }
+.policy li a, .policy-sponsor a { color: var(--accent-dk); text-decoration: none; }
+.policy li a:hover, .policy-sponsor a:hover { text-decoration: underline; }
+.policy code { font-size: 13.5px; background: #F1F4F7; padding: 1px 5px; border-radius: 4px; }
+.policy-sponsor { font-size: 16px; margin: 0 0 14px; }

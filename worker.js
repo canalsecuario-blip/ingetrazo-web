@@ -1,6 +1,6 @@
 // Idioma automático de ingetrazo.com.
 //
-// El sitio es estático (assets); este Worker solo corre para «/» y «/apoyar»
+// El sitio es estático (assets); este Worker solo corre para «/», «/apoyar» y «/firma»
 // (run_worker_first en wrangler.jsonc) y decide si ese visitante se queda en
 // español o va a /en/ o /pt/. Orden:
 //   1. la cookie `lang` — elegir en el selector de la cabecera gana siempre;
@@ -16,7 +16,7 @@ const SPANISH = new Set([
 ]);
 const PORTUGUESE = new Set(['AO', 'BR', 'CV', 'GW', 'MZ', 'PT', 'ST', 'TL']);
 const SUPPORTED = new Set(['es', 'en', 'pt']);
-const LANG_PAGES = new Set(['/', '/apoyar']);
+const LANG_PAGES = new Set(['/', '/apoyar', '/firma']);
 const BOT = /bot|crawl|spider|slurp|facebookexternalhit|embedly|preview|whatsapp|telegram|discord|lighthouse/i;
 
 export function firstLanguage(acceptLanguage) {
@@ -46,7 +46,7 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const ua = request.headers.get('User-Agent') || '';
-    // Only the two pages this Worker is for pick a language. A path the
+    // Only the pages this Worker is for pick a language. A path the
     // assets do not have also reaches the Worker (Cloudflare's not-found
     // fallback): redirecting it to /en/<path> found nothing again and came
     // back here -- /en/en/en/..., the loop that broke Flatpak installs
