@@ -46,12 +46,6 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const ua = request.headers.get('User-Agent') || '';
-    // Renamed images: store listings already published (the Flatpak's
-    // AppStream of 0.5.6) still point at the old names.
-    const MOVED = { '/images/screenshots/import-sketchup.jpeg': '/images/screenshots/importar.jpeg' };
-    if (MOVED[url.pathname]) {
-      return Response.redirect(new URL(MOVED[url.pathname], url.origin).toString(), 301);
-    }
     // Only the pages this Worker is for pick a language. A path the
     // assets do not have also reaches the Worker (Cloudflare's not-found
     // fallback): redirecting it to /en/<path> found nothing again and came
