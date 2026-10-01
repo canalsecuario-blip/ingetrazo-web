@@ -7,8 +7,8 @@
 
   <title>IngeTrazo · Modelador 3D libre para arquitectura e ingeniería</title>
 
-  <meta name="description" content="Modelador 3D libre estilo SketchUp: abre y guarda .skp, etiqueta BIM, obtén el metrado y exporta IFC y planos en PDF. Linux, Windows y macOS. Gratis.">
-  <meta name="keywords" content="modelador 3D libre, alternativa a SketchUp, SketchUp Linux, BIM libre, exportar IFC, metrados, software ingeniería civil, diseño 3D, modelado 3D, CAD Linux, terreno 3D, perfil longitudinal, código abierto, GPL">
+  <meta name="description" content="Modelador 3D libre: abre y guarda .skp, etiqueta BIM, obtén el metrado y exporta IFC y planos en PDF. Linux, Windows y macOS. Gratis.">
+  <meta name="keywords" content="modelador 3D libre, BIM libre, exportar IFC, metrados, software ingeniería civil, diseño 3D, modelado 3D, CAD Linux, terreno 3D, perfil longitudinal, código abierto, GPL">
   <meta name="author" content="Ing. Marco Sumari">
 
   <link rel="canonical" href="https://ingetrazo.com/">
@@ -49,7 +49,7 @@
     "name": "IngeTrazo",
     "operatingSystem": "Linux, Windows, macOS",
     "applicationCategory": "DesignApplication",
-    "description": "Modelador 3D libre estilo SketchUp para arquitectura, ingeniería civil y diseño 3D, con BIM como capa opcional: etiqueta la geometría como muros, losas o columnas, obtén cantidades (metrado) y exporta IFC 4. Incluye biblioteca de 1510 componentes y 427 texturas a tamaño real con los 213 colores RAL Classic, composición de láminas con planos a escala exacta y export a PDF, terreno satelital 3D, levantamientos fotogramétricos de dron, perfiles longitudinales, y modelos SketchUp nativos: abre .skp de todas las versiones y guarda en .skp (también .dae, .obj, glTF, STL). Código abierto bajo GPL-3.0.",
+    "description": "Modelador 3D libre para arquitectura, ingeniería civil y diseño 3D, con BIM como capa opcional: etiqueta la geometría como muros, losas o columnas, obtén cantidades (metrado) y exporta IFC 4. Incluye biblioteca de 1510 componentes y 427 texturas a tamaño real con los 213 colores RAL Classic, composición de láminas con planos a escala exacta y export a PDF, terreno satelital 3D, levantamientos fotogramétricos de dron, perfiles longitudinales, y modelos SketchUp nativos: abre .skp de todas las versiones y guarda en .skp (también .dae, .obj, glTF, STL). Código abierto bajo GPL-3.0.",
     "url": "https://ingetrazo.com/",
     "softwareVersion": "0.5.5",
     "downloadUrl": "https://github.com/ingelibre/ingetrazo/releases/latest",
@@ -86,10 +86,10 @@
       },
       {
         "@type": "Question",
-        "name": "¿En qué se diferencia de SketchUp?",
+        "name": "¿Qué ofrece IngeTrazo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "El dibujo se siente igual de directo (empujar/tirar, inferencias, medidas exactas por teclado), pero IngeTrazo es libre, corre nativo en Linux, garantiza sólidos herméticos aptos para metrado, y suma la capa BIM: etiquetas la geometría y obtienes cantidades e IFC."
+          "text": "El dibujo es directo (empujar/tirar, inferencias, medidas exactas por teclado), e IngeTrazo es libre, corre nativo en Linux, garantiza sólidos herméticos aptos para metrado, y suma la capa BIM: etiquetas la geometría y obtienes cantidades e IFC."
         }
       },
       {
@@ -121,7 +121,7 @@
         "name": "¿Puedo agregarle funciones con plugins?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sí, desde la versión 0.3.2 IngeTrazo tiene un menú Extensiones: copias un plugin (un archivo Python) a tu carpeta personal y sus herramientas aparecen en el menú — al estilo de las extensiones de SketchUp. Vienen dos incluidas: Info del modelo (estadísticas, materiales y objetos BIM) y una Consola Python para inspeccionar y automatizar el modelo por código, con todo integrado al deshacer."
+          "text": "Sí, desde la versión 0.3.2 IngeTrazo tiene un menú Extensiones: copias un plugin (un archivo Python) a tu carpeta personal y sus herramientas aparecen en el menú. Vienen dos incluidas: Info del modelo (estadísticas, materiales y objetos BIM) y una Consola Python para inspeccionar y automatizar el modelo por código, con todo integrado al deshacer."
         }
       },
       {
@@ -259,7 +259,7 @@
           <h2>Traza como a mano</h2>
           <p>Dibuja líneas, rectángulos, círculos y arcos; empuja una cara y ya tienes un sólido. Sin capas de complejidad CAD entre tu idea y el modelo.</p>
           <ul class="feat-list">
-            <li><strong>Empujar/Tirar, Sígueme, Equidistancia</strong> — el flujo SketchUp que ya conoces</li>
+            <li><strong>Empujar/Tirar, Sígueme, Equidistancia</strong> — modela empujando y tirando de las caras</li>
             <li><strong>Medidas exactas por teclado</strong> — escribe <code>3.50</code> y la línea mide 3.50 m</li>
             <li><strong>Inferencias inteligentes</strong> — ejes, extensiones, paralelas y perpendiculares</li>
             <li><strong>Materiales, texturas y cotas</strong> sobre cualquier cara</li>
@@ -309,7 +309,7 @@
             <li><strong>Levantamiento de dron (WebODM)</strong> — tu malla fotogramétrica texturizada como referencia, con cotas reales</li>
             <li><strong>Puntos GPS / estación total</strong> — importa tu CSV en UTM y dibuja sobre puntos exactos</li>
             <li><strong>UTM WGS84 en toda la interfaz</strong> — escribe la Zona/E/N tal como la reporta tu equipo</li>
-            <li><strong>Norte del proyecto</strong> — dibuja a escuadra con los ejes; el mapa, el terreno y las sombras giran por debajo, como en SketchUp</li>
+            <li><strong>Norte del proyecto</strong> — dibuja a escuadra con los ejes; el mapa, el terreno y las sombras giran por debajo</li>
             <li><strong>Rutas y linderos</strong> georreferenciados, con progresivas y áreas</li>
           </ul>
           <p class="feat-muted">El modelador completo funciona offline; solo el mapa usa internet.</p>
@@ -348,7 +348,7 @@
       </div>
     </section>
 
-    <!-- ── Y además: IA, componentes y SketchUp ── -->
+    <!-- ── Y además: IA, componentes y .skp ── -->
     <section class="feat more reveal">
       <div class="container">
         <h2 class="more-title">Y además</h2>
@@ -636,8 +636,8 @@ IngeTrazo-0.5.5/ingetrazo</code>
           <p>Sí. IngeTrazo es <strong>software libre bajo GPL-3.0</strong>: gratis hoy y para siempre, con el código fuente publicado en GitHub. Sin cuentas, sin suscripciones, sin funciones bloqueadas.</p>
         </details>
         <details class="faq-item">
-          <summary>¿En qué se diferencia de SketchUp?</summary>
-          <p>El dibujo se siente igual de directo (empujar/tirar, inferencias, medidas exactas por teclado), pero IngeTrazo es libre, corre <strong>nativo en Linux</strong>, garantiza <strong>sólidos herméticos</strong> aptos para metrado, y suma la capa BIM: etiquetas la geometría y obtienes cantidades e IFC.</p>
+          <summary>¿Qué ofrece IngeTrazo?</summary>
+          <p>El dibujo es directo (empujar/tirar, inferencias, medidas exactas por teclado), e IngeTrazo es libre, corre <strong>nativo en Linux</strong>, garantiza <strong>sólidos herméticos</strong> aptos para metrado, y suma la capa BIM: etiquetas la geometría y obtienes cantidades e IFC.</p>
         </details>
         <details class="faq-item">
           <summary>¿Puedo abrir mis modelos de SketchUp? ¿Y guardar?</summary>
@@ -653,7 +653,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
         </details>
         <details class="faq-item">
           <summary>¿Puedo agregarle funciones con plugins?</summary>
-          <p>Sí, desde la versión 0.3.2 IngeTrazo tiene un <strong>menú Extensiones</strong>: copias un plugin (un archivo Python) a tu carpeta personal y sus herramientas aparecen en el menú — al estilo de las extensiones de SketchUp. Vienen dos incluidas: <strong>Info del modelo</strong> (estadísticas, materiales con m² pintados y objetos BIM) y una <strong>Consola Python</strong> para inspeccionar y automatizar el modelo por código, con todo integrado al deshacer. La guía está en el <a href="https://ingetrazo-docs.pages.dev/extensiones/" target="_blank" rel="noopener">manual</a>.</p>
+          <p>Sí, desde la versión 0.3.2 IngeTrazo tiene un <strong>menú Extensiones</strong>: copias un plugin (un archivo Python) a tu carpeta personal y sus herramientas aparecen en el menú. Vienen dos incluidas: <strong>Info del modelo</strong> (estadísticas, materiales con m² pintados y objetos BIM) y una <strong>Consola Python</strong> para inspeccionar y automatizar el modelo por código, con todo integrado al deshacer. La guía está en el <a href="https://ingetrazo-docs.pages.dev/extensiones/" target="_blank" rel="noopener">manual</a>.</p>
         </details>
         <details class="faq-item">
           <summary>¿Tiene inteligencia artificial?</summary>
