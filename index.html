@@ -8,7 +8,7 @@
 
   <title>IngeTrazo · Modelador 3D libre para arquitectura e ingeniería</title>
 
-  <meta name="description" content="Modelador 3D libre: abre y guarda .skp, etiqueta BIM, obtén el metrado y exporta IFC y planos en PDF. Linux, Windows y macOS. Gratis.">
+  <meta name="description" content="Modelador 3D libre: etiqueta BIM, obtén el metrado y exporta IFC y planos en PDF. Linux, Windows y macOS. Gratis.">
   <meta name="keywords" content="modelador 3D libre, BIM libre, exportar IFC, metrados, software ingeniería civil, diseño 3D, modelado 3D, CAD Linux, terreno 3D, perfil longitudinal, código abierto, GPL">
   <meta name="author" content="Ing. Marco Sumari">
 
@@ -50,7 +50,7 @@
     "name": "IngeTrazo",
     "operatingSystem": "Linux, Windows, macOS",
     "applicationCategory": "DesignApplication",
-    "description": "Modelador 3D libre para arquitectura, ingeniería civil y diseño 3D, con BIM como capa opcional: etiqueta la geometría como muros, losas o columnas, obtén cantidades (metrado) y exporta IFC 4. Incluye biblioteca de 1510 componentes y 427 texturas a tamaño real con los 213 colores RAL Classic, composición de láminas con planos a escala exacta y export a PDF, terreno satelital 3D, levantamientos fotogramétricos de dron, perfiles longitudinales, y modelos SketchUp nativos: abre .skp de todas las versiones y guarda en .skp (también .dae, .obj, glTF, STL). Código abierto bajo GPL-3.0.",
+    "description": "Modelador 3D libre para arquitectura, ingeniería civil y diseño 3D, con BIM como capa opcional: etiqueta la geometría como muros, losas o columnas, obtén cantidades (metrado) y exporta IFC 4. Incluye biblioteca de 1510 componentes y 427 texturas a tamaño real con los 213 colores RAL Classic, composición de láminas con planos a escala exacta y export a PDF, terreno satelital 3D, levantamientos fotogramétricos de dron, perfiles longitudinales, y formatos .dae, .obj, glTF y STL. Código abierto bajo GPL-3.0.",
     "url": "https://ingetrazo.com/",
     "softwareVersion": "0.5.5",
     "downloadUrl": "https://github.com/ingelibre/ingetrazo/releases/latest",
@@ -91,14 +91,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "El dibujo es directo (empujar/tirar, inferencias, medidas exactas por teclado), e IngeTrazo es libre, corre nativo en Linux, garantiza sólidos herméticos aptos para metrado, y suma la capa BIM: etiquetas la geometría y obtienes cantidades e IFC."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Puedo abrir mis modelos de SketchUp? ¿Y guardar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí a ambas, el .skp directamente y sin conversores: Archivo ▸ Importar ▸ SketchUp para abrir, y Archivo ▸ Exportar ▸ SketchUp para guardar. Construido sobre OpenSKP, el lector/escritor libre del formato al que IngeTrazo contribuye — lee archivos de todas las versiones (geometría, grupos, componentes, materiales, texturas, capas, escenas, cotas y textos guía) y lo que exportas abre en SketchUp con sus anotaciones incluidas. También importa COLLADA (.dae) y OBJ."
         }
       },
       {
@@ -146,7 +138,7 @@
         "name": "¿Cómo lo instalo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "En Windows: descarga el instalador de ingetrazo.com o de los releases de GitHub, doble clic y listo. En Linux: descarga el Flatpak (doble clic y tu tienda de aplicaciones lo instala, con los .igz y .skp asociados), el AppImage (permiso de ejecución y abrir) o, si tu distro no trae FUSE, el tar.gz — lo descomprimes donde quieras y ejecutas ingetrazo. En macOS (Apple Silicon): descarga el .dmg, arrastra IngeTrazo a Aplicaciones y la primera vez ábrelo con clic derecho ▸ Abrir (aún no está firmado con una cuenta de Apple). También puedes correrlo desde el código fuente con 3 comandos."
+          "text": "En Windows: descarga el instalador de ingetrazo.com o de los releases de GitHub, doble clic y listo. En Linux: descarga el Flatpak (doble clic y tu tienda de aplicaciones lo instala, con los .igz asociados), el AppImage (permiso de ejecución y abrir) o, si tu distro no trae FUSE, el tar.gz — lo descomprimes donde quieras y ejecutas ingetrazo. En macOS (Apple Silicon): descarga el .dmg, arrastra IngeTrazo a Aplicaciones y la primera vez ábrelo con clic derecho ▸ Abrir (aún no está firmado con una cuenta de Apple). También puedes correrlo desde el código fuente con 3 comandos."
         }
       },
       {
@@ -207,7 +199,6 @@
       <h1>El modelador 3D <span class="grad-text">libre</span><br>para arquitectura, ingeniería y diseño</h1>
       <ul class="hero-checks">
         <li><strong>Gratis para siempre:</strong> sin cuentas, sin suscripciones, sin funciones bloqueadas</li>
-        <li><strong>Abre y guarda tus archivos de SketchUp</strong> <code>.skp</code></li>
         <li><strong>BIM, metrado, IFC y planos en PDF</strong>, listos para la obra</li>
       </ul>
       <div class="hero-ctas">
@@ -233,7 +224,7 @@
         <div class="stat"><strong data-stat="downloads">7.300+</strong><span>descargas</span></div>
         <div class="stat"><strong data-stat="stars">150</strong><span>estrellas en GitHub</span></div>
         <div class="stat"><strong>1.510</strong><span>componentes</span></div>
-        <div class="stat"><strong>.skp</strong><span>compatible con SketchUp</span></div>
+        <div class="stat"><strong>427</strong><span>texturas</span></div>
         <div class="stat"><strong>IFC 4</strong><span>estándar BIM abierto</span></div>
         <div class="stat"><strong>3</strong><span>Linux · Windows · macOS</span></div>
     </div>
@@ -244,7 +235,7 @@
     <div class="container">
       <h2>Del boceto a la obra en 3 pasos</h2>
       <ol class="steps-row">
-        <li class="step"><span class="step-n">1</span><h3>Traza</h3><p>Dibuja como a mano con medidas exactas, o abre tu modelo de SketchUp.</p></li>
+        <li class="step"><span class="step-n">1</span><h3>Traza</h3><p>Dibuja como a mano con medidas exactas.</p></li>
         <li class="step"><span class="step-n">2</span><h3>Etiqueta</h3><p>Marca muros, losas y columnas: IngeTrazo calcula el metrado al instante.</p></li>
         <li class="step"><span class="step-n">3</span><h3>Entrega</h3><p>Planos en PDF a escala, archivo IFC y el presupuesto en IngePresupuestos.</p></li>
       </ol>
@@ -351,7 +342,7 @@
       </div>
     </section>
 
-    <!-- ── Y además: IA, componentes y .skp ── -->
+    <!-- ── Y además: IA y componentes ── -->
     <section class="feat more reveal">
       <div class="container">
         <h2 class="more-title">Y además</h2>
@@ -380,8 +371,8 @@
           <img class="zoomable" src="/ingetrazo-web/images/screenshots/componentes.webp"
                srcset="/ingetrazo-web/images/screenshots/componentes-480.webp 480w, /ingetrazo-web/images/screenshots/componentes-960.webp 960w, /ingetrazo-web/images/screenshots/componentes.webp 1600w"
                sizes="(max-width: 960px) min(640px, calc(100vw - 40px)), 380px"
-               data-caption="Un modelo de SketchUp abierto con sus texturas y dos figuras colocadas, con la bandeja de componentes a la derecha."
-               alt="IngeTrazo con un modelo urbano abierto desde SketchUp: dos figuras de escala en el paseo junto al agua y la bandeja de componentes con muebles, árboles y vehículos" width="1600" height="1005" loading="lazy">
+               data-caption="Un modelo urbano con sus texturas y dos figuras colocadas, con la bandeja de componentes a la derecha."
+               alt="IngeTrazo con un modelo urbano: dos figuras de escala en el paseo junto al agua y la bandeja de componentes con muebles, árboles y vehículos" width="1600" height="1005" loading="lazy">
         </figure>
           <div class="more-body">
             <h3>Poblar la escena no debería costarte la tarde</h3>
@@ -392,24 +383,6 @@
               <li><strong>427 texturas con su medida real</strong> — un ladrillo se ve de ladrillo porque el catálogo dice cuánto mide, no porque lo ajustes a ojo</li>
             </ul>
             <p class="feat-muted">Todo el material viene de la biblioteca libre de <a href="https://www.sweethome3d.com" target="_blank" rel="noopener">Sweet Home 3D</a> (CC0, CC BY y Arte Libre); IngeTrazo muestra siempre la licencia y el autor de cada pieza.</p>
-          </div>
-        </article>
-        <article class="more-card">
-          <figure class="more-img">
-          <img class="zoomable" src="/ingetrazo-web/images/screenshots/import-sketchup.webp"
-               srcset="/ingetrazo-web/images/screenshots/import-sketchup-480.webp 480w, /ingetrazo-web/images/screenshots/import-sketchup-960.webp 960w, /ingetrazo-web/images/screenshots/import-sketchup.webp 1600w"
-               sizes="(max-width: 960px) min(640px, calc(100vw - 40px)), 380px"
-               data-caption="Un parque real abierto desde su .skp — juegos, tribunas y cobertura, con sus capas originales. IngeTrazo contribuye código a OpenSKP: cada archivo que abre aquí mejora el lector libre para todos."
-               alt="Parque infantil abierto desde su archivo .skp: juegos, tribunas y cobertura, con las capas originales de SketchUp" width="1600" height="1005" loading="lazy">
-        </figure>
-          <div class="more-body">
-            <h3>Abre y guarda tus archivos de SketchUp</h3>
-            <p>Tu biblioteca de años no se queda atrás — y tus colegas tampoco: IngeTrazo abre el <code>.skp</code> directamente y <strong>guarda en .skp</strong> lo que modelas, gracias a <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, el lector/escritor libre del formato SketchUp — sin conversores ni instalaciones extra.</p>
-            <ul class="feat-list">
-              <li><strong>Importa SketchUp (.skp) nativo</strong> — todas las versiones, de las antiguas (2013) a las actuales</li>
-              <li><strong>Con todo adentro</strong> — grupos, componentes, materiales, texturas, capas, escenas, cotas y textos guía</li>
-              <li><strong>Exporta a .skp</strong> — tu modelo abre en SketchUp con sus grupos, materiales con nombre, cotas y textos</li>
-            </ul>
           </div>
         </article>
         </div>
@@ -528,7 +501,7 @@
             </div>
 
             <div class="dl-panel" role="tabpanel" data-panel="flatpak" hidden>
-              <p>Instálalo desde nuestro repositorio y <code>flatpak update</code> te traerá cada versión nueva. Queda en tu menú de aplicaciones, con los <code>.igz</code> y <code>.skp</code> asociados.</p>
+              <p>Instálalo desde nuestro repositorio y <code>flatpak update</code> te traerá cada versión nueva. Queda en tu menú de aplicaciones, con los <code>.igz</code> asociados.</p>
               <div class="dl-code" id="dl-code-flatpak">
                 <code>flatpak remote-add --user --if-not-exists ingetrazo https://ingetrazo.com/ingetrazo.flatpakrepo
 flatpak install --user ingetrazo com.ingetrazo.IngeTrazo
@@ -555,7 +528,7 @@ flatpak run com.ingetrazo.IngeTrazo</code>
 IngeTrazo-0.5.5/ingetrazo</code>
                 <button class="dl-code-copy" type="button" data-copy="tar -xzf IngeTrazo-0.5.5-linux-x86_64.tar.gz && IngeTrazo-0.5.5/ingetrazo">Copiar</button>
               </div>
-              <p class="dl-panel-small">Trae lo mismo que el AppImage: Python, Qt y el lector de .skp viajan dentro.</p>
+              <p class="dl-panel-small">Trae lo mismo que el AppImage: Python y Qt viajan dentro.</p>
             </div>
 
             <p class="dl-howto-foot" hidden>Los tres corren en Ubuntu 22.04 o posterior. Si algo falla, <code>--check</code> te dice qué falta.</p>
@@ -574,8 +547,8 @@ IngeTrazo-0.5.5/ingetrazo</code>
               <span>Apple Silicon · macOS</span>
             </a>
           </div>
-          <p class="dl-group-alt">Abre el <code>.dmg</code> y arrastra IngeTrazo a <strong>Aplicaciones</strong>. Todavía no está firmado con una cuenta de Apple, así que <strong>la primera vez</strong> macOS no lo abrirá con doble clic: <strong>clic derecho ▸ Abrir</strong> y confirma. Desde entonces abre normal, y los <code>.igz</code> y <code>.skp</code> se abren con doble clic. Empaquetado por <a href="https://github.com/felixriestra" target="_blank" rel="noopener">Félix Riestra</a>.</p>
-          <p class="dl-group-alt">Para Mac con Apple Silicon (M1 en adelante). Lo que aún no funciona en Mac: la importación de DWG y el conversor auxiliar <code>skp2dae</code>; abrir y guardar <code>.skp</code> sí. Si algo falla, cuéntanos en un <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">issue de GitHub</a>.</p>
+          <p class="dl-group-alt">Abre el <code>.dmg</code> y arrastra IngeTrazo a <strong>Aplicaciones</strong>. Todavía no está firmado con una cuenta de Apple, así que <strong>la primera vez</strong> macOS no lo abrirá con doble clic: <strong>clic derecho ▸ Abrir</strong> y confirma. Desde entonces abre normal, y los <code>.igz</code> se abren con doble clic. Empaquetado por <a href="https://github.com/felixriestra" target="_blank" rel="noopener">Félix Riestra</a>.</p>
+          <p class="dl-group-alt">Para Mac con Apple Silicon (M1 en adelante). Lo que aún no funciona en Mac: la importación de DWG. Si algo falla, cuéntanos en un <a href="https://github.com/ingelibre/ingetrazo/issues" target="_blank" rel="noopener">issue de GitHub</a>.</p>
         </div>
       </div>
     </div>
@@ -643,10 +616,6 @@ IngeTrazo-0.5.5/ingetrazo</code>
           <p>El dibujo es directo (empujar/tirar, inferencias, medidas exactas por teclado), e IngeTrazo es libre, corre <strong>nativo en Linux</strong>, garantiza <strong>sólidos herméticos</strong> aptos para metrado, y suma la capa BIM: etiquetas la geometría y obtienes cantidades e IFC.</p>
         </details>
         <details class="faq-item">
-          <summary>¿Puedo abrir mis modelos de SketchUp? ¿Y guardar?</summary>
-          <p>Sí a ambas, el <strong>.skp directamente y sin conversores</strong>: Archivo ▸ Importar ▸ SketchUp para abrir, y Archivo ▸ Exportar ▸ SketchUp para guardar. Construido sobre <a href="https://github.com/iamahsanmehmood/openskp" target="_blank" rel="noopener"><strong>OpenSKP</strong></a>, el lector/escritor libre del formato al que IngeTrazo contribuye — lee archivos de <strong>todas las versiones</strong> (geometría, grupos, componentes, materiales, texturas, capas, escenas, cotas y textos guía) y lo que exportas abre en SketchUp con sus anotaciones incluidas. También importa <strong>COLLADA (.dae)</strong> y <strong>OBJ</strong>.</p>
-        </details>
-        <details class="faq-item">
           <summary>¿Qué es eso de BIM e IFC?</summary>
           <p>BIM significa darle <strong>semántica</strong> al modelo: este sólido ES un muro, esta cara ES una puerta. Con eso IngeTrazo calcula las cantidades de obra (m², m³, unidades) y las exporta en <strong>IFC</strong>, el formato estándar que entienden los programas de presupuestos — incluido IngePresupuestos.</p>
         </details>
@@ -668,7 +637,7 @@ IngeTrazo-0.5.5/ingetrazo</code>
         </details>
         <details class="faq-item">
           <summary>¿Cómo lo instalo?</summary>
-          <p>En <strong>Windows</strong>: descarga el instalador de la sección Descargar, doble clic y listo (asocia los archivos .igz). En <strong>Linux</strong>: descarga el <strong>Flatpak</strong> (doble clic y GNOME Software / KDE Discover lo instala, con los .igz y .skp asociados), el <strong>AppImage</strong> (dale permiso de ejecución y ábrelo) o, si tu distro no trae FUSE, el <strong>tar.gz</strong>: lo descomprimes donde quieras y ejecutas <code>ingetrazo</code>. Si algo no funciona, <code>--check</code> te dice qué le falta. En <strong>macOS</strong> (Apple Silicon): descarga el <strong>.dmg</strong> de <a href="#mac">Descargar ▸ macOS</a>, arrastra IngeTrazo a Aplicaciones y la primera vez ábrelo con clic derecho ▸ Abrir (aún no está firmado con una cuenta de Apple). También puedes correrlo desde el código fuente con 3 comandos.</p>
+          <p>En <strong>Windows</strong>: descarga el instalador de la sección Descargar, doble clic y listo (asocia los archivos .igz). En <strong>Linux</strong>: descarga el <strong>Flatpak</strong> (doble clic y GNOME Software / KDE Discover lo instala, con los .igz asociados), el <strong>AppImage</strong> (dale permiso de ejecución y ábrelo) o, si tu distro no trae FUSE, el <strong>tar.gz</strong>: lo descomprimes donde quieras y ejecutas <code>ingetrazo</code>. Si algo no funciona, <code>--check</code> te dice qué le falta. En <strong>macOS</strong> (Apple Silicon): descarga el <strong>.dmg</strong> de <a href="#mac">Descargar ▸ macOS</a>, arrastra IngeTrazo a Aplicaciones y la primera vez ábrelo con clic derecho ▸ Abrir (aún no está firmado con una cuenta de Apple). También puedes correrlo desde el código fuente con 3 comandos.</p>
         </details>
         <details class="faq-item">
           <summary>¿Sirve para impresión 3D?</summary>
