@@ -963,12 +963,12 @@ code {
   font-size: 14px; line-height: 1.55; text-align: center; cursor: default;
 }
 
-/* ============ «Y además»: IA, componentes y .skp ============ */
+/* ============ «Y además»: IA y componentes ============ */
 .more-title {
   font-size: clamp(26px, 3vw, 36px); line-height: 1.1; font-weight: 800;
   color: var(--head); letter-spacing: -0.02em; margin-bottom: 32px;
 }
-.more-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: stretch; }  /* tarjetas de la misma altura */
+.more-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; align-items: stretch; }  /* tarjetas de la misma altura */
 .more-card {
   background: var(--card); border-radius: 14px; overflow: hidden;
   display: flex; flex-direction: column;
