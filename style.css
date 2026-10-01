@@ -963,7 +963,7 @@ code {
   font-size: 14px; line-height: 1.55; text-align: center; cursor: default;
 }
 
-/* ============ «Y además»: IA, componentes y SketchUp ============ */
+/* ============ «Y además»: IA, componentes y .skp ============ */
 .more-title {
   font-size: clamp(26px, 3vw, 36px); line-height: 1.1; font-weight: 800;
   color: var(--head); letter-spacing: -0.02em; margin-bottom: 32px;
