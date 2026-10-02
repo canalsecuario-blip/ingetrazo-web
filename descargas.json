@@ -16,7 +16,7 @@
     "596205929": {
       "release": "v0.5.5",
       "nombre": "IngeTrazo-0.5.5-x86_64.AppImage",
-      "descargas": 181
+      "descargas": 182
     },
     "596193105": {
       "release": "v0.5.5",
@@ -36,7 +36,7 @@
     "596217227": {
       "release": "v0.5.5",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 426
+      "descargas": 427
     },
     "596192174": {
       "release": "v0.5.5",
@@ -156,37 +156,37 @@
     "601669854": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-linux-x86_64.tar.gz",
-      "descargas": 91
+      "descargas": 92
     },
     "601646580": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-macos-arm64.dmg",
-      "descargas": 727
+      "descargas": 739
     },
     "601669858": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-x86_64.AppImage",
-      "descargas": 361
+      "descargas": 369
     },
     "601648918": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-x86_64.flatpak",
-      "descargas": 617
+      "descargas": 636
     },
     "601670111": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 70
+      "descargas": 79
     },
     "601648219": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-setup-v0.5.7.exe",
-      "descargas": 2931
+      "descargas": 2993
     },
     "601648216": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 583
+      "descargas": 593
     },
     "601651804": {
       "release": "v0.5.7",
@@ -246,7 +246,7 @@
     "599221059": {
       "release": "v0.5.6",
       "nombre": "IngeTrazo-0.5.6-x86_64.AppImage",
-      "descargas": 22
+      "descargas": 23
     },
     "599190076": {
       "release": "v0.5.6",
@@ -256,7 +256,7 @@
     "599221372": {
       "release": "v0.5.6",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 9
+      "descargas": 10
     },
     "599187133": {
       "release": "v0.5.6",
@@ -275,7 +275,7 @@
     }
   },
   "retiradas": 6852,
-  "publicadas": 10378,
-  "total": 17230,
-  "actualizado": "2026-10-02T19:33Z"
+  "publicadas": 10503,
+  "total": 17355,
+  "actualizado": "2026-10-02T20:31Z"
 }
