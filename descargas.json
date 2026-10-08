@@ -16,7 +16,7 @@
     "596205929": {
       "release": "v0.5.5",
       "nombre": "IngeTrazo-0.5.5-x86_64.AppImage",
-      "descargas": 187
+      "descargas": 188
     },
     "596193105": {
       "release": "v0.5.5",
@@ -31,12 +31,12 @@
     "596217231": {
       "release": "v0.5.5",
       "nombre": "ingetrazo-setup-v0.5.5.exe",
-      "descargas": 1035
+      "descargas": 1037
     },
     "596217227": {
       "release": "v0.5.5",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 446
+      "descargas": 447
     },
     "596192174": {
       "release": "v0.5.5",
@@ -46,7 +46,7 @@
     "591561074": {
       "release": "v0.5.4",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 62
+      "descargas": 64
     },
     "589780204": {
       "release": "v0.5.3",
@@ -66,7 +66,7 @@
     "584217929": {
       "release": "v0.5.0",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 78
+      "descargas": 80
     },
     "580363272": {
       "release": "v0.4.9",
@@ -156,37 +156,37 @@
     "601669854": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-linux-x86_64.tar.gz",
-      "descargas": 311
+      "descargas": 312
     },
     "601646580": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-macos-arm64.dmg",
-      "descargas": 2374
+      "descargas": 2391
     },
     "601669858": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-x86_64.AppImage",
-      "descargas": 1021
+      "descargas": 1025
     },
     "601648918": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-x86_64.flatpak",
-      "descargas": 2085
+      "descargas": 2107
     },
     "601670111": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 240
+      "descargas": 241
     },
     "601648219": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-setup-v0.5.7.exe",
-      "descargas": 9466
+      "descargas": 9509
     },
     "601648216": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 1751
+      "descargas": 1757
     },
     "601651804": {
       "release": "v0.5.7",
@@ -275,7 +275,7 @@
     }
   },
   "retiradas": 6852,
-  "publicadas": 22383,
-  "total": 29235,
-  "actualizado": "2026-10-08T19:34Z"
+  "publicadas": 22485,
+  "total": 29337,
+  "actualizado": "2026-10-08T20:36Z"
 }
