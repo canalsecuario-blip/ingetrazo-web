@@ -26,17 +26,17 @@
     "596206257": {
       "release": "v0.5.5",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 50
+      "descargas": 51
     },
     "596217231": {
       "release": "v0.5.5",
       "nombre": "ingetrazo-setup-v0.5.5.exe",
-      "descargas": 1037
+      "descargas": 1038
     },
     "596217227": {
       "release": "v0.5.5",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 448
+      "descargas": 449
     },
     "596192174": {
       "release": "v0.5.5",
@@ -61,7 +61,7 @@
     "585224110": {
       "release": "v0.5.1",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 19
+      "descargas": 20
     },
     "584217929": {
       "release": "v0.5.0",
@@ -156,37 +156,37 @@
     "601669854": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-linux-x86_64.tar.gz",
-      "descargas": 315
+      "descargas": 317
     },
     "601646580": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-macos-arm64.dmg",
-      "descargas": 2415
+      "descargas": 2422
     },
     "601669858": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-x86_64.AppImage",
-      "descargas": 1030
+      "descargas": 1033
     },
     "601648918": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-x86_64.flatpak",
-      "descargas": 2139
+      "descargas": 2148
     },
     "601670111": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 246
+      "descargas": 247
     },
     "601648219": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-setup-v0.5.7.exe",
-      "descargas": 9634
+      "descargas": 9673
     },
     "601648216": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 1766
+      "descargas": 1769
     },
     "601651804": {
       "release": "v0.5.7",
@@ -275,7 +275,7 @@
     }
   },
   "retiradas": 6852,
-  "publicadas": 22692,
-  "total": 29544,
-  "actualizado": "2026-10-08T23:32Z"
+  "publicadas": 22760,
+  "total": 29612,
+  "actualizado": "2026-10-09T00:47Z"
 }
