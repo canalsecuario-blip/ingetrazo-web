@@ -46,7 +46,7 @@
     "591561074": {
       "release": "v0.5.4",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 68
+      "descargas": 69
     },
     "589780204": {
       "release": "v0.5.3",
@@ -181,12 +181,12 @@
     "601648219": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-setup-v0.5.7.exe",
-      "descargas": 12728
+      "descargas": 12730
     },
     "601648216": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 2311
+      "descargas": 2312
     },
     "601651804": {
       "release": "v0.5.7",
@@ -281,27 +281,27 @@
     "634004680": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-linux-x86_64.tar.gz",
-      "descargas": 0
+      "descargas": 7
     },
     "633935247": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-arm64.dmg",
-      "descargas": 7
+      "descargas": 21
     },
     "633945345": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-x86_64.dmg",
-      "descargas": 18
+      "descargas": 32
     },
     "634004678": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.AppImage",
-      "descargas": 0
+      "descargas": 13
     },
     "634004694": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.flatpak",
-      "descargas": 3
+      "descargas": 16
     },
     "634004691": {
       "release": "v0.5.8",
@@ -311,21 +311,21 @@
     "633945333": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-setup-v0.5.8.exe",
-      "descargas": 57
+      "descargas": 122
     },
     "633945344": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 12
+      "descargas": 33
     },
     "634004695": {
       "release": "v0.5.8",
       "nombre": "ingetrazo_0.5.8_amd64.snap",
-      "descargas": 0
+      "descargas": 1
     }
   },
   "retiradas": 6852,
-  "publicadas": 28692,
-  "total": 35544,
-  "actualizado": "2026-10-12T14:43Z"
+  "publicadas": 28844,
+  "total": 35696,
+  "actualizado": "2026-10-12T15:38Z"
 }
