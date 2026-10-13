@@ -6,12 +6,12 @@
     "596205925": {
       "release": "v0.5.5",
       "nombre": "IngeTrazo-0.5.5-linux-x86_64.tar.gz",
-      "descargas": 57
+      "descargas": 58
     },
     "596184155": {
       "release": "v0.5.5",
       "nombre": "IngeTrazo-0.5.5-macos-arm64.dmg",
-      "descargas": 249
+      "descargas": 250
     },
     "596205929": {
       "release": "v0.5.5",
@@ -36,7 +36,7 @@
     "596217227": {
       "release": "v0.5.5",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 453
+      "descargas": 454
     },
     "596192174": {
       "release": "v0.5.5",
@@ -46,7 +46,7 @@
     "591561074": {
       "release": "v0.5.4",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 73
+      "descargas": 74
     },
     "589780204": {
       "release": "v0.5.3",
@@ -281,32 +281,32 @@
     "634004680": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-linux-x86_64.tar.gz",
-      "descargas": 44
+      "descargas": 45
     },
     "633935247": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-arm64.dmg",
-      "descargas": 210
+      "descargas": 216
     },
     "633945345": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-x86_64.dmg",
-      "descargas": 73
+      "descargas": 76
     },
     "634004678": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.AppImage",
-      "descargas": 175
+      "descargas": 181
     },
     "634004694": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.flatpak",
-      "descargas": 198
+      "descargas": 206
     },
     "634004691": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 22
+      "descargas": 23
     },
     "633945333": {
       "release": "v0.5.8",
@@ -336,16 +336,16 @@
     "635297056": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-setup-v0.5.8.exe",
-      "descargas": 242
+      "descargas": 282
     },
     "635297247": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 63
+      "descargas": 72
     }
   },
   "retiradas": 7626,
-  "publicadas": 29743,
-  "total": 37369,
-  "actualizado": "2026-10-13T03:38Z"
+  "publicadas": 29821,
+  "total": 37447,
+  "actualizado": "2026-10-13T04:39Z"
 }
