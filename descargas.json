@@ -206,7 +206,7 @@
     "599615052": {
       "release": "v0.5.6.1",
       "nombre": "IngeTrazo-0.5.6.1-x86_64.AppImage",
-      "descargas": 128
+      "descargas": 129
     },
     "599583315": {
       "release": "v0.5.6.1",
@@ -261,7 +261,7 @@
     "599187133": {
       "release": "v0.5.6",
       "nombre": "ingetrazo-setup-v0.5.6.exe",
-      "descargas": 228
+      "descargas": 229
     },
     "599187131": {
       "release": "v0.5.6",
@@ -281,32 +281,32 @@
     "634004680": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-linux-x86_64.tar.gz",
-      "descargas": 100
+      "descargas": 102
     },
     "633935247": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-arm64.dmg",
-      "descargas": 693
+      "descargas": 709
     },
     "633945345": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-x86_64.dmg",
-      "descargas": 161
+      "descargas": 164
     },
     "634004678": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.AppImage",
-      "descargas": 436
+      "descargas": 440
     },
     "634004694": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.flatpak",
-      "descargas": 581
+      "descargas": 604
     },
     "634004691": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 87
+      "descargas": 88
     },
     "633945333": {
       "release": "v0.5.8",
@@ -336,16 +336,16 @@
     "635297056": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-setup-v0.5.8.exe",
-      "descargas": 2746
+      "descargas": 2839
     },
     "635297247": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 530
+      "descargas": 550
     }
   },
   "retiradas": 7626,
-  "publicadas": 34206,
-  "total": 41832,
-  "actualizado": "2026-10-14T11:50Z"
+  "publicadas": 34370,
+  "total": 41996,
+  "actualizado": "2026-10-14T13:00Z"
 }
