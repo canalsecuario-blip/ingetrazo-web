@@ -66,7 +66,7 @@
     "584217929": {
       "release": "v0.5.0",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 104
+      "descargas": 105
     },
     "580363272": {
       "release": "v0.4.9",
@@ -266,7 +266,7 @@
     "599187131": {
       "release": "v0.5.6",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 81
+      "descargas": 82
     },
     "599192249": {
       "release": "v0.5.6",
@@ -286,7 +286,7 @@
     "633935247": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-arm64.dmg",
-      "descargas": 1834
+      "descargas": 1838
     },
     "633945345": {
       "release": "v0.5.8",
@@ -296,12 +296,12 @@
     "634004678": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.AppImage",
-      "descargas": 1025
+      "descargas": 1027
     },
     "634004694": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.flatpak",
-      "descargas": 1585
+      "descargas": 1588
     },
     "634004691": {
       "release": "v0.5.8",
@@ -336,21 +336,21 @@
     "635297056": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-setup-v0.5.8.exe",
-      "descargas": 8588
+      "descargas": 8624
     },
     "635297247": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 1694
+      "descargas": 1705
     },
     "653490007": {
       "release": "prueba-spacemouse-1",
       "nombre": "IngeTrazo-prueba-spacemouse-1-windows.zip",
-      "descargas": 21
+      "descargas": 22
     }
   },
   "retiradas": 7626,
-  "publicadas": 44606,
-  "total": 52232,
-  "actualizado": "2026-10-18T21:44Z"
+  "publicadas": 44665,
+  "total": 52291,
+  "actualizado": "2026-10-18T22:42Z"
 }
