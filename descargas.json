@@ -46,7 +46,7 @@
     "591561074": {
       "release": "v0.5.4",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 80
+      "descargas": 81
     },
     "589780204": {
       "release": "v0.5.3",
@@ -66,7 +66,7 @@
     "584217929": {
       "release": "v0.5.0",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 103
+      "descargas": 104
     },
     "580363272": {
       "release": "v0.4.9",
@@ -116,7 +116,7 @@
     "566068368": {
       "release": "v0.4.0",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 8
+      "descargas": 9
     },
     "564292209": {
       "release": "v0.3.20",
@@ -281,12 +281,12 @@
     "634004680": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-linux-x86_64.tar.gz",
-      "descargas": 276
+      "descargas": 277
     },
     "633935247": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-arm64.dmg",
-      "descargas": 1831
+      "descargas": 1834
     },
     "633945345": {
       "release": "v0.5.8",
@@ -296,12 +296,12 @@
     "634004678": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.AppImage",
-      "descargas": 1019
+      "descargas": 1025
     },
     "634004694": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.flatpak",
-      "descargas": 1575
+      "descargas": 1585
     },
     "634004691": {
       "release": "v0.5.8",
@@ -321,7 +321,7 @@
     "634004695": {
       "release": "v0.5.8",
       "nombre": "ingetrazo_0.5.8_amd64.snap",
-      "descargas": 43
+      "descargas": 44
     },
     "635169105": {
       "release": "v0.5.8",
@@ -336,21 +336,21 @@
     "635297056": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-setup-v0.5.8.exe",
-      "descargas": 8556
+      "descargas": 8588
     },
     "635297247": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 1689
+      "descargas": 1694
     },
     "653490007": {
       "release": "prueba-spacemouse-1",
       "nombre": "IngeTrazo-prueba-spacemouse-1-windows.zip",
-      "descargas": 15
+      "descargas": 21
     }
   },
   "retiradas": 7626,
-  "publicadas": 44539,
-  "total": 52165,
-  "actualizado": "2026-10-18T20:43Z"
+  "publicadas": 44606,
+  "total": 52232,
+  "actualizado": "2026-10-18T21:44Z"
 }
