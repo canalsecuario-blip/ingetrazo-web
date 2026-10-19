@@ -156,7 +156,7 @@
     "601669854": {
       "release": "v0.5.7",
       "nombre": "IngeTrazo-0.5.7-linux-x86_64.tar.gz",
-      "descargas": 471
+      "descargas": 472
     },
     "601646580": {
       "release": "v0.5.7",
@@ -186,7 +186,7 @@
     "601648216": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 2337
+      "descargas": 2338
     },
     "601651804": {
       "release": "v0.5.7",
@@ -281,27 +281,27 @@
     "634004680": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-linux-x86_64.tar.gz",
-      "descargas": 279
+      "descargas": 281
     },
     "633935247": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-arm64.dmg",
-      "descargas": 1844
+      "descargas": 1852
     },
     "633945345": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-x86_64.dmg",
-      "descargas": 331
+      "descargas": 332
     },
     "634004678": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.AppImage",
-      "descargas": 1033
+      "descargas": 1039
     },
     "634004694": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-x86_64.flatpak",
-      "descargas": 1589
+      "descargas": 1599
     },
     "634004691": {
       "release": "v0.5.8",
@@ -321,7 +321,7 @@
     "634004695": {
       "release": "v0.5.8",
       "nombre": "ingetrazo_0.5.8_amd64.snap",
-      "descargas": 44
+      "descargas": 45
     },
     "635169105": {
       "release": "v0.5.8",
@@ -336,12 +336,12 @@
     "635297056": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-setup-v0.5.8.exe",
-      "descargas": 8645
+      "descargas": 8688
     },
     "635297247": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 1709
+      "descargas": 1718
     },
     "653490007": {
       "release": "prueba-spacemouse-1",
@@ -350,7 +350,7 @@
     }
   },
   "retiradas": 7626,
-  "publicadas": 44706,
-  "total": 52332,
-  "actualizado": "2026-10-18T23:39Z"
+  "publicadas": 44788,
+  "total": 52414,
+  "actualizado": "2026-10-19T01:01Z"
 }
