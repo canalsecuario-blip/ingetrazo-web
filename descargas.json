@@ -36,7 +36,7 @@
     "596217227": {
       "release": "v0.5.5",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 466
+      "descargas": 467
     },
     "596192174": {
       "release": "v0.5.5",
@@ -186,7 +186,7 @@
     "601648216": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 2338
+      "descargas": 2339
     },
     "601651804": {
       "release": "v0.5.7",
@@ -266,7 +266,7 @@
     "599187131": {
       "release": "v0.5.6",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 83
+      "descargas": 84
     },
     "599192249": {
       "release": "v0.5.6",
@@ -286,7 +286,7 @@
     "633935247": {
       "release": "v0.5.8",
       "nombre": "IngeTrazo-0.5.8-macos-arm64.dmg",
-      "descargas": 2041
+      "descargas": 2042
     },
     "633945345": {
       "release": "v0.5.8",
@@ -341,7 +341,7 @@
     "635297247": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 1906
+      "descargas": 1907
     },
     "653490007": {
       "release": "prueba-spacemouse-1",
@@ -356,7 +356,7 @@
     "657020766": {
       "release": "v0.5.9",
       "nombre": "IngeTrazo-0.5.9-macos-arm64.dmg",
-      "descargas": 541
+      "descargas": 551
     },
     "657027077": {
       "release": "v0.5.9",
@@ -366,12 +366,12 @@
     "657066069": {
       "release": "v0.5.9",
       "nombre": "IngeTrazo-0.5.9-x86_64.AppImage",
-      "descargas": 344
+      "descargas": 353
     },
     "657023775": {
       "release": "v0.5.9",
       "nombre": "IngeTrazo-0.5.9-x86_64.flatpak",
-      "descargas": 406
+      "descargas": 413
     },
     "657066361": {
       "release": "v0.5.9",
@@ -381,12 +381,12 @@
     "657025620": {
       "release": "v0.5.9",
       "nombre": "ingetrazo-setup-v0.5.9.exe",
-      "descargas": 2921
+      "descargas": 2983
     },
     "657025621": {
       "release": "v0.5.9",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 609
+      "descargas": 620
     },
     "657029730": {
       "release": "v0.5.9",
@@ -395,7 +395,7 @@
     }
   },
   "retiradas": 7659,
-  "publicadas": 51478,
-  "total": 59137,
-  "actualizado": "2026-10-21T07:58Z"
+  "publicadas": 51582,
+  "total": 59241,
+  "actualizado": "2026-10-21T08:54Z"
 }
