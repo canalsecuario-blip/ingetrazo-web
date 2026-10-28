@@ -181,7 +181,7 @@
     "601648219": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-setup-v0.5.7.exe",
-      "descargas": 12827
+      "descargas": 12828
     },
     "601648216": {
       "release": "v0.5.7",
@@ -356,7 +356,7 @@
     "657020766": {
       "release": "v0.5.9",
       "nombre": "IngeTrazo-0.5.9-macos-arm64.dmg",
-      "descargas": 1596
+      "descargas": 1597
     },
     "657027077": {
       "release": "v0.5.9",
@@ -381,7 +381,7 @@
     "657025620": {
       "release": "v0.5.9",
       "nombre": "ingetrazo-setup-v0.5.9.exe",
-      "descargas": 8965
+      "descargas": 8967
     },
     "657025621": {
       "release": "v0.5.9",
@@ -426,7 +426,7 @@
     "679399238": {
       "release": "v0.5.10",
       "nombre": "ingetrazo-setup-v0.5.10.exe",
-      "descargas": 430
+      "descargas": 431
     },
     "679399237": {
       "release": "v0.5.10",
@@ -476,7 +476,7 @@
     "680248041": {
       "release": "v0.5.10.1",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 354
+      "descargas": 355
     },
     "680250445": {
       "release": "v0.5.10.1",
@@ -486,42 +486,42 @@
     "683590649": {
       "release": "v0.5.11",
       "nombre": "IngeTrazo-0.5.11-linux-x86_64.tar.gz",
-      "descargas": 34
+      "descargas": 45
     },
     "683541877": {
       "release": "v0.5.11",
       "nombre": "IngeTrazo-0.5.11-macos-arm64.dmg",
-      "descargas": 160
+      "descargas": 219
     },
     "683555717": {
       "release": "v0.5.11",
       "nombre": "IngeTrazo-0.5.11-macos-x86_64.dmg",
-      "descargas": 27
+      "descargas": 35
     },
     "683590648": {
       "release": "v0.5.11",
       "nombre": "IngeTrazo-0.5.11-x86_64.AppImage",
-      "descargas": 122
+      "descargas": 157
     },
     "683547928": {
       "release": "v0.5.11",
       "nombre": "IngeTrazo-0.5.11-x86_64.flatpak",
-      "descargas": 130
+      "descargas": 167
     },
     "683590923": {
       "release": "v0.5.11",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 17
+      "descargas": 25
     },
     "683543767": {
       "release": "v0.5.11",
       "nombre": "ingetrazo-setup-v0.5.11.exe",
-      "descargas": 1092
+      "descargas": 1343
     },
     "683543766": {
       "release": "v0.5.11",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 270
+      "descargas": 353
     },
     "683548128": {
       "release": "v0.5.11",
@@ -530,7 +530,7 @@
     }
   },
   "retiradas": 7659,
-  "publicadas": 67238,
-  "total": 74897,
-  "actualizado": "2026-10-28T18:53Z"
+  "publicadas": 67736,
+  "total": 75395,
+  "actualizado": "2026-10-28T23:16Z"
 }
