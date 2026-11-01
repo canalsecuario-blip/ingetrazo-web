@@ -66,7 +66,7 @@
     "584217929": {
       "release": "v0.5.0",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 119
+      "descargas": 120
     },
     "580363272": {
       "release": "v0.4.9",
@@ -181,7 +181,7 @@
     "601648219": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-setup-v0.5.7.exe",
-      "descargas": 12845
+      "descargas": 12846
     },
     "601648216": {
       "release": "v0.5.7",
@@ -336,7 +336,7 @@
     "635297056": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-setup-v0.5.8.exe",
-      "descargas": 9752
+      "descargas": 9754
     },
     "635297247": {
       "release": "v0.5.8",
@@ -516,12 +516,12 @@
     "683543767": {
       "release": "v0.5.11",
       "nombre": "ingetrazo-setup-v0.5.11.exe",
-      "descargas": 5309
+      "descargas": 5311
     },
     "683543766": {
       "release": "v0.5.11",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 1171
+      "descargas": 1173
     },
     "683548128": {
       "release": "v0.5.11",
@@ -531,51 +531,51 @@
     "698506802": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-linux-x86_64.tar.gz",
-      "descargas": 9
+      "descargas": 21
     },
     "698402843": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-macos-arm64.dmg",
-      "descargas": 79
+      "descargas": 133
     },
     "698411693": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-macos-x86_64.dmg",
-      "descargas": 16
+      "descargas": 26
     },
     "698506803": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-x86_64.AppImage",
-      "descargas": 46
+      "descargas": 84
     },
     "698416280": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-x86_64.flatpak",
-      "descargas": 43
+      "descargas": 79
     },
     "698507187": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-ejemplos.zip",
-      "descargas": 5
+      "descargas": 8
     },
     "698408436": {
       "release": "v0.6.0",
       "nombre": "ingetrazo-setup-v0.6.0.exe",
-      "descargas": 295
+      "descargas": 542
     },
     "698408437": {
       "release": "v0.6.0",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 81
+      "descargas": 146
     },
     "698407355": {
       "release": "v0.6.0",
       "nombre": "ingetrazo_0.6.0_amd64.snap",
-      "descargas": 6
+      "descargas": 7
     }
   },
   "retiradas": 7659,
-  "publicadas": 75399,
-  "total": 83058,
-  "actualizado": "2026-11-01T17:09Z"
+  "publicadas": 75873,
+  "total": 83532,
+  "actualizado": "2026-11-01T21:13Z"
 }
