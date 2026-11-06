@@ -181,7 +181,7 @@
     "601648219": {
       "release": "v0.5.7",
       "nombre": "ingetrazo-setup-v0.5.7.exe",
-      "descargas": 12863
+      "descargas": 12865
     },
     "601648216": {
       "release": "v0.5.7",
@@ -336,12 +336,12 @@
     "635297056": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-setup-v0.5.8.exe",
-      "descargas": 9767
+      "descargas": 9768
     },
     "635297247": {
       "release": "v0.5.8",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 1955
+      "descargas": 1957
     },
     "653490007": {
       "release": "prueba-spacemouse-1",
@@ -531,27 +531,27 @@
     "698506802": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-linux-x86_64.tar.gz",
-      "descargas": 159
+      "descargas": 162
     },
     "698402843": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-macos-arm64.dmg",
-      "descargas": 969
+      "descargas": 999
     },
     "698411693": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-macos-x86_64.dmg",
-      "descargas": 164
+      "descargas": 166
     },
     "698506803": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-x86_64.AppImage",
-      "descargas": 527
+      "descargas": 554
     },
     "698416280": {
       "release": "v0.6.0",
       "nombre": "IngeTrazo-0.6.0-x86_64.flatpak",
-      "descargas": 628
+      "descargas": 650
     },
     "698507187": {
       "release": "v0.6.0",
@@ -561,12 +561,12 @@
     "698408436": {
       "release": "v0.6.0",
       "nombre": "ingetrazo-setup-v0.6.0.exe",
-      "descargas": 5257
+      "descargas": 5451
     },
     "698408437": {
       "release": "v0.6.0",
       "nombre": "ingetrazo-windows.zip",
-      "descargas": 1081
+      "descargas": 1106
     },
     "698407355": {
       "release": "v0.6.0",
@@ -575,7 +575,7 @@
     }
   },
   "retiradas": 7659,
-  "publicadas": 84007,
-  "total": 91666,
-  "actualizado": "2026-11-06T00:22Z"
+  "publicadas": 84315,
+  "total": 91974,
+  "actualizado": "2026-11-06T07:58Z"
 }
